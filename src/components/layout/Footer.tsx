@@ -38,7 +38,7 @@ const Footer = () => {
 
           {/* Center - Logo */}
           <div className="flex justify-center">
-            <img src={logo} alt="Dallas Dumpster Rentals" className="h-28 w-auto" />
+            <img src={logo} alt="Dallas Dumpster Rentals" className="h-36 w-auto" />
           </div>
 
           {/* Right - Business Hours */}

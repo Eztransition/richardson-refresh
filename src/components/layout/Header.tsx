@@ -22,7 +22,7 @@ const Header = () => {
         <div className="container mx-auto flex items-center justify-between py-3 px-4">
           {/* Logo */}
           <a href="https://dallas-dumpster.com/" className="flex-shrink-0">
-            <img src={logo} alt="Dallas Dumpster Rentals" className="h-16 w-auto" />
+            <img src={logo} alt="Dallas Dumpster Rentals" className="h-20 w-auto" />
           </a>
 
           {/* Mobile Phone + Menu */}
