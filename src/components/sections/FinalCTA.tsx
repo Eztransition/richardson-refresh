@@ -19,7 +19,7 @@ const FinalCTA = () => {
             <Button
               asChild
               size="lg"
-              className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-heading font-semibold text-base px-10 shadow-lg hover:shadow-xl transition-all"
+              className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-heading font-semibold text-lg px-12 py-4 h-14 shadow-lg hover:shadow-xl transition-all"
             >
               <a href={BOOKING_URL}>Book Now</a>
             </Button>
@@ -27,10 +27,10 @@ const FinalCTA = () => {
               asChild
               size="lg"
               variant="outline"
-              className="border-2 border-white/20 text-white bg-white/20 hover:bg-white hover:text-primary font-heading font-semibold text-base px-8 transition-all"
+              className="border-2 border-white/20 text-white bg-white/20 hover:bg-white hover:text-primary font-heading font-semibold text-lg px-10 py-4 h-14 transition-all"
             >
               <a href="tel:9726456731">
-                <Phone className="mr-2 h-5 w-5" />
+                <Phone className="mr-2 h-6 w-6" />
                 Call (972) 645-6731
               </a>
             </Button>
