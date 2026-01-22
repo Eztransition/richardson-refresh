@@ -1,25 +1,19 @@
 import { useState } from "react";
-import { useLocation } from "react-router-dom";
 import { Menu, X, Phone, Clock, Calendar } from "lucide-react";
 import logo from "@/assets/logo.png";
 
 const navLinks = [
-  { label: "Home", href: "https://dallas-dumpster.com/", paths: ["/"] },
-  { label: "Dumpster Size", href: "https://dallas-dumpster.com/dumpster-size/", paths: [] },
-  { label: "Service Area", href: "https://dallas-dumpster.com/service-area/", paths: ["/richardson-tx"] },
-  { label: "FAQs", href: "https://dallas-dumpster.com/faqs/", paths: [] },
-  { label: "Acceptable & Prohibited Items", href: "https://dallas-dumpster.com/acceptable-prohibited-items/", paths: [] },
-  { label: "Gallery", href: "https://dallas-dumpster.com/gallery/", paths: [] },
-  { label: "Contact Us", href: "https://dallas-dumpster.com/contact-us/", paths: [] },
+  { label: "Home", href: "https://dallas-dumpster.com/" },
+  { label: "Dumpster Size", href: "https://dallas-dumpster.com/dumpster-size/" },
+  { label: "Service Area", href: "https://dallas-dumpster.com/service-area/" },
+  { label: "FAQs", href: "https://dallas-dumpster.com/faqs/" },
+  { label: "Acceptable & Prohibited Items", href: "https://dallas-dumpster.com/acceptable-prohibited-items/" },
+  { label: "Gallery", href: "https://dallas-dumpster.com/gallery/" },
+  { label: "Contact Us", href: "https://dallas-dumpster.com/contact-us/" },
 ];
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const location = useLocation();
-
-  const isActive = (paths: string[]) => {
-    return paths.some(path => location.pathname === path);
-  };
 
   return (
     <header className="w-full">
@@ -89,11 +83,7 @@ const Header = () => {
               <li key={link.label}>
                 <a
                   href={link.href}
-                  className={`block px-4 py-4 text-sm font-heading font-medium uppercase tracking-wide transition-colors ${
-                    isActive(link.paths)
-                      ? "bg-secondary text-secondary-foreground"
-                      : "text-primary-foreground hover:bg-primary/10"
-                  }`}
+                  className="block px-4 py-4 text-sm font-heading font-medium uppercase tracking-wide text-primary-foreground hover:bg-primary/10 transition-colors"
                 >
                   {link.label}
                 </a>
@@ -112,11 +102,7 @@ const Header = () => {
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    className={`block px-4 py-3 text-sm font-heading font-medium uppercase tracking-wide transition-colors ${
-                      isActive(link.paths)
-                        ? "bg-secondary text-secondary-foreground"
-                        : "text-primary-foreground hover:bg-primary/10"
-                    }`}
+                    className="block px-4 py-3 text-sm font-heading font-medium uppercase tracking-wide text-primary-foreground hover:bg-primary/10 transition-colors"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {link.label}
