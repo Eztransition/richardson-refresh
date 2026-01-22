@@ -5,13 +5,13 @@ const BOOKING_URL = "https://link.eztransition.com/booking/dallas-dumpster-renta
 
 const FinalCTA = () => {
   return (
-    <section className="py-16 lg:py-20 bg-brand-dark text-primary-foreground">
+    <section className="py-16 lg:py-20 bg-gradient-to-r from-primary to-primary/80 text-white">
       <div className="container mx-auto text-center">
         <div className="max-w-2xl mx-auto space-y-6 animate-fade-in">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold">
             Book Your Richardson Dumpster Rental Today
           </h2>
-          <p className="text-lg text-primary-foreground/80">
+          <p className="text-lg text-white/90">
             Fast delivery, transparent pricing, and easy online booking. Get your roll-off dumpster in Richardson, TX—reserve yours now.
           </p>
 
@@ -27,7 +27,7 @@ const FinalCTA = () => {
               asChild
               size="lg"
               variant="outline"
-              className="border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-brand-dark font-heading font-semibold text-base px-8 transition-all"
+              className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-primary font-heading font-semibold text-base px-8 transition-all"
             >
               <a href="tel:9726456731">
                 <Phone className="mr-2 h-5 w-5" />
