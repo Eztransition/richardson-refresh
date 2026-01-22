@@ -27,7 +27,7 @@ const FinalCTA = () => {
               asChild
               size="lg"
               variant="outline"
-              className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-primary font-heading font-semibold text-base px-8 transition-all"
+              className="border-2 border-white/50 text-white bg-white/50 hover:bg-white hover:text-primary font-heading font-semibold text-base px-8 transition-all"
             >
               <a href="tel:9726456731">
                 <Phone className="mr-2 h-5 w-5" />
