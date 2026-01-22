@@ -43,32 +43,32 @@ const Header = () => {
           {/* Desktop Info Bar */}
           <div className="hidden lg:flex items-center gap-8">
             {/* View Dumpsters */}
-            <div className="flex items-center gap-3 text-primary">
-              <Calendar className="h-6 w-6" />
+            <div className="flex items-center gap-3">
+              <Calendar className="h-6 w-6 text-primary" />
               <div>
-                <p className="font-heading font-semibold text-sm">View Dumpsters</p>
-                <p className="text-xs text-primary/80">& Book Online</p>
+                <p className="font-heading font-semibold text-sm text-brand-dark">View Dumpsters</p>
+                <p className="text-xs text-brand-gray">& Book Online</p>
               </div>
             </div>
 
             {/* Phone */}
-            <a href="tel:9726456731" className="flex items-center gap-3 text-primary hover:opacity-90 transition-opacity">
-              <Phone className="h-6 w-6" />
+            <a href="tel:9726456731" className="flex items-center gap-3 hover:opacity-90 transition-opacity">
+              <Phone className="h-6 w-6 text-primary" />
               <div>
-                <p className="font-heading font-semibold text-sm">(972)-645-6731</p>
-                <p className="text-xs text-primary/80">Call</p>
+                <p className="font-heading font-semibold text-sm text-brand-dark">(972)-645-6731</p>
+                <p className="text-xs text-brand-gray">Call</p>
               </div>
             </a>
 
             {/* Hours */}
-            <div className="flex items-center gap-3 text-primary">
-              <Clock className="h-6 w-6" />
+            <div className="flex items-center gap-3">
+              <Clock className="h-6 w-6 text-primary" />
               <div>
-                <p className="font-heading font-semibold text-sm leading-tight">
+                <p className="font-heading font-semibold text-sm leading-tight text-brand-dark">
                   Mon-Fri: 08:00am - 7:00pm<br />
                   Sat: 09:00 am-1:00 pm
                 </p>
-                <p className="text-xs text-primary/80">Book Today!</p>
+                <p className="text-xs text-brand-gray">Book Today!</p>
               </div>
             </div>
           </div>
