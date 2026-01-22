@@ -14,7 +14,7 @@ const Footer = () => {
   return (
     <footer className="bg-brand-gray text-white">
       {/* Main Footer Content */}
-      <div className="container mx-auto py-10 lg:py-12">
+      <div className="container mx-auto py-8 lg:py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center text-center">
           {/* Left - Contact Info */}
           <div className="space-y-2">
