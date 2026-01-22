@@ -1,31 +1,16 @@
 import { MapPin, Check } from "lucide-react";
+import { allServiceAreas, getOtherServiceAreas } from "@/config/locations";
 
-const nearbyAreas = [
-  "Dallas",
-  "Richardson",
-  "Forney",
-  "Rowlett",
-  "Plano",
-  "Rockwall",
-  "Allen",
-  "Cedar Hill",
-  "Balch Springs",
-  "Sunnyvale",
-  "Wylie",
-  "Seagoville",
-  "Hutchins",
-  "Murphy",
-  "Lancaster",
-  "Sachse",
-  "Addison",
-  "Garland",
-  "Highland Park",
-  "University Park",
-  "DeSoto",
-  "Duncanville",
-];
+interface ServiceAreaProps {
+  location?: string;
+  description?: string;
+}
 
-const ServiceArea = () => {
+const ServiceArea = ({ location = "Richardson", description }: ServiceAreaProps) => {
+  const nearbyAreas = getOtherServiceAreas(location);
+  
+  const defaultDescription = `Dallas Dumpster Rentals provides fast and reliable roll-off dumpster delivery throughout ${location}, TX and the greater Dallas-Fort Worth metropolitan area. Whether you're tackling a home renovation, clearing out a property, or managing a construction project in ${location}, we've got you covered.`;
+
   return (
     <section className="py-16 lg:py-24 bg-brand-surface">
       <div className="container mx-auto">
@@ -36,13 +21,13 @@ const ServiceArea = () => {
               Local Service
             </div>
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4">
-              Serving Richardson and Surrounding DFW Communities
+              Serving {location} and Surrounding DFW Communities
             </h2>
           </div>
 
           <div className="bg-background rounded-xl p-6 lg:p-8 shadow-card animate-fade-in" style={{ animationDelay: "0.1s" }}>
             <p className="text-muted-foreground mb-6 text-center">
-              Dallas Dumpster Rentals provides fast and reliable roll-off dumpster delivery throughout Richardson, TX and the greater Dallas-Fort Worth metropolitan area. Whether you're tackling a home renovation in Richardson Heights, clearing out a property near UTD, or managing a construction project downtown, we've got you covered.
+              {description || defaultDescription}
             </p>
 
             <div className="border-t border-border pt-6">

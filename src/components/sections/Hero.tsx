@@ -11,7 +11,15 @@ const trustItems = [
 
 const BOOKING_URL = "https://link.eztransition.com/booking/dallas-dumpster-rentals-mj6zf8sxcb";
 
-const Hero = () => {
+interface HeroProps {
+  location?: string;
+  state?: string;
+  description?: string;
+}
+
+const Hero = ({ location = "Richardson", state = "TX", description }: HeroProps) => {
+  const defaultDescription = `Fast, reliable roll-off dumpster delivery for your ${location} home cleanouts, remodeling projects, and construction sites. Book online in minutes.`;
+  
   return (
     <section className="relative bg-brand-surface overflow-hidden">
       <div className="container mx-auto py-12 lg:py-20">
@@ -20,10 +28,10 @@ const Hero = () => {
           <div className="space-y-6 animate-fade-in" style={{ animationDelay: "0.1s" }}>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-foreground leading-tight">
               Dumpster Rental in{" "}
-              <span className="text-primary">Richardson, TX</span>
+              <span className="text-primary">{location}, {state}</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-lg">
-              Fast, reliable roll-off dumpster delivery for your Richardson home cleanouts, remodeling projects, and construction sites. Book online in minutes.
+              {description || defaultDescription}
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-2">
@@ -71,7 +79,7 @@ const Hero = () => {
             <div className="relative rounded-xl overflow-hidden shadow-elevated">
               <img
                 src={heroImage}
-                alt="Dumpster delivery in Richardson, TX"
+                alt={`Dumpster delivery in ${location}, ${state}`}
                 className="w-full h-auto object-cover aspect-[16/10]"
               />
               {/* Gradient overlay */}

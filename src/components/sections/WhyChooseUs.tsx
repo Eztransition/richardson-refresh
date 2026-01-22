@@ -1,55 +1,59 @@
-import { Truck, DollarSign, Calendar, Headphones, Clock, MapPin, MousePointerClick, CheckCircle } from "lucide-react";
+import { Truck, DollarSign, Calendar, Headphones, Clock, MousePointerClick, CheckCircle } from "lucide-react";
 
-const features = [
-  {
-    icon: Truck,
-    title: "Reliable Richardson Delivery",
-    description: "We maintain efficient routes throughout Richardson for fast, dependable service.",
-  },
-  {
-    icon: DollarSign,
-    title: "Upfront Pricing",
-    description: "No surprise fees—your quote includes delivery, pickup, weight, and disposal.",
-  },
-  {
-    icon: Calendar,
-    title: "Flexible Rental Periods",
-    description: "Standard rentals with clear $20/day extra day pricing when you need more time.",
-  },
-  {
-    icon: Headphones,
-    title: "Responsive Support",
-    description: "Reach us by phone or text—we're here to help with any questions.",
-  },
-  {
-    icon: Clock,
-    title: "On-Time Pickup",
-    description: "Schedule your pickup and we'll be there—reliable service every time.",
-  },
-];
+interface WhyChooseUsProps {
+  location?: string;
+}
 
-const steps = [
-  {
-    number: "1",
-    icon: MousePointerClick,
-    title: "Choose Size & Book",
-    description: "Select your dumpster size online and complete your booking in minutes.",
-  },
-  {
-    number: "2",
-    icon: Truck,
-    title: "We Deliver",
-    description: "We deliver your dumpster directly to your Richardson address.",
-  },
-  {
-    number: "3",
-    icon: CheckCircle,
-    title: "Fill & We Pick Up",
-    description: "Load it up, then we handle pickup and proper disposal.",
-  },
-];
+const WhyChooseUs = ({ location = "Richardson" }: WhyChooseUsProps) => {
+  const features = [
+    {
+      icon: Truck,
+      title: `Reliable ${location} Delivery`,
+      description: `We maintain efficient routes throughout ${location} for fast, dependable service.`,
+    },
+    {
+      icon: DollarSign,
+      title: "Upfront Pricing",
+      description: "No surprise fees—your quote includes delivery, pickup, weight, and disposal.",
+    },
+    {
+      icon: Calendar,
+      title: "Flexible Rental Periods",
+      description: "Standard rentals with clear $20/day extra day pricing when you need more time.",
+    },
+    {
+      icon: Headphones,
+      title: "Responsive Support",
+      description: "Reach us by phone or text—we're here to help with any questions.",
+    },
+    {
+      icon: Clock,
+      title: "On-Time Pickup",
+      description: "Schedule your pickup and we'll be there—reliable service every time.",
+    },
+  ];
 
-const WhyChooseUs = () => {
+  const steps = [
+    {
+      number: "1",
+      icon: MousePointerClick,
+      title: "Choose Size & Book",
+      description: "Select your dumpster size online and complete your booking in minutes.",
+    },
+    {
+      number: "2",
+      icon: Truck,
+      title: "We Deliver",
+      description: `We deliver your dumpster directly to your ${location} address.`,
+    },
+    {
+      number: "3",
+      icon: CheckCircle,
+      title: "Fill & We Pick Up",
+      description: "Load it up, then we handle pickup and proper disposal.",
+    },
+  ];
+
   return (
     <section className="py-16 lg:py-24 bg-background">
       <div className="container mx-auto">
@@ -57,7 +61,7 @@ const WhyChooseUs = () => {
           {/* Features Column */}
           <div className="animate-fade-in">
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-8">
-              Why Choose Dallas Dumpster Rentals in Richardson?
+              Why Choose Dallas Dumpster Rentals in {location}?
             </h2>
 
             <div className="space-y-5">
