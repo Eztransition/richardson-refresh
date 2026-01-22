@@ -26,12 +26,11 @@ const Hero = () => {
               Fast, reliable roll-off dumpster delivery for your Richardson home cleanouts, remodeling projects, and construction sites. Book online in minutes.
             </p>
 
-            {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-2">
               <Button
                 asChild
                 size="lg"
-                className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-heading font-semibold text-base px-8 shadow-lg hover:shadow-xl transition-all"
+                className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-heading font-semibold text-lg px-12 py-4 h-14 shadow-lg hover:shadow-xl transition-all"
               >
                 <a href={BOOKING_URL}>Book Now</a>
               </Button>
@@ -39,10 +38,10 @@ const Hero = () => {
                 asChild
                 size="lg"
                 variant="outline"
-                className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground font-heading font-semibold text-base px-8 transition-all"
+                className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground font-heading font-semibold text-lg px-10 py-4 h-14 transition-all"
               >
                 <a href="tel:9726456731">
-                  <Phone className="mr-2 h-5 w-5" />
+                  <Phone className="mr-2 h-6 w-6" />
                   Call (972) 645-6731
                 </a>
               </Button>

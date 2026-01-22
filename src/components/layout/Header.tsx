@@ -55,7 +55,7 @@ const Header = () => {
             <a href="tel:9726456731" className="flex items-center gap-3 hover:opacity-90 transition-opacity">
               <Phone className="h-6 w-6 text-primary" />
               <div>
-                <p className="font-heading font-semibold text-sm text-brand-dark">(972)-645-6731</p>
+                <p className="font-heading font-semibold text-sm text-brand-dark">(972) 645-6731</p>
                 <p className="text-xs text-brand-gray">Call</p>
               </div>
             </a>

@@ -130,7 +130,7 @@ const PricingCards = () => {
               <CardFooter className="flex flex-col gap-3 pt-4">
                 <Button
                   asChild
-                  className={`w-full font-heading font-semibold ${
+                  className={`w-full font-heading font-semibold text-lg py-4 h-14 ${
                     dumpster.popular
                       ? "bg-secondary hover:bg-secondary/90 text-secondary-foreground"
                       : "bg-primary hover:bg-primary/90 text-primary-foreground"
@@ -138,7 +138,7 @@ const PricingCards = () => {
                 >
                   <a href={BOOKING_URL}>Book Now</a>
                 </Button>
-                <Button asChild variant="ghost" className="w-full text-muted-foreground hover:text-foreground">
+                <Button asChild variant="ghost" className="w-full text-muted-foreground hover:text-foreground text-base py-3 h-12">
                   <a href={MORE_INFO_URL}>More Info →</a>
                 </Button>
               </CardFooter>
