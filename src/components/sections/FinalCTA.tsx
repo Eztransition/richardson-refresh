@@ -14,7 +14,7 @@ const FinalCTA = ({ location = "Richardson", state = "TX" }: FinalCTAProps) => {
       <div className="container mx-auto text-center">
         <div className="max-w-2xl mx-auto space-y-6 animate-fade-in">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold">
-            Dumpster Rentals in {location}, {state} for Every Project
+            Book Your {location} Dumpster Rental Today
           </h2>
           <p className="text-lg text-white/90">
             Fast delivery, transparent pricing, and easy online booking. Get your roll-off dumpster in {location}, {state}—reserve yours now.
