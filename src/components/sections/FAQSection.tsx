@@ -46,7 +46,7 @@ const FAQSection = () => {
           {/* Section Header */}
           <div className="text-center mb-10 animate-fade-in">
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4">
-              Frequently Asked Questions
+              Richardson, TX Dumpster Rental FAQs
             </h2>
             <p className="text-lg text-muted-foreground">
               Got questions about renting a dumpster in Richardson? We've got answers.
