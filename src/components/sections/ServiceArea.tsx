@@ -2,13 +2,27 @@ import { MapPin, Check } from "lucide-react";
 
 const nearbyAreas = [
   "Dallas",
+  "Richardson",
+  "Forney",
+  "Rowlett",
   "Plano",
-  "Garland",
+  "Rockwall",
+  "Allen",
+  "Cedar Hill",
+  "Balch Springs",
+  "Sunnyvale",
+  "Wylie",
+  "Seagoville",
+  "Hutchins",
   "Murphy",
+  "Lancaster",
   "Sachse",
   "Addison",
-  "Mesquite",
-  "Allen",
+  "Garland",
+  "Highland Park",
+  "University Park",
+  "DeSoto",
+  "Duncanville",
 ];
 
 const ServiceArea = () => {
