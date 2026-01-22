@@ -241,3 +241,7 @@ export const getLocationBySlug = (slug: string): LocationConfig | undefined => {
 export const getOtherServiceAreas = (currentLocation: string): string[] => {
   return allServiceAreas.filter((area) => area !== currentLocation);
 };
+
+export const getLocationByName = (name: string): LocationConfig | undefined => {
+  return locations.find((loc) => loc.name === name);
+};
