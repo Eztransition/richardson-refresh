@@ -27,7 +27,7 @@ const RichardsonTX = () => {
     <div className="min-h-screen flex flex-col">
       <Header />
       
-      <main className="flex-1 pb-16 lg:pb-0">
+      <main className="flex-1">
         <Hero />
         <PricingCards />
         <Services />
