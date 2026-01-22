@@ -3,32 +3,32 @@ import { Home, Warehouse, Hammer, HardHat, Trees, Trash2 } from "lucide-react";
 const services = [
   {
     icon: Home,
-    title: "Home Cleanouts",
+    title: "Home Cleanouts in Richardson, TX",
     description: "Declutter bedrooms, basements, and living spaces during your Richardson home cleanout.",
   },
   {
     icon: Warehouse,
-    title: "Garage Cleanouts",
+    title: "Garage Cleanouts in Richardson, TX",
     description: "Clear out years of accumulated items from your Richardson garage quickly and easily.",
   },
   {
     icon: Hammer,
-    title: "Remodeling Debris",
+    title: "Remodeling Debris in Richardson, TX",
     description: "Handle drywall, flooring, cabinets, and other renovation waste from your Richardson remodel.",
   },
   {
     icon: HardHat,
-    title: "Roofing Debris",
+    title: "Roofing Debris in Richardson, TX",
     description: "Safely dispose of shingles and roofing materials from your Richardson roof replacement.",
   },
   {
     icon: Trash2,
-    title: "Construction Jobs",
+    title: "Construction Jobs in Richardson, TX",
     description: "Keep your Richardson construction site clean with reliable dumpster service.",
   },
   {
     icon: Trees,
-    title: "Yard & Landscape Cleanup",
+    title: "Yard & Landscape Cleanup in Richardson, TX",
     description: "Remove branches, brush, and landscaping debris from your Richardson property.",
   },
 ];
