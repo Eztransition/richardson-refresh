@@ -18,18 +18,18 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center text-center">
           {/* Left - Contact Info */}
           <div className="space-y-2">
-            <p className="text-white/90">707 Opal Lane Mesquite, TX 75149</p>
+            <p className="text-white/90 text-sm">707 Opal Lane Mesquite, TX 75149</p>
             <a 
               href="tel:9726456731" 
-              className="block text-2xl font-heading font-bold text-white hover:text-white/80 transition-colors"
+              className="block text-lg font-heading font-bold text-white hover:text-white/80 transition-colors"
             >
               972-645-6731
             </a>
             <div className="pt-2">
-              <p className="text-white/80">Email Us:</p>
+              <p className="text-white/80 text-sm">Email Us:</p>
               <a
                 href="mailto:Info@dallas-dumpster.com"
-                className="text-xl font-heading font-semibold text-white hover:text-white/80 transition-colors"
+                className="text-lg font-heading font-semibold text-white hover:text-white/80 transition-colors"
               >
                 Info@dallas-dumpster.com
               </a>
@@ -43,9 +43,9 @@ const Footer = () => {
 
           {/* Right - Business Hours */}
           <div className="space-y-2">
-            <p className="text-white font-heading font-semibold text-lg">Business Hours:</p>
-            <p className="text-white font-medium">Mon-Fri: 8:00 AM - 7:00 PM</p>
-            <p className="text-white font-medium">Sat: 09:00 AM - 1:00 PM</p>
+            <p className="text-white font-heading font-bold text-lg">Business Hours:</p>
+            <p className="text-white text-sm">Mon-Fri: 8:00 AM - 7:00 PM</p>
+            <p className="text-white text-sm">Sat: 09:00 AM - 1:00 PM</p>
           </div>
         </div>
       </div>
