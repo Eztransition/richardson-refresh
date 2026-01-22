@@ -9,17 +9,17 @@ const MobileStickyCTA = () => {
       <div className="flex gap-3">
         <Button
           asChild
-          className="flex-1 bg-secondary hover:bg-secondary/90 text-secondary-foreground font-heading font-semibold shadow-lg"
+          className="flex-1 bg-secondary hover:bg-secondary/90 text-secondary-foreground font-heading font-semibold text-lg py-4 h-14 shadow-lg"
         >
           <a href={BOOKING_URL}>Book Now</a>
         </Button>
         <Button
           asChild
           variant="outline"
-          className="flex-1 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-brand-dark font-heading font-semibold"
+          className="flex-1 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-brand-dark font-heading font-semibold text-lg py-4 h-14"
         >
           <a href="tel:9726456731">
-            <Phone className="mr-2 h-4 w-4" />
+            <Phone className="mr-2 h-6 w-6" />
             Call Now
           </a>
         </Button>
