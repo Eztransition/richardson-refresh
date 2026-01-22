@@ -1,4 +1,3 @@
-import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import logo from "@/assets/logo.png";
 
 const footerLinks = [
@@ -13,76 +12,67 @@ const footerLinks = [
 
 const Footer = () => {
   return (
-    <footer className="bg-brand-dark text-primary-foreground">
-      <div className="container mx-auto py-12 lg:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
-          {/* Address */}
-          <div className="space-y-4">
-            <div className="flex items-start gap-3">
-              <MapPin className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-              <div>
-                <h3 className="font-heading font-semibold text-lg text-primary-foreground">
-                  707 Opal Lane Mesquite, TX 75149
-                </h3>
-              </div>
-            </div>
-          </div>
-
-          {/* Phone */}
-          <div className="space-y-4">
-            <a href="tel:9726456731" className="flex items-start gap-3 hover:opacity-90 transition-opacity">
-              <Phone className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-              <div>
-                <h3 className="font-heading font-semibold text-lg text-primary-foreground">
-                  972-645-6731
-                </h3>
-              </div>
+    <footer className="bg-brand-gray text-white">
+      {/* Main Footer Content */}
+      <div className="container mx-auto py-10 lg:py-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+          {/* Left - Contact Info */}
+          <div className="text-center md:text-left space-y-2">
+            <p className="text-white/90">707 Opal Lane Mesquite, TX 75149</p>
+            <a 
+              href="tel:9726456731" 
+              className="block text-2xl font-heading font-bold text-white hover:text-primary transition-colors"
+            >
+              972-645-6731
             </a>
-          </div>
-
-          {/* Email */}
-          <div className="space-y-4">
-            <div>
-              <p className="text-sm text-primary-foreground/80 mb-1">Email Us:</p>
+            <div className="pt-2">
+              <p className="text-white/80">Email Us:</p>
               <a
                 href="mailto:Info@dallas-dumpster.com"
-                className="flex items-start gap-3 hover:opacity-90 transition-opacity"
+                className="text-xl font-heading font-semibold text-white hover:text-primary transition-colors"
               >
-                <Mail className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                <span className="font-heading font-semibold text-lg text-primary-foreground">
-                  Info@dallas-dumpster.com
-                </span>
+                Info@dallas-dumpster.com
               </a>
             </div>
           </div>
 
-          {/* Logo + Hours */}
-          <div className="space-y-4">
-            <img src={logo} alt="Dallas Dumpster Rentals" className="h-16 w-auto" />
-            <div className="flex items-start gap-3">
-              <Clock className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-              <div>
-                <p className="text-sm text-primary-foreground/80 mb-1">Business Hours:</p>
-                <p className="text-primary-foreground">Mon-Fri: 8:00 AM - 7:00 PM</p>
-                <p className="text-primary-foreground">Sat: 09:00 AM - 1:00 PM</p>
-              </div>
-            </div>
+          {/* Center - Logo */}
+          <div className="flex justify-center">
+            <img src={logo} alt="Dallas Dumpster Rentals" className="h-28 w-auto" />
+          </div>
+
+          {/* Right - Business Hours */}
+          <div className="text-center md:text-right space-y-2">
+            <p className="text-primary font-heading font-semibold text-lg">Business Hours:</p>
+            <p className="text-white font-medium">Mon-Fri: 8:00 AM - 7:00 PM</p>
+            <p className="text-white font-medium">Sat: 09:00 AM - 1:00 PM</p>
           </div>
         </div>
+      </div>
 
-        {/* Footer Links */}
-        <div className="mt-10 pt-8 border-t border-brand-gray/30">
-          <nav className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
+      {/* Footer Links */}
+      <div className="border-t border-white/20">
+        <div className="container mx-auto py-6">
+          <nav className="flex flex-wrap items-center justify-center gap-6 md:gap-10">
             {footerLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
-                className="text-sm text-primary-foreground/80 hover:text-primary transition-colors"
+                className="text-sm text-white/90 hover:text-primary transition-colors"
               >
                 {link.label}
               </a>
             ))}
           </nav>
+        </div>
+      </div>
+
+      {/* Copyright Bar */}
+      <div className="bg-brand-dark py-4">
+        <div className="container mx-auto">
+          <p className="text-center text-sm text-white/80">
+            © {new Date().getFullYear()} Dallas Dumpster Rentals All rights reserved
+          </p>
         </div>
       </div>
     </footer>
