@@ -9,7 +9,7 @@ const FinalCTA = () => {
       <div className="container mx-auto text-center">
         <div className="max-w-2xl mx-auto space-y-6 animate-fade-in">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold">
-            Book Your Richardson Dumpster Rental Today
+            Dumpster Rentals in Richardson for Every Project
           </h2>
           <p className="text-lg text-white/90">
             Fast delivery, transparent pricing, and easy online booking. Get your roll-off dumpster in Richardson, TX—reserve yours now.
