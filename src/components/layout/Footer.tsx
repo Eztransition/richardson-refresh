@@ -23,7 +23,7 @@ const Footer = () => {
               href="tel:9726456731" 
               className="block text-lg font-heading font-bold text-white hover:text-white/80 transition-colors"
             >
-              972-645-6731
+              (972) 645-6731
             </a>
             <div className="pt-2">
               <p className="text-white/80 text-sm">Email Us:</p>
