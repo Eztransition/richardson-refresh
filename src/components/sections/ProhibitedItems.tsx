@@ -27,10 +27,10 @@ const ProhibitedItems = () => {
 
               <div className="flex-1">
                 <h3 className="text-xl font-heading font-bold text-foreground mb-3">
-                  Acceptable & Prohibited Items
+                  Richardson Dumpster Rental: Acceptable & Prohibited Items
                 </h3>
                 <p className="text-muted-foreground mb-4">
-                  For safety and environmental compliance, certain items cannot be placed in our dumpsters. Hazardous materials and liquids are strictly prohibited.
+                  For safety and environmental compliance in Richardson, TX, certain items cannot be placed in our dumpsters. Hazardous materials and liquids are strictly prohibited.
                 </p>
 
                 <div className="mb-6">
