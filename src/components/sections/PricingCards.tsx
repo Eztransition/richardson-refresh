@@ -62,7 +62,11 @@ const sizeGuide = [
   { size: "20-yard", use: "Major renovations, roofing, construction debris removal", image: dumpster20Yard },
 ];
 
-const PricingCards = () => {
+interface PricingCardsProps {
+  location?: string;
+}
+
+const PricingCards = ({ location = "Richardson" }: PricingCardsProps) => {
   return (
     <section className="py-16 lg:py-24 bg-background">
       <div className="container mx-auto">
@@ -72,7 +76,7 @@ const PricingCards = () => {
             Right Size, Right Price
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Choose the perfect roll-off dumpster for your Richardson project. All prices include delivery, pickup, and disposal.
+            Choose the perfect roll-off dumpster for your {location} project. All prices include delivery, pickup, and disposal.
           </p>
         </div>
 
@@ -153,10 +157,10 @@ const PricingCards = () => {
         {/* Size Helper Module */}
         <div className="bg-brand-surface rounded-xl p-6 lg:p-8 animate-fade-in" style={{ animationDelay: "0.4s" }}>
           <h3 className="text-xl font-heading font-bold text-foreground mb-4">
-            Quick Size Guide for Richardson Projects
+            Quick Size Guide for {location} Projects
           </h3>
           <p className="text-muted-foreground mb-6">
-            Not sure which size fits your Richardson home project? Here's a quick breakdown based on typical jobs in the area—from garage decluttering to full home renovations.
+            Not sure which size fits your {location} home project? Here's a quick breakdown based on typical jobs in the area—from garage decluttering to full home renovations.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">

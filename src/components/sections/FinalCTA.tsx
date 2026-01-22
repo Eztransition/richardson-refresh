@@ -3,16 +3,21 @@ import { Button } from "@/components/ui/button";
 
 const BOOKING_URL = "https://link.eztransition.com/booking/dallas-dumpster-rentals-mj6zf8sxcb";
 
-const FinalCTA = () => {
+interface FinalCTAProps {
+  location?: string;
+  state?: string;
+}
+
+const FinalCTA = ({ location = "Richardson", state = "TX" }: FinalCTAProps) => {
   return (
     <section className="py-12 lg:py-20 bg-gradient-to-br from-primary via-primary/90 to-cyan-600 text-white">
       <div className="container mx-auto text-center">
         <div className="max-w-2xl mx-auto space-y-6 animate-fade-in">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold">
-            Dumpster Rentals in Richardson for Every Project
+            Dumpster Rentals in {location} for Every Project
           </h2>
           <p className="text-lg text-white/90">
-            Fast delivery, transparent pricing, and easy online booking. Get your roll-off dumpster in Richardson, TX—reserve yours now.
+            Fast delivery, transparent pricing, and easy online booking. Get your roll-off dumpster in {location}, {state}—reserve yours now.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">

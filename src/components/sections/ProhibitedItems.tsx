@@ -12,7 +12,12 @@ const prohibitedItems = [
   "All liquids",
 ];
 
-const ProhibitedItems = () => {
+interface ProhibitedItemsProps {
+  location?: string;
+  state?: string;
+}
+
+const ProhibitedItems = ({ location = "Richardson", state = "TX" }: ProhibitedItemsProps) => {
   return (
     <section className="py-12 lg:py-16 bg-background">
       <div className="container mx-auto">
@@ -27,10 +32,10 @@ const ProhibitedItems = () => {
 
               <div className="flex-1">
                 <h3 className="text-xl font-heading font-bold text-foreground mb-3">
-                  Richardson Dumpster Rental: Acceptable & Prohibited Items
+                  {location} Dumpster Rental: Acceptable & Prohibited Items
                 </h3>
                 <p className="text-muted-foreground mb-4">
-                  For safety and environmental compliance in Richardson, TX, certain items cannot be placed in our dumpsters. Hazardous materials and liquids are strictly prohibited.
+                  For safety and environmental compliance in {location}, {state}, certain items cannot be placed in our dumpsters. Hazardous materials and liquids are strictly prohibited.
                 </p>
 
                 <div className="mb-6">

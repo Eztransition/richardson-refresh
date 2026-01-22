@@ -1,49 +1,54 @@
 import { Home, Warehouse, Hammer, HardHat, Trees, Trash2 } from "lucide-react";
 
-const services = [
-  {
-    icon: Home,
-    title: "Home Cleanouts in Richardson, TX",
-    description: "Declutter bedrooms, basements, and living spaces during your Richardson home cleanout.",
-  },
-  {
-    icon: Warehouse,
-    title: "Garage Cleanouts in Richardson, TX",
-    description: "Clear out years of accumulated items from your Richardson garage quickly and easily.",
-  },
-  {
-    icon: Hammer,
-    title: "Remodeling Debris in Richardson, TX",
-    description: "Handle drywall, flooring, cabinets, and other renovation waste from your Richardson remodel.",
-  },
-  {
-    icon: HardHat,
-    title: "Roofing Debris in Richardson, TX",
-    description: "Safely dispose of shingles and roofing materials from your Richardson roof replacement.",
-  },
-  {
-    icon: Trash2,
-    title: "Construction Jobs in Richardson, TX",
-    description: "Keep your Richardson construction site clean with reliable dumpster service.",
-  },
-  {
-    icon: Trees,
-    title: "Yard & Landscape Cleanup in Richardson, TX",
-    description: "Remove branches, brush, and landscaping debris from your Richardson property.",
-  },
-];
+interface ServicesProps {
+  location?: string;
+  state?: string;
+}
 
-const Services = () => {
+const Services = ({ location = "Richardson", state = "TX" }: ServicesProps) => {
+  const services = [
+    {
+      icon: Home,
+      title: `Home Cleanouts in ${location}, ${state}`,
+      description: `Declutter bedrooms, basements, and living spaces during your ${location} home cleanout.`,
+    },
+    {
+      icon: Warehouse,
+      title: `Garage Cleanouts in ${location}, ${state}`,
+      description: `Clear out years of accumulated items from your ${location} garage quickly and easily.`,
+    },
+    {
+      icon: Hammer,
+      title: `Remodeling Debris in ${location}, ${state}`,
+      description: `Handle drywall, flooring, cabinets, and other renovation waste from your ${location} remodel.`,
+    },
+    {
+      icon: HardHat,
+      title: `Roofing Debris in ${location}, ${state}`,
+      description: `Safely dispose of shingles and roofing materials from your ${location} roof replacement.`,
+    },
+    {
+      icon: Trash2,
+      title: `Construction Jobs in ${location}, ${state}`,
+      description: `Keep your ${location} construction site clean with reliable dumpster service.`,
+    },
+    {
+      icon: Trees,
+      title: `Yard & Landscape Cleanup in ${location}, ${state}`,
+      description: `Remove branches, brush, and landscaping debris from your ${location} property.`,
+    },
+  ];
+
   return (
     <section className="py-16 lg:py-24 bg-brand-surface">
       <div className="container mx-auto">
         {/* Section Header */}
         <div className="text-center mb-12 animate-fade-in">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-foreground mb-4">
-            Richardson, TX Dumpster Rentals for Every Project
+            {location}, {state} Dumpster Rentals for Every Project
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            From small home cleanouts to major construction projects, we've got the right dumpster for your Richardson job.
+            From small home cleanouts to major construction projects, we've got the right dumpster for your {location} job.
           </p>
         </div>
 
