@@ -5,7 +5,7 @@ const BOOKING_URL = "https://link.eztransition.com/booking/dallas-dumpster-renta
 
 const FinalCTA = () => {
   return (
-    <section className="py-16 lg:py-20 bg-gradient-to-br from-primary via-primary/90 to-cyan-600 text-white">
+    <section className="py-12 lg:py-20 bg-gradient-to-br from-primary via-primary/90 to-cyan-600 text-white">
       <div className="container mx-auto text-center">
         <div className="max-w-2xl mx-auto space-y-6 animate-fade-in">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold">
