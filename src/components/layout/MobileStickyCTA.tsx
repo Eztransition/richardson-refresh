@@ -16,7 +16,7 @@ const MobileStickyCTA = () => {
         <Button
           asChild
           variant="outline"
-          className="flex-1 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-brand-dark font-heading font-semibold text-lg py-4 h-14"
+          className="flex-1 border-white text-white hover:bg-white hover:text-brand-dark font-heading font-semibold text-lg py-4 h-14"
         >
           <a href="tel:9726456731">
             <Phone className="mr-2 h-6 w-6" />
