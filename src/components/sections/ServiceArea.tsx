@@ -1,5 +1,6 @@
 import { MapPin, Check } from "lucide-react";
-import { allServiceAreas, getOtherServiceAreas } from "@/config/locations";
+import { Link } from "react-router-dom";
+import { getOtherServiceAreas, getLocationByName } from "@/config/locations";
 
 interface ServiceAreaProps {
   location?: string;
@@ -35,16 +36,22 @@ const ServiceArea = ({ location = "Richardson", description }: ServiceAreaProps)
                 We also serve these nearby communities:
               </p>
               <div className="flex flex-wrap justify-center gap-3">
-                {nearbyAreas.map((area, index) => (
-                  <div
-                    key={area}
-                    className="inline-flex items-center gap-1.5 bg-brand-surface px-3 py-1.5 rounded-lg text-sm font-medium text-foreground animate-fade-in"
-                    style={{ animationDelay: `${0.2 + index * 0.03}s` }}
-                  >
-                    <Check className="h-3.5 w-3.5 text-secondary" />
-                    {area}
-                  </div>
-                ))}
+                {nearbyAreas.map((area, index) => {
+                  const locationData = getLocationByName(area);
+                  const href = locationData ? `/dumpster-rental-${locationData.slug}` : "#";
+                  
+                  return (
+                    <Link
+                      key={area}
+                      to={href}
+                      className="inline-flex items-center gap-1.5 bg-brand-surface px-3 py-1.5 rounded-lg text-sm font-medium text-foreground hover:bg-primary/10 hover:text-primary transition-colors animate-fade-in"
+                      style={{ animationDelay: `${0.2 + index * 0.03}s` }}
+                    >
+                      <Check className="h-3.5 w-3.5 text-secondary" />
+                      {area}
+                    </Link>
+                  );
+                })}
               </div>
             </div>
           </div>
