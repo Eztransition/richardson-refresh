@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/richardson-hero.jpg";
 
 const trustItems = [
-  { icon: Calendar, label: "Simple online booking" },
+  { icon: Calendar, label: "Online booking" },
   { icon: DollarSign, label: "Transparent pricing" },
   { icon: Clock, label: "Flexible rental days" },
   { icon: Truck, label: "Fast pickup on request" },
