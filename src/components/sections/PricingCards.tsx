@@ -3,6 +3,10 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
+import dumpster10Yard from "@/assets/dumpster-10-yard.jpg";
+import dumpster15Yard from "@/assets/dumpster-15-yard.jpg";
+import dumpster20Yard from "@/assets/dumpster-20-yard.jpg";
+
 const BOOKING_URL = "https://link.eztransition.com/booking/dallas-dumpster-rentals-mj6zf8sxcb";
 const MORE_INFO_URL = "https://dallas-dumpster.com/dumpster-size/";
 
@@ -53,9 +57,9 @@ const dumpsters: DumpsterOption[] = [
 ];
 
 const sizeGuide = [
-  { size: "10-yard", use: "Small cleanouts, yard debris, minor garage decluttering" },
-  { size: "15-yard", use: "Medium cleanouts, light remodel waste, small roofing jobs" },
-  { size: "20-yard", use: "Major renovations, roofing, construction debris removal" },
+  { size: "10-yard", use: "Small cleanouts, yard debris, minor garage decluttering", image: dumpster10Yard },
+  { size: "15-yard", use: "Medium cleanouts, light remodel waste, small roofing jobs", image: dumpster15Yard },
+  { size: "20-yard", use: "Major renovations, roofing, construction debris removal", image: dumpster20Yard },
 ];
 
 const PricingCards = () => {
@@ -161,6 +165,11 @@ const PricingCards = () => {
                 key={guide.size}
                 className="bg-background rounded-lg p-4 border border-border"
               >
+                <img 
+                  src={guide.image} 
+                  alt={`${guide.size} dumpster dimensions`}
+                  className="w-full h-auto mb-3"
+                />
                 <span className="inline-block px-3 py-1 bg-primary/10 text-primary font-heading font-semibold text-sm rounded-full mb-2">
                   {guide.size}
                 </span>
