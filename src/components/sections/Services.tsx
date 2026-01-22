@@ -1,35 +1,47 @@
 import { Home, Warehouse, Hammer, HardHat, Trees, Trash2 } from "lucide-react";
+import serviceHomeCleanout from "@/assets/service-home-cleanout.jpg";
+import serviceGarageCleanout from "@/assets/service-garage-cleanout.jpg";
+import serviceRemodeling from "@/assets/service-remodeling.jpg";
+import serviceRoofing from "@/assets/service-roofing.jpg";
+import serviceConstruction from "@/assets/service-construction.jpg";
+import serviceYardCleanup from "@/assets/service-yard-cleanup.jpg";
 
 const services = [
   {
     icon: Home,
     title: "Home Cleanouts in Richardson, TX",
     description: "Declutter bedrooms, basements, and living spaces during your Richardson home cleanout.",
+    image: serviceHomeCleanout,
   },
   {
     icon: Warehouse,
     title: "Garage Cleanouts in Richardson, TX",
     description: "Clear out years of accumulated items from your Richardson garage quickly and easily.",
+    image: serviceGarageCleanout,
   },
   {
     icon: Hammer,
     title: "Remodeling Debris in Richardson, TX",
     description: "Handle drywall, flooring, cabinets, and other renovation waste from your Richardson remodel.",
+    image: serviceRemodeling,
   },
   {
     icon: HardHat,
     title: "Roofing Debris in Richardson, TX",
     description: "Safely dispose of shingles and roofing materials from your Richardson roof replacement.",
+    image: serviceRoofing,
   },
   {
     icon: Trash2,
     title: "Construction Jobs in Richardson, TX",
     description: "Keep your Richardson construction site clean with reliable dumpster service.",
+    image: serviceConstruction,
   },
   {
     icon: Trees,
     title: "Yard & Landscape Cleanup in Richardson, TX",
     description: "Remove branches, brush, and landscaping debris from your Richardson property.",
+    image: serviceYardCleanup,
   },
 ];
 
@@ -52,18 +64,31 @@ const Services = () => {
           {services.map((service, index) => (
             <div
               key={service.title}
-              className="group bg-background rounded-xl p-6 shadow-card hover:shadow-card-hover transition-all duration-300 border border-border hover:border-primary/30 animate-fade-in"
+              className="group bg-background rounded-xl overflow-hidden shadow-card hover:shadow-card-hover transition-all duration-300 border border-border hover:border-primary/30 animate-fade-in"
               style={{ animationDelay: `${0.1 + index * 0.05}s` }}
             >
-              <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                <service.icon className="h-7 w-7 text-primary" />
+              {/* Image */}
+              <div className="relative h-48 overflow-hidden">
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                {/* Icon overlay */}
+                <div className="absolute top-4 left-4 w-12 h-12 rounded-xl bg-white/90 backdrop-blur-sm flex items-center justify-center shadow-md">
+                  <service.icon className="h-6 w-6 text-primary" />
+                </div>
               </div>
-              <h3 className="text-xl font-heading font-bold text-foreground mb-2">
-                {service.title}
-              </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                {service.description}
-              </p>
+              
+              {/* Content */}
+              <div className="p-6">
+                <h3 className="text-xl font-heading font-bold text-foreground mb-2">
+                  {service.title}
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {service.description}
+                </p>
+              </div>
             </div>
           ))}
         </div>
