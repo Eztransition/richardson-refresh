@@ -45,7 +45,7 @@ const Services = ({ location = "Richardson", state = "TX" }: ServicesProps) => {
         {/* Section Header */}
         <div className="text-center mb-12 animate-fade-in">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-foreground mb-4">
-            {location}, {state} Dumpster Rentals for Every Project
+            Dumpster Rentals in {location}, {state} for Every Project
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             From small home cleanouts to major construction projects, we've got the right dumpster for your {location} job.
