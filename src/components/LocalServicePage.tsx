@@ -9,6 +9,7 @@ import ServiceArea from "@/components/sections/ServiceArea";
 import ProhibitedItems from "@/components/sections/ProhibitedItems";
 import FAQSection from "@/components/sections/FAQSection";
 import FinalCTA from "@/components/sections/FinalCTA";
+import LocalBusinessSchema from "@/components/LocalBusinessSchema";
 import { useEffect } from "react";
 import { LocationConfig } from "@/config/locations";
 
@@ -30,6 +31,7 @@ const LocalServicePage = ({ location }: LocalServicePageProps) => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <LocalBusinessSchema location={location.name} state={location.state} />
       <Header />
       
       <main className="flex-1">
