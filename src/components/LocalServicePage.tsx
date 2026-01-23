@@ -9,6 +9,7 @@ import ServiceArea from "@/components/sections/ServiceArea";
 import ProhibitedItems from "@/components/sections/ProhibitedItems";
 import FAQSection from "@/components/sections/FAQSection";
 import FinalCTA from "@/components/sections/FinalCTA";
+import GoogleMap from "@/components/sections/GoogleMap";
 import LocalBusinessSchema from "@/components/LocalBusinessSchema";
 import { useEffect } from "react";
 import { LocationConfig } from "@/config/locations";
@@ -49,6 +50,7 @@ const LocalServicePage = ({ location }: LocalServicePageProps) => {
         />
         <ProhibitedItems location={location.name} state={location.state} />
         <FAQSection location={location.name} />
+        <GoogleMap location={location.name} />
         <FinalCTA location={location.name} state={location.state} />
       </main>
 
