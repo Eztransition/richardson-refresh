@@ -4,7 +4,7 @@ const footerLinks = [
   { label: "Home", href: "https://dallas-dumpster.com/" },
   { label: "About", href: "https://dallas-dumpster.com/about-us/" },
   { label: "Service Area", href: "https://dallas-dumpster.com/service-area/" },
-  { label: "FAQS", href: "https://dallas-dumpster.com/faqs/" },
+  { label: "FAQS", href: "https://dallas-dumpster.com/frequently-asked-questions/" },
   { label: "Gallery", href: "https://dallas-dumpster.com/gallery/" },
   { label: "Contact", href: "https://dallas-dumpster.com/contact-us/" },
   { label: "Privacy Policy", href: "https://dallas-dumpster.com/privacy-policy/" },
