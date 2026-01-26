@@ -39,10 +39,10 @@ const ServiceArea = () => {
                 <Button
                   asChild
                   size="lg"
-                  className="bg-lime-500 hover:bg-lime-600 text-brand-dark font-bold h-14 px-10 text-lg"
+                  className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-heading font-semibold text-lg px-12 py-4 h-14 shadow-lg hover:shadow-xl transition-all"
                 >
                   <a
-                    href="https://app.eztransition.co/dallas-dumpsters/order"
+                    href="https://link.eztransition.com/booking/dallas-dumpster-rentals-mj6zf8sxcb"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
