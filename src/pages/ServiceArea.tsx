@@ -184,24 +184,24 @@ const ServiceArea = () => {
         </section>
 
         {/* Final CTA */}
-        <section className="relative py-16 md:py-20 bg-gradient-to-br from-primary via-primary to-cyan-600 overflow-hidden">
-          <div className="absolute inset-0 bg-black/10" />
-          <div className="container mx-auto px-4 relative z-10">
-            <div className="max-w-3xl mx-auto text-center text-white">
-              <h2 className="text-2xl md:text-4xl font-bold mb-4">
+        <section className="py-12 lg:py-20 bg-gradient-to-br from-primary via-primary/90 to-cyan-600 text-white">
+          <div className="container mx-auto text-center">
+            <div className="max-w-2xl mx-auto space-y-6 animate-fade-in">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold">
                 Ready to Book Your Dumpster?
               </h2>
-              <p className="text-lg opacity-90 mb-8">
-                Get fast, reliable roll-off dumpster delivery anywhere in the Dallas-Fort Worth area. Book online in minutes or call us today.
+              <p className="text-lg text-white/90">
+                Fast delivery, transparent pricing, and easy online booking. Get your roll-off dumpster anywhere in the Dallas-Fort Worth area—reserve yours now.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+
+              <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
                 <Button
                   asChild
                   size="lg"
-                  className="bg-lime-500 hover:bg-lime-600 text-brand-dark font-bold h-14 px-12 text-lg"
+                  className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-heading font-semibold text-lg px-12 py-4 h-14 shadow-lg hover:shadow-xl transition-all"
                 >
                   <a
-                    href="https://app.eztransition.co/dallas-dumpsters/order"
+                    href="https://link.eztransition.com/booking/dallas-dumpster-rentals-mj6zf8sxcb"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -212,11 +212,11 @@ const ServiceArea = () => {
                   asChild
                   size="lg"
                   variant="outline"
-                  className="bg-white/20 border-white/40 text-white hover:bg-white/30 font-bold h-14 px-12 text-lg"
+                  className="border-2 border-white/20 text-white bg-white/20 hover:bg-white hover:text-primary font-heading font-semibold text-lg px-10 py-4 h-14 transition-all"
                 >
                   <a href="tel:9726456731">
-                    <Phone className="mr-2 h-5 w-5" />
-                    (972) 645-6731
+                    <Phone className="mr-2 h-6 w-6" />
+                    Call (972) 645-6731
                   </a>
                 </Button>
               </div>
