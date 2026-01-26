@@ -68,7 +68,7 @@ const ServiceArea = () => {
                 <Button
                   asChild
                   size="lg"
-                  className="bg-white text-muted-foreground hover:bg-white/90 font-heading font-semibold text-lg px-10 py-4 h-14 shadow-lg transition-all"
+                  className="bg-white text-secondary-foreground hover:bg-white/90 font-heading font-semibold text-lg px-10 py-4 h-14 shadow-lg transition-all"
                 >
                   <a href="tel:9726456731">
                     <Phone className="mr-2 h-6 w-6" />
