@@ -1,9 +1,16 @@
+import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
 
-const footerLinks = [
+interface FooterLink {
+  label: string;
+  href: string;
+  isInternal?: boolean;
+}
+
+const footerLinks: FooterLink[] = [
   { label: "Home", href: "https://dallas-dumpster.com/" },
   { label: "About", href: "https://dallas-dumpster.com/about-us/" },
-  { label: "Service Area", href: "https://dallas-dumpster.com/service-area/" },
+  { label: "Service Area", href: "/", isInternal: true },
   { label: "FAQS", href: "https://dallas-dumpster.com/frequently-asked-questions/" },
   { label: "Gallery", href: "https://dallas-dumpster.com/gallery/" },
   { label: "Contact", href: "https://dallas-dumpster.com/contact-us/" },
@@ -55,13 +62,23 @@ const Footer = () => {
         <div className="container mx-auto py-6">
           <nav className="flex flex-wrap items-center justify-center gap-6 md:gap-10">
             {footerLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                className="text-sm text-white/90 hover:text-primary transition-colors"
-              >
-                {link.label}
-              </a>
+              link.isInternal ? (
+                <Link
+                  key={link.label}
+                  to={link.href}
+                  className="text-sm text-white/90 hover:text-primary transition-colors"
+                >
+                  {link.label}
+                </Link>
+              ) : (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  className="text-sm text-white/90 hover:text-primary transition-colors"
+                >
+                  {link.label}
+                </a>
+              )
             ))}
           </nav>
         </div>
