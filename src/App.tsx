@@ -40,7 +40,7 @@ const App = () => (
       <BrowserRouter>
         <ScrollToTop />
         <Routes>
-          <Route path="/" element={<Index />} />
+          <Route path="/" element={<ServiceArea />} />
           <Route path="/dumpster-rental-richardson-tx" element={<RichardsonTX />} />
           <Route path="/dumpster-rental-dallas-tx" element={<DallasTX />} />
           <Route path="/dumpster-rental-forney-tx" element={<ForneyTX />} />
