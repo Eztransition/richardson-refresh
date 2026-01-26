@@ -13,7 +13,7 @@ const navLinks: NavLink[] = [
   { label: "Home", href: "https://dallas-dumpster.com/" },
   { label: "Dumpster Size", href: "https://dallas-dumpster.com/dumpster-size/" },
   { label: "Service Area", href: "/", isInternal: true },
-  { label: "FAQs", href: "https://dallas-dumpster.com/faqs/" },
+  { label: "FAQs", href: "https://dallas-dumpster.com/frequently-asked-questions/" },
   { label: "Acceptable & Prohibited Items", href: "https://dallas-dumpster.com/acceptable-prohibited-items/" },
   { label: "Gallery", href: "https://dallas-dumpster.com/gallery/" },
   { label: "Contact Us", href: "https://dallas-dumpster.com/contact-us/" },
