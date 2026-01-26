@@ -1,11 +1,18 @@
 import { useState } from "react";
 import { Menu, X, Phone, Clock, Calendar } from "lucide-react";
+import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
 
-const navLinks = [
+interface NavLink {
+  label: string;
+  href: string;
+  isInternal?: boolean;
+}
+
+const navLinks: NavLink[] = [
   { label: "Home", href: "https://dallas-dumpster.com/" },
   { label: "Dumpster Size", href: "https://dallas-dumpster.com/dumpster-size/" },
-  { label: "Service Area", href: "https://dallas-dumpster.com/service-area/" },
+  { label: "Service Area", href: "/", isInternal: true },
   { label: "FAQs", href: "https://dallas-dumpster.com/faqs/" },
   { label: "Acceptable & Prohibited Items", href: "https://dallas-dumpster.com/acceptable-prohibited-items/" },
   { label: "Gallery", href: "https://dallas-dumpster.com/gallery/" },
@@ -81,12 +88,21 @@ const Header = () => {
           <ul className="flex items-center justify-center gap-1">
             {navLinks.map((link) => (
               <li key={link.label}>
-                <a
-                  href={link.href}
-                  className="block px-4 py-4 text-sm font-heading font-medium uppercase tracking-wide text-primary-foreground hover:bg-primary/10 transition-colors"
-                >
-                  {link.label}
-                </a>
+                {link.isInternal ? (
+                  <Link
+                    to={link.href}
+                    className="block px-4 py-4 text-sm font-heading font-medium uppercase tracking-wide text-primary-foreground hover:bg-primary/10 transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                ) : (
+                  <a
+                    href={link.href}
+                    className="block px-4 py-4 text-sm font-heading font-medium uppercase tracking-wide text-primary-foreground hover:bg-primary/10 transition-colors"
+                  >
+                    {link.label}
+                  </a>
+                )}
               </li>
             ))}
           </ul>
@@ -100,13 +116,23 @@ const Header = () => {
             <ul className="flex flex-col">
               {navLinks.map((link) => (
                 <li key={link.label}>
-                  <a
-                    href={link.href}
-                    className="block px-4 py-3 text-sm font-heading font-medium uppercase tracking-wide text-primary-foreground hover:bg-primary/10 transition-colors"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    {link.label}
-                  </a>
+                  {link.isInternal ? (
+                    <Link
+                      to={link.href}
+                      className="block px-4 py-3 text-sm font-heading font-medium uppercase tracking-wide text-primary-foreground hover:bg-primary/10 transition-colors"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      {link.label}
+                    </Link>
+                  ) : (
+                    <a
+                      href={link.href}
+                      className="block px-4 py-3 text-sm font-heading font-medium uppercase tracking-wide text-primary-foreground hover:bg-primary/10 transition-colors"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      {link.label}
+                    </a>
+                  )}
                 </li>
               ))}
             </ul>
