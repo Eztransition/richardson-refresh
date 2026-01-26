@@ -4,8 +4,9 @@ import MobileStickyCTA from "@/components/layout/MobileStickyCTA";
 import { Button } from "@/components/ui/button";
 import { locations } from "@/config/locations";
 import { Link } from "react-router-dom";
-import { MapPin, Phone, Truck, Clock, CheckCircle } from "lucide-react";
+import { MapPin, Phone, Truck, Clock, CheckCircle, Building2, Package, Zap, Calendar } from "lucide-react";
 import { useEffect } from "react";
+import heroImage from "@/assets/richardson-hero.jpg";
 
 const ServiceArea = () => {
   useEffect(() => {
@@ -19,23 +20,38 @@ const ServiceArea = () => {
     }
   }, []);
 
+  const stats = [
+    { value: "22", label: "Communities Served", icon: Building2 },
+    { value: "3", label: "Dumpster Sizes", icon: Package },
+    { value: "Same-Day", label: "Delivery Available", icon: Zap },
+    { value: "7 Days", label: "Included Rental", icon: Calendar },
+  ];
+
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
 
       <main className="flex-1">
-        {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-primary via-primary to-cyan-600 py-16 md:py-24">
-          <div className="absolute inset-0 bg-black/10" />
-          <div className="container mx-auto px-4 relative z-10">
+        {/* Hero Section with Background Image */}
+        <section className="relative min-h-[600px] md:min-h-[700px] flex items-center">
+          {/* Background Image */}
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{ backgroundImage: `url(${heroImage})` }}
+          />
+          {/* Dark Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/80" />
+          
+          <div className="container mx-auto px-4 relative z-10 py-16 md:py-24">
             <div className="max-w-4xl mx-auto text-center text-white">
-              <h1 className="text-3xl md:text-5xl font-bold mb-6">
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-heading font-bold mb-6 animate-fade-in">
                 Dumpster Rental Service Areas
               </h1>
-              <p className="text-lg md:text-xl opacity-90 mb-8">
+              <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: "0.1s" }}>
                 Proudly serving 22 communities across the Dallas-Fort Worth metroplex with fast, reliable roll-off dumpster delivery.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-fade-in" style={{ animationDelay: "0.2s" }}>
                 <Button
                   asChild
                   size="lg"
@@ -53,37 +69,31 @@ const ServiceArea = () => {
                   asChild
                   size="lg"
                   variant="outline"
-                  className="bg-white/20 border-white/40 text-white hover:bg-white/30 font-bold h-14 px-10 text-lg"
+                  className="border-2 border-white/30 text-white bg-white/10 hover:bg-white hover:text-primary font-heading font-semibold text-lg px-10 py-4 h-14 backdrop-blur-sm transition-all"
                 >
                   <a href="tel:9726456731">
-                    <Phone className="mr-2 h-5 w-5" />
+                    <Phone className="mr-2 h-6 w-6" />
                     (972) 645-6731
                   </a>
                 </Button>
               </div>
-            </div>
-          </div>
-        </section>
 
-        {/* Stats Bar */}
-        <section className="bg-brand-dark py-8">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-white">
-              <div>
-                <div className="text-3xl md:text-4xl font-bold text-lime-400">22</div>
-                <div className="text-sm md:text-base opacity-80">Communities Served</div>
-              </div>
-              <div>
-                <div className="text-3xl md:text-4xl font-bold text-lime-400">3</div>
-                <div className="text-sm md:text-base opacity-80">Dumpster Sizes</div>
-              </div>
-              <div>
-                <div className="text-3xl md:text-4xl font-bold text-lime-400">Same-Day</div>
-                <div className="text-sm md:text-base opacity-80">Delivery Available</div>
-              </div>
-              <div>
-                <div className="text-3xl md:text-4xl font-bold text-lime-400">7 Days</div>
-                <div className="text-sm md:text-base opacity-80">Included Rental</div>
+              {/* Stats Badges */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 animate-fade-in" style={{ animationDelay: "0.3s" }}>
+                {stats.map((stat, index) => (
+                  <div
+                    key={index}
+                    className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4 md:p-6 hover:bg-white/15 transition-all duration-300"
+                  >
+                    <stat.icon className="h-6 w-6 md:h-8 md:w-8 text-secondary mx-auto mb-2" />
+                    <div className="text-2xl md:text-3xl font-heading font-bold text-white">
+                      {stat.value}
+                    </div>
+                    <div className="text-xs md:text-sm text-white/80 font-medium">
+                      {stat.label}
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
