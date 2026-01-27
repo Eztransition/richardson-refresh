@@ -16,6 +16,7 @@ const navLinks: NavLink[] = [
   { label: "FAQs", href: "https://dallas-dumpster.com/frequently-asked-questions/" },
   { label: "Acceptable & Prohibited Items", href: "https://dallas-dumpster.com/acceptable-prohibited-items/" },
   { label: "Gallery", href: "https://dallas-dumpster.com/gallery/" },
+  { label: "Blog", href: "https://blog.dallas-dumpster.com/" },
   { label: "Contact Us", href: "https://dallas-dumpster.com/contact-us/" },
 ];
 

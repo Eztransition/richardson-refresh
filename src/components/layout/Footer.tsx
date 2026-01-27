@@ -13,6 +13,7 @@ const footerLinks: FooterLink[] = [
   { label: "Service Area", href: "https://local.dallas-dumpster.com/" },
   { label: "FAQS", href: "https://dallas-dumpster.com/frequently-asked-questions/" },
   { label: "Gallery", href: "https://dallas-dumpster.com/gallery/" },
+  { label: "Blog", href: "https://blog.dallas-dumpster.com/" },
   { label: "Contact", href: "https://dallas-dumpster.com/contact-us/" },
   { label: "Privacy Policy", href: "https://dallas-dumpster.com/privacy-policy/" },
 ];
