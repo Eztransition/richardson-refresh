@@ -1,7 +1,7 @@
 import { Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const BOOKING_URL = "https://link.eztransition.com/booking/dallas-dumpster-rentals-mj6zf8sxcb";
+const BOOKING_URL = "https://link.eztransition.com/rentals/dallas-dumpster-rentals-6xqeln7m6zi";
 
 const MobileStickyCTA = () => {
   return (
