@@ -7,7 +7,7 @@ import dumpster10Yard from "@/assets/dumpster-10-yard.jpg";
 import dumpster15Yard from "@/assets/dumpster-15-yard.jpg";
 import dumpster20Yard from "@/assets/dumpster-20-yard.jpg";
 
-const BOOKING_URL = "https://link.eztransition.com/rentals/dallas-dumpster-rentals-6xqeln7m6zi";
+const BOOKING_URL = "https://link.eztransition.com/booking/dallas-dumpster-rentals-mj6zf8sxcb";
 const MORE_INFO_URL = "https://dallas-dumpster.com/dumpster-size/";
 
 interface DumpsterOption {

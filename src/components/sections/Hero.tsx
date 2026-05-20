@@ -9,7 +9,7 @@ const trustItems = [
   { icon: Truck, label: "Fast pickup on request" },
 ];
 
-const BOOKING_URL = "https://link.eztransition.com/rentals/dallas-dumpster-rentals-6xqeln7m6zi";
+const BOOKING_URL = "https://link.eztransition.com/booking/dallas-dumpster-rentals-mj6zf8sxcb";
 
 interface HeroProps {
   location?: string;
