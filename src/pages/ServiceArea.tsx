@@ -58,7 +58,7 @@ const ServiceArea = () => {
                   className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-heading font-semibold text-lg px-12 py-4 h-14 shadow-lg hover:shadow-xl transition-all"
                 >
                   <a
-                    href="https://link.eztransition.com/rentals/dallas-dumpster-rentals-6xqeln7m6zi"
+                    href="https://link.eztransition.com/booking/dallas-dumpster-rentals-mj6zf8sxcb"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -210,7 +210,7 @@ const ServiceArea = () => {
                   className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-heading font-semibold text-lg px-12 py-4 h-14 shadow-lg hover:shadow-xl transition-all"
                 >
                   <a
-                    href="https://link.eztransition.com/rentals/dallas-dumpster-rentals-6xqeln7m6zi"
+                    href="https://link.eztransition.com/booking/dallas-dumpster-rentals-mj6zf8sxcb"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
