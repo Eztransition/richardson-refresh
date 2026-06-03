@@ -28,6 +28,7 @@ import UniversityParkTX from "./pages/UniversityParkTX";
 import DeSotoTX from "./pages/DeSotoTX";
 import DuncanvilleTX from "./pages/DuncanvilleTX";
 import ServiceArea from "./pages/ServiceArea";
+import ThankYou from "./pages/ThankYou";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
