@@ -29,6 +29,7 @@ import DeSotoTX from "./pages/DeSotoTX";
 import DuncanvilleTX from "./pages/DuncanvilleTX";
 import ServiceArea from "./pages/ServiceArea";
 import ThankYou from "./pages/ThankYou";
+import HowToDisposeOfCouchDallas from "./pages/HowToDisposeOfCouchDallas";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
