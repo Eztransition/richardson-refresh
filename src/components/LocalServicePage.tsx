@@ -13,21 +13,33 @@ import GoogleMap from "@/components/sections/GoogleMap";
 import LocalBusinessSchema from "@/components/LocalBusinessSchema";
 import { useEffect } from "react";
 import { LocationConfig } from "@/config/locations";
+import { applyPageSeo, setJsonLd, removeJsonLd } from "@/lib/seo";
+import { getLocationFaqs } from "@/lib/faqs";
 
 interface LocalServicePageProps {
   location: LocationConfig;
 }
 
-const LocalServicePage = ({ location }: LocalServicePageProps) => {
+const LocalServicePage = ({ location }: LocationConfig extends never ? never : LocalServicePageProps) => {
   useEffect(() => {
-    // Update page title and meta for SEO
-    document.title = location.metaTitle;
-    
-    // Update meta description
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute("content", location.metaDescription);
-    }
+    applyPageSeo({
+      title: location.metaTitle,
+      description: location.metaDescription,
+      path: `/dumpster-rental-${location.slug}`,
+    });
+
+    const faqs = getLocationFaqs(location.name);
+    setJsonLd("faq-jsonld", {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: faqs.map((f) => ({
+        "@type": "Question",
+        name: f.question,
+        acceptedAnswer: { "@type": "Answer", text: f.answer },
+      })),
+    });
+
+    return () => removeJsonLd("faq-jsonld");
   }, [location]);
 
   return (
