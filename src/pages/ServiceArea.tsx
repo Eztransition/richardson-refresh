@@ -6,18 +6,17 @@ import { locations } from "@/config/locations";
 import { Link } from "react-router-dom";
 import { MapPin, Phone, Truck, Clock, CheckCircle, Building2, Package, Zap, Calendar } from "lucide-react";
 import { useEffect } from "react";
+import { applyPageSeo } from "@/lib/seo";
 import heroImage from "@/assets/richardson-hero.jpg";
 
 const ServiceArea = () => {
   useEffect(() => {
-    document.title = "Service Areas | Dumpster Rental Dallas-Fort Worth | Dallas Dumpster Rentals";
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute(
-        "content",
-        "Dallas Dumpster Rentals serves 22 communities across the Dallas-Fort Worth metroplex. Find dumpster rental services near you. Call (972) 645-6731 for fast delivery."
-      );
-    }
+    applyPageSeo({
+      title: "Dumpster Rental Service Areas | Dallas-Fort Worth",
+      description:
+        "Dallas Dumpster Rentals serves 22 communities across the Dallas-Fort Worth metroplex. Find dumpster rental services near you. Call (972) 645-6731.",
+      path: "/service-area",
+    });
   }, []);
 
   const stats = [

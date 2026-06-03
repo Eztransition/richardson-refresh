@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://local.dallas-dumpster.com/sitemap.xml
+Sitemap: https://richardson-revamp-joy.lovable.app/sitemap.xml
