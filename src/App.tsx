@@ -29,6 +29,7 @@ import DeSotoTX from "./pages/DeSotoTX";
 import DuncanvilleTX from "./pages/DuncanvilleTX";
 import ServiceArea from "./pages/ServiceArea";
 import ThankYou from "./pages/ThankYou";
+import HowToDisposeOfCouchDallas from "./pages/HowToDisposeOfCouchDallas";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -66,6 +67,7 @@ const App = () => (
           <Route path="/dumpster-rental-duncanville-tx" element={<DuncanvilleTX />} />
           <Route path="/service-area" element={<ServiceArea />} />
           <Route path="/thank-you" element={<ThankYou />} />
+          <Route path="/resources/how-to-dispose-of-a-couch-in-dallas" element={<HowToDisposeOfCouchDallas />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
