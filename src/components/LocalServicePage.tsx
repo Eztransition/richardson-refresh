@@ -20,7 +20,7 @@ interface LocalServicePageProps {
   location: LocationConfig;
 }
 
-const LocalServicePage = ({ location }: LocationConfig extends never ? never : LocalServicePageProps) => {
+const LocalServicePage = ({ location }: LocalServicePageProps) => {
   useEffect(() => {
     applyPageSeo({
       title: location.metaTitle,
