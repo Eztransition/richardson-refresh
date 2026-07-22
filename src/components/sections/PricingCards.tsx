@@ -25,9 +25,9 @@ interface DumpsterOption {
 const dumpsters: DumpsterOption[] = [
   {
     size: "10-Yard",
-    price: "$340.00",
+    price: "$355.00",
     dimensions: "14'L x 7'W x 4'H",
-    rentalTime: "1–4 Day Rental",
+    rentalTime: "1–3 Day Rental",
     includedWeight: "2,000 lbs included",
     additionalDays: "$20/day",
     extraWeight: "$45 per 1,000 lbs",
@@ -35,7 +35,7 @@ const dumpsters: DumpsterOption[] = [
   },
   {
     size: "15-Yard",
-    price: "$350.00",
+    price: "$365.00",
     dimensions: "14'L x 7'W x 4'H",
     rentalTime: "1–4 Day Rental",
     includedWeight: "2,000 lbs included",
@@ -45,7 +45,7 @@ const dumpsters: DumpsterOption[] = [
   },
   {
     size: "20-Yard",
-    price: "$410.00",
+    price: "$435.00",
     dimensions: "14'L x 7'W x 5'H",
     rentalTime: "1–5 Day Rental",
     includedWeight: "4,000 lbs included",
