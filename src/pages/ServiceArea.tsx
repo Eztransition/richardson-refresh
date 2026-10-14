@@ -23,7 +23,7 @@ const ServiceArea = () => {
     { value: "22", label: "Communities Served", icon: Building2 },
     { value: "3", label: "Dumpster Sizes", icon: Package },
     { value: "Same-Day", label: "Delivery Available", icon: Zap },
-    { value: "7 Days", label: "Included Rental", icon: Calendar },
+    { value: "1–5 Days", label: "Included Rental", icon: Calendar },
   ];
 
   return (
@@ -163,7 +163,7 @@ const ServiceArea = () => {
                 </div>
                 <h3 className="text-xl font-bold mb-2">Flexible Rentals</h3>
                 <p className="text-muted-foreground">
-                  7-day rental period included with every dumpster. Need more time? Just let us know.
+                  1–5 day rental period included, depending on dumpster size. Need more time? Just let us know.
                 </p>
               </div>
             </div>
