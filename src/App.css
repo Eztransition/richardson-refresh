@@ -1,6 +1,0 @@
-/* App-specific styles - kept minimal to avoid conflicts */
-
-/* Safe area for mobile sticky CTA */
-.safe-area-pb {
-  padding-bottom: env(safe-area-inset-bottom, 0);
-}

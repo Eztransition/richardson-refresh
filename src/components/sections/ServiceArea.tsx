@@ -1,5 +1,5 @@
 import { MapPin, Check } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { getOtherServiceAreas, getLocationByName } from "@/config/locations";
 
 interface ServiceAreaProps {
