@@ -2,13 +2,20 @@ import { Check, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Link } from "@tanstack/react-router";
 
 import dumpster10Yard from "@/assets/dumpster-10-yard.jpg";
 import dumpster15Yard from "@/assets/dumpster-15-yard.jpg";
 import dumpster20Yard from "@/assets/dumpster-20-yard.jpg";
 
 const BOOKING_URL = "https://link.eztransition.com/booking/dallas-dumpster-rentals-mj6zf8sxcb";
-const MORE_INFO_URL = "https://dallas-dumpster.com/dumpster-size/";
+const MORE_INFO_PATHS = {
+  "10-Yard": "/10-yard-dumpster-rentals",
+  "15-Yard": "/15-yard-dumpster-rentals",
+  "20-Yard": "/20-yard-dumpster-rentals",
+} as const;
+const moreInfoPath = (size: string) =>
+  MORE_INFO_PATHS[size as keyof typeof MORE_INFO_PATHS] ?? "/dumpster-size";
 
 interface DumpsterOption {
   size: string;
@@ -147,7 +154,7 @@ const PricingCards = ({ location = "Richardson" }: PricingCardsProps) => {
                   <a href={BOOKING_URL}>Book Now</a>
                 </Button>
                 <Button asChild variant="ghost" className="w-full text-muted-foreground hover:text-foreground text-base py-3 h-12">
-                  <a href={MORE_INFO_URL}>More Info →</a>
+                  <Link to={moreInfoPath(dumpster.size)}>More Info →</Link>
                 </Button>
               </CardFooter>
             </Card>
