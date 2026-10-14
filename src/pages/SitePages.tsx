@@ -1,10 +1,7 @@
-import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { Clock, Mail, MapPin, Phone, ShieldCheck, Wallet, CalendarRange } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Checkbox } from "@/components/ui/checkbox";
+import { ContactForm } from "@/components/site/ContactForm";
 import { PageShell, FaqAccordion, ItemList } from "@/components/site/PageShell";
 import { RentalSteps, bookButtonClass } from "@/components/sizes/SizePageParts";
 import { BOOKING_URL } from "@/config/dumpster-sizes";
@@ -166,12 +163,6 @@ export const GalleryPage = () => (
 );
 
 export const ContactPage = () => {
-  const [form, setForm] = useState({ first: "", last: "", phone: "", email: "" });
-  const submit = (e: React.FormEvent) => {
-    e.preventDefault();
-    const body = `Name: ${form.first} ${form.last}\nPhone: ${form.phone}\nEmail: ${form.email}`;
-    window.location.href = `mailto:Info@dallas-dumpster.com?subject=${encodeURIComponent("Website inquiry")}&body=${encodeURIComponent(body)}`;
-  };
   const cards = [
     { Icon: Phone, title: "(972) 645-6731", sub: "Call or Text Anytime", href: "tel:9726456731" },
     { Icon: Mail, title: "Info@dallas-dumpster.com", sub: "Email Us", href: "mailto:Info@dallas-dumpster.com" },
@@ -202,23 +193,7 @@ export const ContactPage = () => {
 
       <section className="py-16 lg:py-24 bg-brand-surface">
         <div className="container mx-auto grid lg:grid-cols-2 gap-10 items-start">
-          <form onSubmit={submit} className="bg-background rounded-2xl p-8 border border-border shadow-card space-y-4">
-            <h2 className="text-2xl font-heading font-bold text-foreground mb-2">{cp.formHeading}</h2>
-            <div className="grid sm:grid-cols-2 gap-4">
-              <div><Label htmlFor="first">First Name</Label><Input id="first" value={form.first} onChange={(e) => setForm({ ...form, first: e.target.value })} /></div>
-              <div><Label htmlFor="last">Last Name</Label><Input id="last" value={form.last} onChange={(e) => setForm({ ...form, last: e.target.value })} /></div>
-            </div>
-            <div><Label htmlFor="phone">Phone *</Label><Input id="phone" type="tel" required value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} /></div>
-            <div><Label htmlFor="email">Email *</Label><Input id="email" type="email" required value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} /></div>
-            {[cp.consentTransactional, cp.consentMarketing].map((t, i) => (
-              <label key={i} className="flex items-start gap-3 text-xs text-muted-foreground leading-relaxed">
-                <Checkbox className="mt-0.5" />
-                <span>{t}</span>
-              </label>
-            ))}
-            <Button type="submit" size="lg" className={`${bookButtonClass} w-full`}>Send</Button>
-            <Link to="/privacy-policy" className="block text-center text-sm text-primary hover:underline">Privacy Policy</Link>
-          </form>
+          <ContactForm />
           <div className="space-y-4 text-muted-foreground leading-relaxed text-lg">
             {cp.body.map((p) => <p key={p}>{p}</p>)}
             <p className="flex items-center gap-2 text-foreground font-semibold pt-2">
