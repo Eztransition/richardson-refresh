@@ -1,3 +1,11 @@
+const wpAssets = import.meta.glob<{ url: string }>("/src/assets/wp/*.asset.json", { eager: true, import: "default" });
+/** Images copied from the old WordPress uploads into the project's asset storage. */
+const wpImage = (file: string) => {
+  const hit = Object.entries(wpAssets).find(([k]) => k.endsWith(`/${file}.asset.json`));
+  if (!hit) throw new Error(`Missing image asset: ${file}`);
+  return hit[1].url;
+};
+
 /**
  * Content for the general pages (About, Contact, FAQs, Gallery,
  * Acceptable & Prohibited Items, Privacy Policy), copied verbatim from the
@@ -36,7 +44,7 @@ export const aboutPage = {
     "Dallas Dumpster Rentals takes pride in providing high quality roll off dumpster rentals at competitive prices. Whether you own a home, run a business, or are directing a construction site, we have the debris hauling containers to make your job easier.we are a family-owned and operated business, proudly serving our community with dependable, affordable and hassle-free dumpster rental.",
     "Our team is dedicated to providing timely and efficient service, ensuring your project, big or small, progresses smoothly with the support of our top-quality dumpsters. Trust us to meet your needs with professionalism and expert care.We are dedicated to providing the best rolloff dumpster rental in Dallas,TX and Surrounding areas.We offer professional and reliable dumpster rental services.Our aim is to offer a five-star, best-in-class customer service experience, whether this is your first dumpster rental or you rent dumpsters every week! We are committed to making the process of renting a dumpster easy, affordable, hassle-free.",
   ],
-  image: "https://dallas-dumpster.com/wp-content/uploads/2026/05/20260316_093332-768x842.jpg",
+  image: wpImage("20260316_093332-768x842.jpg"),
   eyebrow: "Locally Owned Reliable Service",
   whyHeading: "Why Choose Dallas Dumpster Rentals",
   why: [
@@ -208,7 +216,7 @@ export const galleryPage = {
     "2026/06/20260423_121452.jpg",
     "2026/06/20260329_082433_resized.jpg",
   ].map((p, i) => ({
-    src: `https://dallas-dumpster.com/wp-content/uploads/${p}`,
+    src: wpImage(p.split("/").pop()!),
     alt: `Dallas dumpster rental gallery image ${i + 1}`,
   })),
   subHeading: "Dumpster Rental Gallery (Dallas and surrounding areas)",
