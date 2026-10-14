@@ -33,7 +33,7 @@ const FAQSection = ({ location = "Richardson" }: FAQSectionProps) => {
               <AccordionItem
                 key={index}
                 value={`item-${index}`}
-                className="border border-border rounded-lg px-6 bg-card shadow-sm data-[state=open]:shadow-card animate-fade-in overflow-hidden"
+                className="border border-border rounded-lg px-6 bg-card shadow-xs data-[state=open]:shadow-card animate-fade-in overflow-hidden"
                 style={{ animationDelay: `${0.1 + index * 0.05}s` }}
               >
                 <AccordionTrigger className="text-left font-heading font-semibold text-foreground hover:text-primary py-5 hover:no-underline">

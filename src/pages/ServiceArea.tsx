@@ -114,7 +114,7 @@ const ServiceArea = () => {
                 <Link
                   key={location.slug}
                   to={`/dumpster-rental-${location.slug}`}
-                  className="group bg-white rounded-lg p-4 shadow-sm hover:shadow-lg transition-all duration-300 border border-border hover:border-primary text-center"
+                  className="group bg-white rounded-lg p-4 shadow-xs hover:shadow-lg transition-all duration-300 border border-border hover:border-primary text-center"
                 >
                   <MapPin className="h-6 w-6 text-primary mx-auto mb-2 group-hover:scale-110 transition-transform" />
                   <span className="font-semibold text-brand-dark group-hover:text-primary transition-colors">

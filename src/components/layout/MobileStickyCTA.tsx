@@ -5,7 +5,7 @@ const BOOKING_URL = "https://link.eztransition.com/booking/dallas-dumpster-renta
 
 const MobileStickyCTA = () => {
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 lg:hidden bg-brand-dark/95 backdrop-blur-sm border-t border-brand-gray/30 p-3 safe-area-pb">
+    <div className="fixed bottom-0 left-0 right-0 z-50 lg:hidden bg-brand-dark/95 backdrop-blur-xs border-t border-brand-gray/30 p-3 safe-area-pb">
       <div className="flex gap-3">
         <Button
           asChild
