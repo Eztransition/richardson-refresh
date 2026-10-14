@@ -147,9 +147,9 @@ export const faqs: FaqItem[] = [
       "When the dumpster is picked up, the driver will put a tarp over the load for containment during transport. We ask that you don’t load any material above the top rails of the dumpster that will interfere with the tarp. Try to keep the load flat and distribute the weight as evenly as possible. If for any reason the dumpster is improperly loaded and cannot be transported safely, you will have to unload the dumpster to a safe level before we can remove it. If your dumpster is overfilled, we have the right to refuse pickup and you may incur a minimum $135 trip charge.",
     ],
   },
-  aboutFaqs[3],
-  aboutFaqs[4],
-  aboutFaqs[5],
+  aboutFaqs[3]!,
+  aboutFaqs[4]!,
+  aboutFaqs[5]!,
   {
     q: "What weight limits are include in my dumpster rental?",
     a: [
@@ -160,7 +160,7 @@ export const faqs: FaqItem[] = [
       "$ 37 per 1,000 lbs in overages charged, after the alloted weight. These average fees coverage our costs for the extra weight",
     ],
   },
-  aboutFaqs[7],
+  aboutFaqs[7]!,
 ];
 
 export const itemsPage = {

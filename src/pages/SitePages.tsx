@@ -49,7 +49,7 @@ export const AboutPage = () => {
           <h2 className={`${h2} text-center mb-12`}>{ab.whyHeading}</h2>
           <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
             {ab.why.map((w, i) => {
-              const Icon = icons[i];
+              const Icon = icons[i] ?? ShieldCheck;
               return (
                 <div key={w.title} className="bg-background rounded-xl p-8 border border-border shadow-card">
                   <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-5">
