@@ -9,8 +9,13 @@ import dumpster15Yard from "@/assets/dumpster-15-yard.jpg";
 import dumpster20Yard from "@/assets/dumpster-20-yard.jpg";
 
 const BOOKING_URL = "https://link.eztransition.com/booking/dallas-dumpster-rentals-mj6zf8sxcb";
+const MORE_INFO_PATHS = {
+  "10-Yard": "/10-yard-dumpster-rentals",
+  "15-Yard": "/15-yard-dumpster-rentals",
+  "20-Yard": "/20-yard-dumpster-rentals",
+} as const;
 const moreInfoPath = (size: string) =>
-  `/${size.toLowerCase()}-dumpster-rentals` as "/10-yard-dumpster-rentals" | "/15-yard-dumpster-rentals" | "/20-yard-dumpster-rentals";
+  MORE_INFO_PATHS[size as keyof typeof MORE_INFO_PATHS] ?? "/dumpster-size";
 
 interface DumpsterOption {
   size: string;
