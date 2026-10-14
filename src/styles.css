@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap");
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Dallas Dumpster Brand Design System
+ * Brand Colors: Cyan #00C0EF, Lime Green #C4E901, Dark Gray #333333
+ *
+ * The :root and .dark blocks hold raw HSL channel values; the @theme inline
+ * block wraps them in hsl() and maps them to Tailwind utilities
+ * (e.g. --color-primary -> bg-primary, --color-brand-dark -> text-brand-dark).
+ */
+
+@theme inline {
+  --font-heading: "Montserrat", system-ui, sans-serif;
+  --font-body: "Open Sans", system-ui, sans-serif;
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --color-ring-offset-background: hsl(var(--background));
+
+  --color-brand-cyan: hsl(var(--brand-cyan));
+  --color-brand-cyan-dark: hsl(var(--brand-cyan-dark));
+  --color-brand-cyan-light: hsl(var(--brand-cyan-light));
+  --color-brand-lime: hsl(var(--brand-lime));
+  --color-brand-lime-dark: hsl(var(--brand-lime-dark));
+  --color-brand-lime-light: hsl(var(--brand-lime-light));
+  --color-brand-dark: hsl(var(--brand-dark));
+  --color-brand-gray: hsl(var(--brand-gray));
+  --color-brand-gray-light: hsl(var(--brand-gray-light));
+  --color-brand-surface: hsl(var(--brand-surface));
+  --color-brand-surface-alt: hsl(var(--brand-surface-alt));
+
+  --color-sidebar: hsl(var(--sidebar-background));
+  --color-sidebar-foreground: hsl(var(--sidebar-foreground));
+  --color-sidebar-primary: hsl(var(--sidebar-primary));
+  --color-sidebar-primary-foreground: hsl(var(--sidebar-primary-foreground));
+  --color-sidebar-accent: hsl(var(--sidebar-accent));
+  --color-sidebar-accent-foreground: hsl(var(--sidebar-accent-foreground));
+  --color-sidebar-border: hsl(var(--sidebar-border));
+  --color-sidebar-ring: hsl(var(--sidebar-ring));
+
+  --shadow-card: var(--shadow-card-value);
+  --shadow-card-hover: var(--shadow-card-hover-value);
+  --shadow-elevated: var(--shadow-elevated-value);
+
+  --animate-fade-in: fade-in 0.5s ease-out forwards;
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes accordion-down {
+    from {
+      height: 0;
+    }
+    to {
+      height: var(--radix-accordion-content-height);
+    }
+  }
+  @keyframes accordion-up {
+    from {
+      height: var(--radix-accordion-content-height);
+    }
+    to {
+      height: 0;
+    }
+  }
+}
+
+/* Matches the previous container setup: centered, 1.5rem side padding, 1200px max. */
+@utility container {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+  @media (width >= 1200px) {
+    max-width: 1200px;
+  }
+}
+
+:root {
+  /* Brand Primary - Cyan Blue */
+  --brand-cyan: 193 100% 47%;
+  --brand-cyan-dark: 193 100% 40%;
+  --brand-cyan-light: 193 100% 90%;
+
+  /* Brand Secondary - Lime Green */
+  --brand-lime: 68 98% 46%;
+  --brand-lime-dark: 68 98% 38%;
+  --brand-lime-light: 68 80% 85%;
+
+  /* Brand Neutrals */
+  --brand-dark: 0 0% 20%;
+  --brand-gray: 0 0% 40%;
+  --brand-gray-light: 0 0% 60%;
+  --brand-surface: 210 20% 98%;
+  --brand-surface-alt: 210 15% 95%;
+
+  /* Base tokens using brand */
+  --background: 0 0% 100%;
+  --foreground: 0 0% 20%;
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 20%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 0 0% 20%;
+  --primary: 193 100% 47%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 68 98% 46%;
+  --secondary-foreground: 0 0% 20%;
+  --muted: 210 20% 98%;
+  --muted-foreground: 0 0% 45%;
+  --accent: 193 100% 90%;
+  --accent-foreground: 193 100% 30%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 210 20% 90%;
+  --input: 210 20% 90%;
+  --ring: 193 100% 47%;
+
+  --radius: 0.5rem;
+
+  /* Custom spacing */
+  --section-padding: 5rem;
+  --container-max: 1200px;
+
+  /* Shadows */
+  --shadow-card-value: 0 4px 24px -4px hsl(0 0% 0% / 0.08);
+  --shadow-card-hover-value: 0 8px 32px -4px hsl(0 0% 0% / 0.12);
+  --shadow-elevated-value: 0 16px 48px -8px hsl(0 0% 0% / 0.15);
+
+  --sidebar-background: 0 0% 98%;
+  --sidebar-foreground: 240 5.3% 26.1%;
+  --sidebar-primary: 240 5.9% 10%;
+  --sidebar-primary-foreground: 0 0% 98%;
+  --sidebar-accent: 240 4.8% 95.9%;
+  --sidebar-accent-foreground: 240 5.9% 10%;
+  --sidebar-border: 220 13% 91%;
+  --sidebar-ring: 217.2 91.2% 59.8%;
+}
+
+.dark {
+  --background: 0 0% 10%;
+  --foreground: 0 0% 95%;
+  --card: 0 0% 12%;
+  --card-foreground: 0 0% 95%;
+  --popover: 0 0% 12%;
+  --popover-foreground: 0 0% 95%;
+  --primary: 193 100% 50%;
+  --primary-foreground: 0 0% 10%;
+  --secondary: 68 98% 50%;
+  --secondary-foreground: 0 0% 10%;
+  --muted: 0 0% 18%;
+  --muted-foreground: 0 0% 65%;
+  --accent: 193 100% 20%;
+  --accent-foreground: 193 100% 80%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 0 0% 20%;
+  --input: 0 0% 20%;
+  --ring: 193 100% 50%;
+  --sidebar-background: 240 5.9% 10%;
+  --sidebar-foreground: 240 4.8% 95.9%;
+  --sidebar-primary: 224.3 76.3% 48%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 240 3.7% 15.9%;
+  --sidebar-accent-foreground: 240 4.8% 95.9%;
+  --sidebar-border: 240 3.7% 15.9%;
+  --sidebar-ring: 217.2 91.2% 59.8%;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    letter-spacing: -0.025em;
+  }
+
+  /* Tailwind v4 dropped the pointer cursor on buttons; keep the v3 behaviour. */
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
