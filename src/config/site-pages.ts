@@ -111,7 +111,7 @@ export const aboutFaqs: FaqItem[] = [
     q: "What weight limits are include in my dumpster rental?",
     a: [
       "10 Yard Dumpster 2,000lbs",
-      "15 Yard Dumpster 4,000lbs",
+      "15 Yard Dumpster 2,000lbs",
       "20 Yard Dumpster 4,000lbs",
       "If you go over these weights, there will be",
       "$ 37 per 1,000 lbs in overages charged, after the alloted weight. These average fees coverage our costs for the extra weight",
@@ -228,7 +228,7 @@ export const galleryPage = {
   sizes: [
     "10-yard:(1–3 day rental; 2,000 lbs included)",
     "15-yard: (1–4 day rental; 2,000 lbs included)",
-    "20-yard: (1–7 day rental; 4,000 lbs included)",
+    "20-yard: (1–5 day rental; 4,000 lbs included)",
   ],
   checklistHeading: "Before delivery: a quick checklist",
   checklist: [

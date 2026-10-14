@@ -61,7 +61,7 @@ export const dumpsterSizePages: DumpsterSizePage[] = [
     seo: {
       title: "10-Yard Dumpster Rentals - Dallas Dumpster",
       description:
-        "10-yard dumpster rental: $340, 14’L x 7’W x 4’H, 1–4 day rental, 2,000 lbs included. Dallas and surrounding areas. Call 972-645-6731.",
+        "10-yard dumpster rental: $355, 14’L x 7’W x 4’H, 1–3 day rental, 2,000 lbs included. Dallas and surrounding areas. Call 972-645-6731.",
     },
   },
   {
@@ -89,7 +89,7 @@ export const dumpsterSizePages: DumpsterSizePage[] = [
     seo: {
       title: "15 Yard Dumpster Rentals - Dallas Dumpster",
       description:
-        "15-yard dumpster rental: $350, 14’L x 7’W x 4’H, 1–4 day rental, 2,000 lbs included. Dallas and surrounding areas. Call 972-645-6731.",
+        "15-yard dumpster rental: $375, 14’L x 7’W x 4’H, 1–4 day rental, 2,000 lbs included. Dallas and surrounding areas. Call 972-645-6731.",
     },
   },
   {
@@ -117,7 +117,7 @@ export const dumpsterSizePages: DumpsterSizePage[] = [
     seo: {
       title: "20 Yard Dumpster Rentals - Dallas Dumpster",
       description:
-        "20-yard dumpster rental: $410, 14’L x 7’W x 5’H, 1–5 day rental, 4,000 lbs included. Dallas and surrounding areas. Call 972-645-6731.",
+        "20-yard dumpster rental: $450, 14’L x 7’W x 5’H, 1–5 day rental, 4,000 lbs included. Dallas and surrounding areas. Call 972-645-6731.",
     },
   },
 ];
