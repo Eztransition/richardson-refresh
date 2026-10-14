@@ -12,7 +12,7 @@ import { applyPageSeo } from "@/lib/seo";
 
 const DumpsterSize = () => {
   useEffect(() => {
-    applyPageSeo({ title: ov.seo.title, description: ov.seo.description, path: "/dumpster-size/" });
+    applyPageSeo({ title: ov.seo.title, description: ov.seo.description, path: "/dumpster-size" });
   }, []);
 
   return (
@@ -68,7 +68,7 @@ const DumpsterSize = () => {
                       <a href={BOOKING_URL}>Book Now</a>
                     </Button>
                     <Button asChild variant="ghost" className="w-full text-muted-foreground hover:text-foreground text-base py-3 h-12">
-                      <Link to={`/${d.slug}`}>More Info →</Link>
+                      <Link to={`/${d.slug}` as const}>More Info →</Link>
                     </Button>
                   </CardFooter>
                 </Card>
@@ -90,7 +90,7 @@ const DumpsterSize = () => {
           </div>
         </section>
 
-        <div className="bg-background"><RentalSteps /></div>
+        <RentalSteps tinted={false} />
       </main>
       <Footer />
       <MobileStickyCTA />

@@ -55,8 +55,8 @@ export const SizeHero = ({ eyebrow, title, variant }: SizeHeroProps) => (
 
 const stepIcons = [CalendarCheck, Package, Truck];
 
-export const RentalSteps = () => (
-  <section className="py-16 lg:py-24 bg-brand-surface">
+export const RentalSteps = ({ tinted = true }: { tinted?: boolean }) => (
+  <section className={`py-16 lg:py-24 ${tinted ? "bg-brand-surface" : "bg-background"}`}>
     <div className="container mx-auto">
       <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground text-center mb-12">
         {rentalSteps.heading}

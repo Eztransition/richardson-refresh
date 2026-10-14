@@ -17,7 +17,7 @@ const DumpsterSizeDetail = ({ slug }: Props) => {
   const page = getDumpsterSizePage(slug);
 
   useEffect(() => {
-    applyPageSeo({ title: page.seo.title, description: page.seo.description, path: `/${page.slug}/` });
+    applyPageSeo({ title: page.seo.title, description: page.seo.description, path: `/${page.slug}` });
   }, [page]);
 
   const specs = [
