@@ -85,7 +85,7 @@ const ThankYou = () => {
                   <div>
                     <h3 className="font-heading font-semibold text-brand-dark">Pickup</h3>
                     <p className="text-brand-gray">
-                      Fill it up, then we'll pick it up at the end of your 7-day rental period.
+                      Fill it up, then we'll pick it up at the end of your rental period.
                     </p>
                   </div>
                 </li>

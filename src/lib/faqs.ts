@@ -19,7 +19,7 @@ export const getLocationFaqs = (location: string): Faq[] => [
   {
     question: "How long is the rental and how do extra days work?",
     answer:
-      "Our rates include up to 7 days, which includes both the drop-off day and pickup day. Need more time? Extra days are just $20/day, subject to availability. Contact us at least one day before your scheduled pickup to extend.",
+      "Our rates include a 1–3 day rental for the 10-yard, 1–4 days for the 15-yard and 1–5 days for the 20-yard, which includes both the drop-off day and pickup day. Need more time? Extra days are just $20/day, subject to availability. Contact us at least one day before your scheduled pickup to extend.",
   },
   {
     question: "What items are prohibited?",

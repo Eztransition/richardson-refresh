@@ -259,7 +259,7 @@ const HowToDisposeOfCouchDallas = () => {
               </div>
               <div className="bg-primary/10 border-l-4 border-primary rounded-r-xl p-5">
                 <p className="text-brand-dark">
-                  <strong>Why it wins for bigger jobs:</strong> Flat rate, 7-day rental, no per-item fees,
+                  <strong>Why it wins for bigger jobs:</strong> Flat rate, 1–5 day rental, no per-item fees,
                   and you load on your timeline — no waiting on a city pickup window or charity truck.
                 </p>
               </div>
