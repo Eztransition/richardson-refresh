@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Clock, Mail, MapPin, Phone, ShieldCheck, Wallet, CalendarRange } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import GoogleMap from "@/components/sections/GoogleMap";
 import { ContactForm } from "@/components/site/ContactForm";
 import { PageShell, FaqAccordion, ItemList } from "@/components/site/PageShell";
 import { RentalSteps, bookButtonClass } from "@/components/sizes/SizePageParts";
@@ -192,8 +193,13 @@ export const ContactPage = () => {
       </section>
 
       <section className="py-16 lg:py-24 bg-brand-surface">
-        <div className="container mx-auto grid lg:grid-cols-2 gap-10 items-start">
+        <div className="container mx-auto max-w-3xl">
           <ContactForm />
+        </div>
+      </section>
+
+      <section className="py-16 lg:py-24 bg-background">
+        <div className="container mx-auto max-w-3xl">
           <div className="space-y-4 text-muted-foreground leading-relaxed text-lg">
             {cp.body.map((p) => <p key={p}>{p}</p>)}
             <p className="flex items-center gap-2 text-foreground font-semibold pt-2">
@@ -202,6 +208,8 @@ export const ContactPage = () => {
           </div>
         </div>
       </section>
+
+      <GoogleMap location="Dallas" />
     </PageShell>
   );
 };
