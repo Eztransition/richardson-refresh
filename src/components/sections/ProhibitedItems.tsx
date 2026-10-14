@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import { AlertTriangle, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -53,13 +54,10 @@ const ProhibitedItems = ({ location = "Richardson", state = "TX" }: ProhibitedIt
                 </div>
 
                 <Button asChild variant="outline" className="text-foreground hover:text-primary">
-                  <a
-                    href="https://dallas-dumpster.com/acceptable-prohibited-items/"
-                    className="inline-flex items-center gap-2"
-                  >
+                  <Link to="/acceptable-prohibited-items" className="inline-flex items-center gap-2">
                     View Full List
                     <ExternalLink className="h-4 w-4" />
-                  </a>
+                  </Link>
                 </Button>
               </div>
             </div>

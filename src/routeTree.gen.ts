@@ -13,6 +13,9 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as R10YardDumpsterRentalsRouteImport } from './routes/10-yard-dumpster-rentals'
 import { Route as R15YardDumpsterRentalsRouteImport } from './routes/15-yard-dumpster-rentals'
 import { Route as R20YardDumpsterRentalsRouteImport } from './routes/20-yard-dumpster-rentals'
+import { Route as AboutUsRouteImport } from './routes/about-us'
+import { Route as AcceptableProhibitedItemsRouteImport } from './routes/acceptable-prohibited-items'
+import { Route as ContactUsRouteImport } from './routes/contact-us'
 import { Route as DumpsterRentalAddisonTxRouteImport } from './routes/dumpster-rental-addison-tx'
 import { Route as DumpsterRentalAllenTxRouteImport } from './routes/dumpster-rental-allen-tx'
 import { Route as DumpsterRentalBalchSpringsTxRouteImport } from './routes/dumpster-rental-balch-springs-tx'
@@ -36,6 +39,9 @@ import { Route as DumpsterRentalSunnyvaleTxRouteImport } from './routes/dumpster
 import { Route as DumpsterRentalUniversityParkTxRouteImport } from './routes/dumpster-rental-university-park-tx'
 import { Route as DumpsterRentalWylieTxRouteImport } from './routes/dumpster-rental-wylie-tx'
 import { Route as DumpsterSizeRouteImport } from './routes/dumpster-size'
+import { Route as FrequentlyAskedQuestionsRouteImport } from './routes/frequently-asked-questions'
+import { Route as GalleryRouteImport } from './routes/gallery'
+import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
 import { Route as ServiceAreaRouteImport } from './routes/service-area'
 import { Route as ThankYouRouteImport } from './routes/thank-you'
 import { Route as ResourcesHowToDisposeOfACouchInDallasRouteImport } from './routes/resources/how-to-dispose-of-a-couch-in-dallas'
@@ -58,6 +64,22 @@ const R15YardDumpsterRentalsRoute = R15YardDumpsterRentalsRouteImport.update({
 const R20YardDumpsterRentalsRoute = R20YardDumpsterRentalsRouteImport.update({
   id: '/20-yard-dumpster-rentals',
   path: '/20-yard-dumpster-rentals',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutUsRoute = AboutUsRouteImport.update({
+  id: '/about-us',
+  path: '/about-us',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AcceptableProhibitedItemsRoute =
+  AcceptableProhibitedItemsRouteImport.update({
+    id: '/acceptable-prohibited-items',
+    path: '/acceptable-prohibited-items',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ContactUsRoute = ContactUsRouteImport.update({
+  id: '/contact-us',
+  path: '/contact-us',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DumpsterRentalAddisonTxRoute = DumpsterRentalAddisonTxRouteImport.update({
@@ -186,6 +208,22 @@ const DumpsterSizeRoute = DumpsterSizeRouteImport.update({
   path: '/dumpster-size',
   getParentRoute: () => rootRouteImport,
 } as any)
+const FrequentlyAskedQuestionsRoute =
+  FrequentlyAskedQuestionsRouteImport.update({
+    id: '/frequently-asked-questions',
+    path: '/frequently-asked-questions',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const GalleryRoute = GalleryRouteImport.update({
+  id: '/gallery',
+  path: '/gallery',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
+  id: '/privacy-policy',
+  path: '/privacy-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ServiceAreaRoute = ServiceAreaRouteImport.update({
   id: '/service-area',
   path: '/service-area',
@@ -208,6 +246,9 @@ export interface FileRoutesByFullPath {
   '/10-yard-dumpster-rentals': typeof R10YardDumpsterRentalsRoute
   '/15-yard-dumpster-rentals': typeof R15YardDumpsterRentalsRoute
   '/20-yard-dumpster-rentals': typeof R20YardDumpsterRentalsRoute
+  '/about-us': typeof AboutUsRoute
+  '/acceptable-prohibited-items': typeof AcceptableProhibitedItemsRoute
+  '/contact-us': typeof ContactUsRoute
   '/dumpster-rental-addison-tx': typeof DumpsterRentalAddisonTxRoute
   '/dumpster-rental-allen-tx': typeof DumpsterRentalAllenTxRoute
   '/dumpster-rental-balch-springs-tx': typeof DumpsterRentalBalchSpringsTxRoute
@@ -231,6 +272,9 @@ export interface FileRoutesByFullPath {
   '/dumpster-rental-university-park-tx': typeof DumpsterRentalUniversityParkTxRoute
   '/dumpster-rental-wylie-tx': typeof DumpsterRentalWylieTxRoute
   '/dumpster-size': typeof DumpsterSizeRoute
+  '/frequently-asked-questions': typeof FrequentlyAskedQuestionsRoute
+  '/gallery': typeof GalleryRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
   '/service-area': typeof ServiceAreaRoute
   '/thank-you': typeof ThankYouRoute
   '/resources/how-to-dispose-of-a-couch-in-dallas': typeof ResourcesHowToDisposeOfACouchInDallasRoute
@@ -240,6 +284,9 @@ export interface FileRoutesByTo {
   '/10-yard-dumpster-rentals': typeof R10YardDumpsterRentalsRoute
   '/15-yard-dumpster-rentals': typeof R15YardDumpsterRentalsRoute
   '/20-yard-dumpster-rentals': typeof R20YardDumpsterRentalsRoute
+  '/about-us': typeof AboutUsRoute
+  '/acceptable-prohibited-items': typeof AcceptableProhibitedItemsRoute
+  '/contact-us': typeof ContactUsRoute
   '/dumpster-rental-addison-tx': typeof DumpsterRentalAddisonTxRoute
   '/dumpster-rental-allen-tx': typeof DumpsterRentalAllenTxRoute
   '/dumpster-rental-balch-springs-tx': typeof DumpsterRentalBalchSpringsTxRoute
@@ -263,6 +310,9 @@ export interface FileRoutesByTo {
   '/dumpster-rental-university-park-tx': typeof DumpsterRentalUniversityParkTxRoute
   '/dumpster-rental-wylie-tx': typeof DumpsterRentalWylieTxRoute
   '/dumpster-size': typeof DumpsterSizeRoute
+  '/frequently-asked-questions': typeof FrequentlyAskedQuestionsRoute
+  '/gallery': typeof GalleryRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
   '/service-area': typeof ServiceAreaRoute
   '/thank-you': typeof ThankYouRoute
   '/resources/how-to-dispose-of-a-couch-in-dallas': typeof ResourcesHowToDisposeOfACouchInDallasRoute
@@ -273,6 +323,9 @@ export interface FileRoutesById {
   '/10-yard-dumpster-rentals': typeof R10YardDumpsterRentalsRoute
   '/15-yard-dumpster-rentals': typeof R15YardDumpsterRentalsRoute
   '/20-yard-dumpster-rentals': typeof R20YardDumpsterRentalsRoute
+  '/about-us': typeof AboutUsRoute
+  '/acceptable-prohibited-items': typeof AcceptableProhibitedItemsRoute
+  '/contact-us': typeof ContactUsRoute
   '/dumpster-rental-addison-tx': typeof DumpsterRentalAddisonTxRoute
   '/dumpster-rental-allen-tx': typeof DumpsterRentalAllenTxRoute
   '/dumpster-rental-balch-springs-tx': typeof DumpsterRentalBalchSpringsTxRoute
@@ -296,6 +349,9 @@ export interface FileRoutesById {
   '/dumpster-rental-university-park-tx': typeof DumpsterRentalUniversityParkTxRoute
   '/dumpster-rental-wylie-tx': typeof DumpsterRentalWylieTxRoute
   '/dumpster-size': typeof DumpsterSizeRoute
+  '/frequently-asked-questions': typeof FrequentlyAskedQuestionsRoute
+  '/gallery': typeof GalleryRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
   '/service-area': typeof ServiceAreaRoute
   '/thank-you': typeof ThankYouRoute
   '/resources/how-to-dispose-of-a-couch-in-dallas': typeof ResourcesHowToDisposeOfACouchInDallasRoute
@@ -307,6 +363,9 @@ export interface FileRouteTypes {
     | '/10-yard-dumpster-rentals'
     | '/15-yard-dumpster-rentals'
     | '/20-yard-dumpster-rentals'
+    | '/about-us'
+    | '/acceptable-prohibited-items'
+    | '/contact-us'
     | '/dumpster-rental-addison-tx'
     | '/dumpster-rental-allen-tx'
     | '/dumpster-rental-balch-springs-tx'
@@ -330,6 +389,9 @@ export interface FileRouteTypes {
     | '/dumpster-rental-university-park-tx'
     | '/dumpster-rental-wylie-tx'
     | '/dumpster-size'
+    | '/frequently-asked-questions'
+    | '/gallery'
+    | '/privacy-policy'
     | '/service-area'
     | '/thank-you'
     | '/resources/how-to-dispose-of-a-couch-in-dallas'
@@ -339,6 +401,9 @@ export interface FileRouteTypes {
     | '/10-yard-dumpster-rentals'
     | '/15-yard-dumpster-rentals'
     | '/20-yard-dumpster-rentals'
+    | '/about-us'
+    | '/acceptable-prohibited-items'
+    | '/contact-us'
     | '/dumpster-rental-addison-tx'
     | '/dumpster-rental-allen-tx'
     | '/dumpster-rental-balch-springs-tx'
@@ -362,6 +427,9 @@ export interface FileRouteTypes {
     | '/dumpster-rental-university-park-tx'
     | '/dumpster-rental-wylie-tx'
     | '/dumpster-size'
+    | '/frequently-asked-questions'
+    | '/gallery'
+    | '/privacy-policy'
     | '/service-area'
     | '/thank-you'
     | '/resources/how-to-dispose-of-a-couch-in-dallas'
@@ -371,6 +439,9 @@ export interface FileRouteTypes {
     | '/10-yard-dumpster-rentals'
     | '/15-yard-dumpster-rentals'
     | '/20-yard-dumpster-rentals'
+    | '/about-us'
+    | '/acceptable-prohibited-items'
+    | '/contact-us'
     | '/dumpster-rental-addison-tx'
     | '/dumpster-rental-allen-tx'
     | '/dumpster-rental-balch-springs-tx'
@@ -394,6 +465,9 @@ export interface FileRouteTypes {
     | '/dumpster-rental-university-park-tx'
     | '/dumpster-rental-wylie-tx'
     | '/dumpster-size'
+    | '/frequently-asked-questions'
+    | '/gallery'
+    | '/privacy-policy'
     | '/service-area'
     | '/thank-you'
     | '/resources/how-to-dispose-of-a-couch-in-dallas'
@@ -404,6 +478,9 @@ export interface RootRouteChildren {
   R10YardDumpsterRentalsRoute: typeof R10YardDumpsterRentalsRoute
   R15YardDumpsterRentalsRoute: typeof R15YardDumpsterRentalsRoute
   R20YardDumpsterRentalsRoute: typeof R20YardDumpsterRentalsRoute
+  AboutUsRoute: typeof AboutUsRoute
+  AcceptableProhibitedItemsRoute: typeof AcceptableProhibitedItemsRoute
+  ContactUsRoute: typeof ContactUsRoute
   DumpsterRentalAddisonTxRoute: typeof DumpsterRentalAddisonTxRoute
   DumpsterRentalAllenTxRoute: typeof DumpsterRentalAllenTxRoute
   DumpsterRentalBalchSpringsTxRoute: typeof DumpsterRentalBalchSpringsTxRoute
@@ -427,6 +504,9 @@ export interface RootRouteChildren {
   DumpsterRentalUniversityParkTxRoute: typeof DumpsterRentalUniversityParkTxRoute
   DumpsterRentalWylieTxRoute: typeof DumpsterRentalWylieTxRoute
   DumpsterSizeRoute: typeof DumpsterSizeRoute
+  FrequentlyAskedQuestionsRoute: typeof FrequentlyAskedQuestionsRoute
+  GalleryRoute: typeof GalleryRoute
+  PrivacyPolicyRoute: typeof PrivacyPolicyRoute
   ServiceAreaRoute: typeof ServiceAreaRoute
   ThankYouRoute: typeof ThankYouRoute
   ResourcesHowToDisposeOfACouchInDallasRoute: typeof ResourcesHowToDisposeOfACouchInDallasRoute
@@ -460,6 +540,27 @@ declare module '@tanstack/react-router' {
       path: '/20-yard-dumpster-rentals'
       fullPath: '/20-yard-dumpster-rentals'
       preLoaderRoute: typeof R20YardDumpsterRentalsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about-us': {
+      id: '/about-us'
+      path: '/about-us'
+      fullPath: '/about-us'
+      preLoaderRoute: typeof AboutUsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/acceptable-prohibited-items': {
+      id: '/acceptable-prohibited-items'
+      path: '/acceptable-prohibited-items'
+      fullPath: '/acceptable-prohibited-items'
+      preLoaderRoute: typeof AcceptableProhibitedItemsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact-us': {
+      id: '/contact-us'
+      path: '/contact-us'
+      fullPath: '/contact-us'
+      preLoaderRoute: typeof ContactUsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/dumpster-rental-addison-tx': {
@@ -623,6 +724,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DumpsterSizeRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/frequently-asked-questions': {
+      id: '/frequently-asked-questions'
+      path: '/frequently-asked-questions'
+      fullPath: '/frequently-asked-questions'
+      preLoaderRoute: typeof FrequentlyAskedQuestionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gallery': {
+      id: '/gallery'
+      path: '/gallery'
+      fullPath: '/gallery'
+      preLoaderRoute: typeof GalleryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy-policy': {
+      id: '/privacy-policy'
+      path: '/privacy-policy'
+      fullPath: '/privacy-policy'
+      preLoaderRoute: typeof PrivacyPolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/service-area': {
       id: '/service-area'
       path: '/service-area'
@@ -652,6 +774,9 @@ const rootRouteChildren: RootRouteChildren = {
   R10YardDumpsterRentalsRoute: R10YardDumpsterRentalsRoute,
   R15YardDumpsterRentalsRoute: R15YardDumpsterRentalsRoute,
   R20YardDumpsterRentalsRoute: R20YardDumpsterRentalsRoute,
+  AboutUsRoute: AboutUsRoute,
+  AcceptableProhibitedItemsRoute: AcceptableProhibitedItemsRoute,
+  ContactUsRoute: ContactUsRoute,
   DumpsterRentalAddisonTxRoute: DumpsterRentalAddisonTxRoute,
   DumpsterRentalAllenTxRoute: DumpsterRentalAllenTxRoute,
   DumpsterRentalBalchSpringsTxRoute: DumpsterRentalBalchSpringsTxRoute,
@@ -675,6 +800,9 @@ const rootRouteChildren: RootRouteChildren = {
   DumpsterRentalUniversityParkTxRoute: DumpsterRentalUniversityParkTxRoute,
   DumpsterRentalWylieTxRoute: DumpsterRentalWylieTxRoute,
   DumpsterSizeRoute: DumpsterSizeRoute,
+  FrequentlyAskedQuestionsRoute: FrequentlyAskedQuestionsRoute,
+  GalleryRoute: GalleryRoute,
+  PrivacyPolicyRoute: PrivacyPolicyRoute,
   ServiceAreaRoute: ServiceAreaRoute,
   ThankYouRoute: ThankYouRoute,
   ResourcesHowToDisposeOfACouchInDallasRoute:

@@ -10,14 +10,14 @@ interface NavLink {
 }
 
 const navLinks: NavLink[] = [
-  { label: "Home", href: "https://dallas-dumpster.com/" },
-  { label: "Dumpster Size", href: "https://dallas-dumpster.com/dumpster-size/" },
+  { label: "Home", href: "/", isInternal: true },
+  { label: "Dumpster Size", href: "/dumpster-size", isInternal: true },
   { label: "Service Area", href: "/", isInternal: true },
-  { label: "FAQs", href: "https://dallas-dumpster.com/frequently-asked-questions/" },
-  { label: "Acceptable & Prohibited Items", href: "https://dallas-dumpster.com/acceptable-prohibited-items/" },
-  { label: "Gallery", href: "https://dallas-dumpster.com/gallery/" },
+  { label: "FAQs", href: "/frequently-asked-questions", isInternal: true },
+  { label: "Acceptable & Prohibited Items", href: "/acceptable-prohibited-items", isInternal: true },
+  { label: "Gallery", href: "/gallery", isInternal: true },
   { label: "Blog", href: "https://blog.dallas-dumpster.com/" },
-  { label: "Contact Us", href: "https://dallas-dumpster.com/contact-us/" },
+  { label: "Contact Us", href: "/contact-us", isInternal: true },
 ];
 
 const Header = () => {
@@ -29,9 +29,9 @@ const Header = () => {
       <div className="bg-white">
         <div className="container mx-auto flex items-center justify-between py-3 px-4">
           {/* Logo */}
-          <a href="https://dallas-dumpster.com/" className="flex-shrink-0">
+          <Link to="/" className="flex-shrink-0">
             <img src={logo} alt="Dallas Dumpster Rentals" className="h-20 w-auto" />
-          </a>
+          </Link>
 
           {/* Mobile Phone + Menu */}
           <div className="flex items-center gap-4 lg:hidden">
