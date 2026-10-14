@@ -32,6 +32,7 @@ import { Route as DumpsterRentalSeagovilleTxRouteImport } from './routes/dumpste
 import { Route as DumpsterRentalSunnyvaleTxRouteImport } from './routes/dumpster-rental-sunnyvale-tx'
 import { Route as DumpsterRentalUniversityParkTxRouteImport } from './routes/dumpster-rental-university-park-tx'
 import { Route as DumpsterRentalWylieTxRouteImport } from './routes/dumpster-rental-wylie-tx'
+import { Route as DumpsterSizeRouteImport } from './routes/dumpster-size'
 import { Route as ServiceAreaRouteImport } from './routes/service-area'
 import { Route as ThankYouRouteImport } from './routes/thank-you'
 import { Route as ResourcesHowToDisposeOfACouchInDallasRouteImport } from './routes/resources/how-to-dispose-of-a-couch-in-dallas'
@@ -162,6 +163,11 @@ const DumpsterRentalWylieTxRoute = DumpsterRentalWylieTxRouteImport.update({
   path: '/dumpster-rental-wylie-tx',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DumpsterSizeRoute = DumpsterSizeRouteImport.update({
+  id: '/dumpster-size',
+  path: '/dumpster-size',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ServiceAreaRoute = ServiceAreaRouteImport.update({
   id: '/service-area',
   path: '/service-area',
@@ -203,6 +209,7 @@ export interface FileRoutesByFullPath {
   '/dumpster-rental-sunnyvale-tx': typeof DumpsterRentalSunnyvaleTxRoute
   '/dumpster-rental-university-park-tx': typeof DumpsterRentalUniversityParkTxRoute
   '/dumpster-rental-wylie-tx': typeof DumpsterRentalWylieTxRoute
+  '/dumpster-size': typeof DumpsterSizeRoute
   '/service-area': typeof ServiceAreaRoute
   '/thank-you': typeof ThankYouRoute
   '/resources/how-to-dispose-of-a-couch-in-dallas': typeof ResourcesHowToDisposeOfACouchInDallasRoute
@@ -231,6 +238,7 @@ export interface FileRoutesByTo {
   '/dumpster-rental-sunnyvale-tx': typeof DumpsterRentalSunnyvaleTxRoute
   '/dumpster-rental-university-park-tx': typeof DumpsterRentalUniversityParkTxRoute
   '/dumpster-rental-wylie-tx': typeof DumpsterRentalWylieTxRoute
+  '/dumpster-size': typeof DumpsterSizeRoute
   '/service-area': typeof ServiceAreaRoute
   '/thank-you': typeof ThankYouRoute
   '/resources/how-to-dispose-of-a-couch-in-dallas': typeof ResourcesHowToDisposeOfACouchInDallasRoute
@@ -260,6 +268,7 @@ export interface FileRoutesById {
   '/dumpster-rental-sunnyvale-tx': typeof DumpsterRentalSunnyvaleTxRoute
   '/dumpster-rental-university-park-tx': typeof DumpsterRentalUniversityParkTxRoute
   '/dumpster-rental-wylie-tx': typeof DumpsterRentalWylieTxRoute
+  '/dumpster-size': typeof DumpsterSizeRoute
   '/service-area': typeof ServiceAreaRoute
   '/thank-you': typeof ThankYouRoute
   '/resources/how-to-dispose-of-a-couch-in-dallas': typeof ResourcesHowToDisposeOfACouchInDallasRoute
@@ -290,6 +299,7 @@ export interface FileRouteTypes {
     | '/dumpster-rental-sunnyvale-tx'
     | '/dumpster-rental-university-park-tx'
     | '/dumpster-rental-wylie-tx'
+    | '/dumpster-size'
     | '/service-area'
     | '/thank-you'
     | '/resources/how-to-dispose-of-a-couch-in-dallas'
@@ -318,6 +328,7 @@ export interface FileRouteTypes {
     | '/dumpster-rental-sunnyvale-tx'
     | '/dumpster-rental-university-park-tx'
     | '/dumpster-rental-wylie-tx'
+    | '/dumpster-size'
     | '/service-area'
     | '/thank-you'
     | '/resources/how-to-dispose-of-a-couch-in-dallas'
@@ -346,6 +357,7 @@ export interface FileRouteTypes {
     | '/dumpster-rental-sunnyvale-tx'
     | '/dumpster-rental-university-park-tx'
     | '/dumpster-rental-wylie-tx'
+    | '/dumpster-size'
     | '/service-area'
     | '/thank-you'
     | '/resources/how-to-dispose-of-a-couch-in-dallas'
@@ -375,6 +387,7 @@ export interface RootRouteChildren {
   DumpsterRentalSunnyvaleTxRoute: typeof DumpsterRentalSunnyvaleTxRoute
   DumpsterRentalUniversityParkTxRoute: typeof DumpsterRentalUniversityParkTxRoute
   DumpsterRentalWylieTxRoute: typeof DumpsterRentalWylieTxRoute
+  DumpsterSizeRoute: typeof DumpsterSizeRoute
   ServiceAreaRoute: typeof ServiceAreaRoute
   ThankYouRoute: typeof ThankYouRoute
   ResourcesHowToDisposeOfACouchInDallasRoute: typeof ResourcesHowToDisposeOfACouchInDallasRoute
@@ -543,6 +556,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DumpsterRentalWylieTxRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/dumpster-size': {
+      id: '/dumpster-size'
+      path: '/dumpster-size'
+      fullPath: '/dumpster-size'
+      preLoaderRoute: typeof DumpsterSizeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/service-area': {
       id: '/service-area'
       path: '/service-area'
@@ -591,6 +611,7 @@ const rootRouteChildren: RootRouteChildren = {
   DumpsterRentalSunnyvaleTxRoute: DumpsterRentalSunnyvaleTxRoute,
   DumpsterRentalUniversityParkTxRoute: DumpsterRentalUniversityParkTxRoute,
   DumpsterRentalWylieTxRoute: DumpsterRentalWylieTxRoute,
+  DumpsterSizeRoute: DumpsterSizeRoute,
   ServiceAreaRoute: ServiceAreaRoute,
   ThankYouRoute: ThankYouRoute,
   ResourcesHowToDisposeOfACouchInDallasRoute:
