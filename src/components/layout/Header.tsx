@@ -10,9 +10,9 @@ interface NavLink {
 }
 
 const navLinks: NavLink[] = [
-  { label: "Home", href: "/", isInternal: true },
-  { label: "Dumpster Size", href: "/dumpster-size", isInternal: true },
-  { label: "Service Area", href: "/service-area", isInternal: true },
+  { label: "Home", href: "https://dallas-dumpster.com/" },
+  { label: "Dumpster Size", href: "https://dallas-dumpster.com/dumpster-size/" },
+  { label: "Service Area", href: "/", isInternal: true },
   { label: "FAQs", href: "https://dallas-dumpster.com/frequently-asked-questions/" },
   { label: "Acceptable & Prohibited Items", href: "https://dallas-dumpster.com/acceptable-prohibited-items/" },
   { label: "Gallery", href: "https://dallas-dumpster.com/gallery/" },

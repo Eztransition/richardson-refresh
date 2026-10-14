@@ -1,1 +1,0 @@
-- [x] Build Home page at / replicating dallas-dumpster.com homepage (user request 18:42); Service Area stays at /service-area
