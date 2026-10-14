@@ -8,7 +8,7 @@ interface FooterLink {
 }
 
 const footerLinks: FooterLink[] = [
-  { label: "Home", href: "https://dallas-dumpster.com/" },
+  { label: "Home", href: "/", isInternal: true },
   { label: "About", href: "https://dallas-dumpster.com/about-us/" },
   { label: "Service Area", href: "https://local.dallas-dumpster.com/" },
   { label: "FAQS", href: "https://dallas-dumpster.com/frequently-asked-questions/" },
