@@ -1,4 +1,4 @@
-const wpAssets = import.meta.glob<{ url: string }>("@/assets/wp/*.asset.json", { eager: true, import: "default" });
+const wpAssets = import.meta.glob<{ url: string }>("/src/assets/wp/*.asset.json", { eager: true, import: "default" });
 /** Images copied from the old WordPress uploads into the project's asset storage. */
 const wpImage = (file: string) => {
   const hit = Object.entries(wpAssets).find(([k]) => k.endsWith(`/${file}.asset.json`));
