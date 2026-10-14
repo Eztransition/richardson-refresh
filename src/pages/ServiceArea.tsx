@@ -3,7 +3,7 @@ import Footer from "@/components/layout/Footer";
 import MobileStickyCTA from "@/components/layout/MobileStickyCTA";
 import { Button } from "@/components/ui/button";
 import { locations } from "@/config/locations";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { MapPin, Phone, Truck, Clock, CheckCircle, Building2, Package, Zap, Calendar } from "lucide-react";
 import { useEffect } from "react";
 import { applyPageSeo } from "@/lib/seo";
