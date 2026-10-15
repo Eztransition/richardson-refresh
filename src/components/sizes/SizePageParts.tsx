@@ -9,7 +9,7 @@ export const bookButtonClass =
 interface SizeHeroProps {
   eyebrow?: string;
   title: string;
-  backgroundImage?: string;
+  backgroundImage?: string | undefined;
   /** Show "Book Now" (overview page) or "Call Us Now" (detail pages), matching the source page. */
   variant: "book" | "call";
 }
