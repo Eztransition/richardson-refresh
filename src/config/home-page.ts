@@ -6,10 +6,10 @@ export const homePage = {
     title: "Dumpster Rental Dallas, TX | Roll-Off Dumpsters from $355",
     description: "Affordable dumpster rental in Dallas, TX. Book 10, 15, or 20-yard roll-off dumpsters with easy online ordering, flexible rental periods, and reliable delivery across DFW.",
   },
-  heading: "Dumpster Rental in Dallas, TX — Simple, Reliable & Affordable",
+  heading: "The Right Dumpster for Your Next Project",
   subHeading: "Serving Dallas, TX & Surrounding Areas",
-  description: "Rent a roll-off dumpster for your home cleanup, renovation, or construction project. Choose from 10, 15, and 20-yard dumpsters with straightforward pricing, flexible rental periods, and convenient delivery throughout the Dallas area.",
-  trustLine: "Same-Day Delivery Available • Easy Online Booking • Starting at $355",
+  description: "Affordable roll-off dumpster rentals in Dallas, TX, for home cleanouts, renovations, and construction projects. Easy online booking and reliable local delivery.",
+  reviewsLine: "5-Star Google Reviews",
   howHeading: "Dumpster Rental Made Easy",
   features: [
     { title: "Book Online", text: "Choose your dumpster size, select your dates, and place your order online." },
