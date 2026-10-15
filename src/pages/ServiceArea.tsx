@@ -14,13 +14,13 @@ const ServiceArea = () => {
     applyPageSeo({
       title: "Dumpster Rental Service Areas | Dallas-Fort Worth",
       description:
-        "Dallas Dumpster Rentals serves 22 communities across the Dallas-Fort Worth metroplex. Find dumpster rental services near you. Call (972) 645-6731.",
+        "Dallas Dumpster Rentals serves 23 communities across the Dallas-Fort Worth metroplex. Find dumpster rental services near you. Call (972) 645-6731.",
       path: "/service-area",
     });
   }, []);
 
   const stats = [
-    { value: "22", label: "Communities Served", icon: Building2 },
+    { value: "23", label: "Communities Served", icon: Building2 },
     { value: "3", label: "Dumpster Sizes", icon: Package },
     { value: "Same-Day", label: "Delivery Available", icon: Zap },
     { value: "1–5 Days", label: "Included Rental", icon: Calendar },
@@ -47,7 +47,7 @@ const ServiceArea = () => {
                 Dumpster Rental Service Areas
               </h1>
               <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: "0.1s" }}>
-                Proudly serving 22 communities across the Dallas-Fort Worth metroplex with fast, reliable roll-off dumpster delivery.
+                Proudly serving 23 communities across the Dallas-Fort Worth metroplex with fast, reliable roll-off dumpster delivery.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-fade-in" style={{ animationDelay: "0.2s" }}>

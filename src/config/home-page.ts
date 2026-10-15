@@ -52,6 +52,7 @@ export const homePage = {
   areas: [
     "Dallas", "Richardson", "Forney", "Rowlett", "Plano", "Rock wall", "Allen", "Balch springs", "Wylie",
     "Seagoville", "Garland", "Hutchins", "Royse City", "Murphy", "Sachse", "Addison", "Highland Park", "University park",
+    "Sunnyvale", "Cedar Hill", "Lancaster", "DeSoto", "Duncanville",
   ],
   faqHeading: "Frequently Asked Questions",
   galleryHeading: "Gallery",
