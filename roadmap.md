@@ -32,3 +32,7 @@
 ## Section title sizes
 - [x] Photo-band section titles (home Why Choose, About Why Choose, 3-step rental band) now scale to lg:text-5xl like every other section title
 - [x] Verified 48px vs 48px on desktop, 30px on phone, no overflow or errors
+
+## Home page closing CTA
+- [x] Added "Have a Project in Mind?" band with the supplied text and Find Your Dumpster / Contact Us buttons
+- [x] Verified both buttons navigate correctly on desktop and phone, no errors
