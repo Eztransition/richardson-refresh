@@ -36,3 +36,10 @@
 ## Home page closing CTA
 - [x] Added "Have a Project in Mind?" band with the supplied text and Find Your Dumpster / Contact Us buttons
 - [x] Verified both buttons navigate correctly on desktop and phone, no errors
+
+## About Us content update
+- [x] Hero: H1 "About Dallas Dumpster Rentals" + short description, Book Now button and booking link unchanged.
+- [x] Main section: "Our Story" heading with the three supplied paragraphs; image and placement preserved.
+- [x] Why Choose: new eyebrow and heading, three cards replaced with the supplied titles and text; layout, icons and styling untouched.
+- [x] Verified desktop and phone rendering with no overflow or runtime errors.
+- [ ] FAQs section: the brief's section 4 arrived with no content — waiting on the user's FAQ wording.

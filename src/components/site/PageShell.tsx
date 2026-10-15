@@ -11,17 +11,19 @@ export const PageShell = ({
   title,
   variant = "book",
   heroImage,
+  heroDescription,
   children,
 }: {
   title: string;
   variant?: "book" | "call";
   heroImage?: string;
+  heroDescription?: string;
   children: ReactNode;
 }) => (
   <div className="min-h-screen flex flex-col">
     <Header />
     <main className="flex-1">
-      <SizeHero title={title} variant={variant} backgroundImage={heroImage} />
+      <SizeHero title={title} variant={variant} backgroundImage={heroImage} description={heroDescription} />
       {children}
     </main>
     <Footer />

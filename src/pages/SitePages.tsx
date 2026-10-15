@@ -22,20 +22,23 @@ const h2 = "text-3xl md:text-4xl font-heading font-bold text-foreground";
 export const AboutPage = () => {
   const icons = [ShieldCheck, Wallet, CalendarRange];
   return (
-    <PageShell title={ab.heading} heroImage={ab.heroImage}>
+    <PageShell title={ab.heading} heroImage={ab.heroImage} heroDescription={ab.heroDescription}>
       <section className="py-16 lg:py-24 bg-background">
-        <div className="container mx-auto grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-          <div className="space-y-5 text-muted-foreground leading-relaxed text-lg">
-            {ab.paragraphs.map((p) => (
-              <p key={p}>{p}</p>
-            ))}
+        <div className="container mx-auto">
+          <h2 className={`${h2} text-center mb-10`}>{ab.storyHeading}</h2>
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+            <div className="space-y-5 text-muted-foreground leading-relaxed text-lg">
+              {ab.paragraphs.map((p) => (
+                <p key={p}>{p}</p>
+              ))}
+            </div>
+            <img
+              src={ab.image}
+              alt="Dallas Dumpster Rentals roll-off dumpster"
+              loading="lazy"
+              className="w-full max-w-md mx-auto rounded-2xl shadow-card object-cover"
+            />
           </div>
-          <img
-            src={ab.image}
-            alt="Dallas Dumpster Rentals roll-off dumpster"
-            loading="lazy"
-            className="w-full max-w-md mx-auto rounded-2xl shadow-card object-cover"
-          />
         </div>
       </section>
 
