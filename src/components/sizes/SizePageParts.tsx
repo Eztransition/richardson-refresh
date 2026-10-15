@@ -10,12 +10,14 @@ export const bookButtonClass =
 interface SizeHeroProps {
   eyebrow?: string;
   title: string;
+  /** Short line shown under the H1, above the CTA. */
+  description?: string;
   backgroundImage?: string | undefined;
   /** Show "Book Now" (overview page) or "Call Us Now" (detail pages), matching the source page. */
   variant: "book" | "call";
 }
 
-export const SizeHero = ({ eyebrow, title, variant, backgroundImage = heroImage }: SizeHeroProps) => (
+export const SizeHero = ({ eyebrow, title, description, variant, backgroundImage = heroImage }: SizeHeroProps) => (
   <section className="relative min-h-[380px] md:min-h-[460px] flex items-center">
     <div
       className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -29,9 +31,18 @@ export const SizeHero = ({ eyebrow, title, variant, backgroundImage = heroImage 
             {eyebrow}
           </p>
         )}
-        <h1 className="text-3xl md:text-5xl lg:text-6xl font-heading font-bold mb-8 animate-fade-in">
+        <h1
+          className={`text-3xl md:text-5xl lg:text-6xl font-heading font-bold animate-fade-in ${
+            description ? "mb-5" : "mb-8"
+          }`}
+        >
           {title}
         </h1>
+        {description && (
+          <p className="mx-auto mb-8 max-w-2xl text-base leading-relaxed text-white/85 animate-fade-in md:text-lg">
+            {description}
+          </p>
+        )}
         <div className="flex justify-center animate-fade-in" style={{ animationDelay: "0.1s" }}>
           {variant === "book" ? (
             <Button asChild size="lg" className={bookButtonClass}>
