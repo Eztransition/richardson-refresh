@@ -33,6 +33,7 @@ import { Route as DumpsterRentalPlanoTxRouteImport } from './routes/dumpster-ren
 import { Route as DumpsterRentalRichardsonTxRouteImport } from './routes/dumpster-rental-richardson-tx'
 import { Route as DumpsterRentalRockwallTxRouteImport } from './routes/dumpster-rental-rockwall-tx'
 import { Route as DumpsterRentalRowlettTxRouteImport } from './routes/dumpster-rental-rowlett-tx'
+import { Route as DumpsterRentalRoyseCityTxRouteImport } from './routes/dumpster-rental-royse-city-tx'
 import { Route as DumpsterRentalSachseTxRouteImport } from './routes/dumpster-rental-sachse-tx'
 import { Route as DumpsterRentalSeagovilleTxRouteImport } from './routes/dumpster-rental-seagoville-tx'
 import { Route as DumpsterRentalSunnyvaleTxRouteImport } from './routes/dumpster-rental-sunnyvale-tx'
@@ -175,6 +176,12 @@ const DumpsterRentalRowlettTxRoute = DumpsterRentalRowlettTxRouteImport.update({
   path: '/dumpster-rental-rowlett-tx',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DumpsterRentalRoyseCityTxRoute =
+  DumpsterRentalRoyseCityTxRouteImport.update({
+    id: '/dumpster-rental-royse-city-tx',
+    path: '/dumpster-rental-royse-city-tx',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const DumpsterRentalSachseTxRoute = DumpsterRentalSachseTxRouteImport.update({
   id: '/dumpster-rental-sachse-tx',
   path: '/dumpster-rental-sachse-tx',
@@ -266,6 +273,7 @@ export interface FileRoutesByFullPath {
   '/dumpster-rental-richardson-tx': typeof DumpsterRentalRichardsonTxRoute
   '/dumpster-rental-rockwall-tx': typeof DumpsterRentalRockwallTxRoute
   '/dumpster-rental-rowlett-tx': typeof DumpsterRentalRowlettTxRoute
+  '/dumpster-rental-royse-city-tx': typeof DumpsterRentalRoyseCityTxRoute
   '/dumpster-rental-sachse-tx': typeof DumpsterRentalSachseTxRoute
   '/dumpster-rental-seagoville-tx': typeof DumpsterRentalSeagovilleTxRoute
   '/dumpster-rental-sunnyvale-tx': typeof DumpsterRentalSunnyvaleTxRoute
@@ -304,6 +312,7 @@ export interface FileRoutesByTo {
   '/dumpster-rental-richardson-tx': typeof DumpsterRentalRichardsonTxRoute
   '/dumpster-rental-rockwall-tx': typeof DumpsterRentalRockwallTxRoute
   '/dumpster-rental-rowlett-tx': typeof DumpsterRentalRowlettTxRoute
+  '/dumpster-rental-royse-city-tx': typeof DumpsterRentalRoyseCityTxRoute
   '/dumpster-rental-sachse-tx': typeof DumpsterRentalSachseTxRoute
   '/dumpster-rental-seagoville-tx': typeof DumpsterRentalSeagovilleTxRoute
   '/dumpster-rental-sunnyvale-tx': typeof DumpsterRentalSunnyvaleTxRoute
@@ -343,6 +352,7 @@ export interface FileRoutesById {
   '/dumpster-rental-richardson-tx': typeof DumpsterRentalRichardsonTxRoute
   '/dumpster-rental-rockwall-tx': typeof DumpsterRentalRockwallTxRoute
   '/dumpster-rental-rowlett-tx': typeof DumpsterRentalRowlettTxRoute
+  '/dumpster-rental-royse-city-tx': typeof DumpsterRentalRoyseCityTxRoute
   '/dumpster-rental-sachse-tx': typeof DumpsterRentalSachseTxRoute
   '/dumpster-rental-seagoville-tx': typeof DumpsterRentalSeagovilleTxRoute
   '/dumpster-rental-sunnyvale-tx': typeof DumpsterRentalSunnyvaleTxRoute
@@ -383,6 +393,7 @@ export interface FileRouteTypes {
     | '/dumpster-rental-richardson-tx'
     | '/dumpster-rental-rockwall-tx'
     | '/dumpster-rental-rowlett-tx'
+    | '/dumpster-rental-royse-city-tx'
     | '/dumpster-rental-sachse-tx'
     | '/dumpster-rental-seagoville-tx'
     | '/dumpster-rental-sunnyvale-tx'
@@ -421,6 +432,7 @@ export interface FileRouteTypes {
     | '/dumpster-rental-richardson-tx'
     | '/dumpster-rental-rockwall-tx'
     | '/dumpster-rental-rowlett-tx'
+    | '/dumpster-rental-royse-city-tx'
     | '/dumpster-rental-sachse-tx'
     | '/dumpster-rental-seagoville-tx'
     | '/dumpster-rental-sunnyvale-tx'
@@ -459,6 +471,7 @@ export interface FileRouteTypes {
     | '/dumpster-rental-richardson-tx'
     | '/dumpster-rental-rockwall-tx'
     | '/dumpster-rental-rowlett-tx'
+    | '/dumpster-rental-royse-city-tx'
     | '/dumpster-rental-sachse-tx'
     | '/dumpster-rental-seagoville-tx'
     | '/dumpster-rental-sunnyvale-tx'
@@ -498,6 +511,7 @@ export interface RootRouteChildren {
   DumpsterRentalRichardsonTxRoute: typeof DumpsterRentalRichardsonTxRoute
   DumpsterRentalRockwallTxRoute: typeof DumpsterRentalRockwallTxRoute
   DumpsterRentalRowlettTxRoute: typeof DumpsterRentalRowlettTxRoute
+  DumpsterRentalRoyseCityTxRoute: typeof DumpsterRentalRoyseCityTxRoute
   DumpsterRentalSachseTxRoute: typeof DumpsterRentalSachseTxRoute
   DumpsterRentalSeagovilleTxRoute: typeof DumpsterRentalSeagovilleTxRoute
   DumpsterRentalSunnyvaleTxRoute: typeof DumpsterRentalSunnyvaleTxRoute
@@ -682,6 +696,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DumpsterRentalRowlettTxRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/dumpster-rental-royse-city-tx': {
+      id: '/dumpster-rental-royse-city-tx'
+      path: '/dumpster-rental-royse-city-tx'
+      fullPath: '/dumpster-rental-royse-city-tx'
+      preLoaderRoute: typeof DumpsterRentalRoyseCityTxRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/dumpster-rental-sachse-tx': {
       id: '/dumpster-rental-sachse-tx'
       path: '/dumpster-rental-sachse-tx'
@@ -794,6 +815,7 @@ const rootRouteChildren: RootRouteChildren = {
   DumpsterRentalRichardsonTxRoute: DumpsterRentalRichardsonTxRoute,
   DumpsterRentalRockwallTxRoute: DumpsterRentalRockwallTxRoute,
   DumpsterRentalRowlettTxRoute: DumpsterRentalRowlettTxRoute,
+  DumpsterRentalRoyseCityTxRoute: DumpsterRentalRoyseCityTxRoute,
   DumpsterRentalSachseTxRoute: DumpsterRentalSachseTxRoute,
   DumpsterRentalSeagovilleTxRoute: DumpsterRentalSeagovilleTxRoute,
   DumpsterRentalSunnyvaleTxRoute: DumpsterRentalSunnyvaleTxRoute,
