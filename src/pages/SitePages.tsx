@@ -170,7 +170,7 @@ export const GalleryPage = () => (
         </div>
       </div>
     </section>
-    <RentalSteps tinted={false} />
+    <RentalSteps />
   </PageShell>
 );
 
