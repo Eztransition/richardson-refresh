@@ -9,15 +9,16 @@ export const bookButtonClass =
 interface SizeHeroProps {
   eyebrow?: string;
   title: string;
+  backgroundImage?: string;
   /** Show "Book Now" (overview page) or "Call Us Now" (detail pages), matching the source page. */
   variant: "book" | "call";
 }
 
-export const SizeHero = ({ eyebrow, title, variant }: SizeHeroProps) => (
+export const SizeHero = ({ eyebrow, title, variant, backgroundImage = heroImage }: SizeHeroProps) => (
   <section className="relative min-h-[380px] md:min-h-[460px] flex items-center">
     <div
       className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: `url(${heroImage})` }}
+      style={{ backgroundImage: `url(${backgroundImage})` }}
     />
     <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/80" />
     <div className="container mx-auto px-4 relative z-10 py-16 md:py-20">
