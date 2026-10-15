@@ -13,6 +13,7 @@ import { BOOKING_URL, dumpsterSizePages } from "@/config/dumpster-sizes";
 import { ReviewsWidget } from "@/components/site/ReviewsWidget";
 import { galleryPage } from "@/config/site-pages";
 import { homePage as hp, homeFaqs } from "@/config/home-page";
+import { wpImage } from "@/lib/wp-images";
 import { locations } from "@/config/locations";
 
 const h2 = "text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-foreground";
@@ -126,21 +127,32 @@ const HomePage = () => (
       </section>
 
       {/* Why */}
-      <section className="py-16 lg:py-24 bg-background">
+      <section aria-labelledby="home-why-heading" className="relative isolate overflow-hidden bg-brand-dark py-16 lg:py-24">
+        <img
+          src={wpImage("about-why-background.jpg")}
+          alt=""
+          loading="lazy"
+          className="absolute inset-0 -z-20 h-full w-full object-cover object-center"
+        />
+        <div className="absolute inset-0 -z-10 bg-brand-dark/75" />
         <div className="container mx-auto">
-          <p className={eyebrow}>{hp.whyEyebrow}</p>
-          <h2 className={`${h2} text-center mb-4`}>{hp.whyHeading}</h2>
-          <p className={sub}>{hp.whySub}</p>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+          <div className="mx-auto mb-10 max-w-3xl text-center lg:mb-14">
+            <span aria-hidden="true" className="mx-auto mb-6 block h-1 w-12 rounded-full bg-secondary" />
+            <p className="mb-4 font-heading text-xs font-bold uppercase tracking-normal text-secondary sm:text-sm">{hp.whyEyebrow}</p>
+            <h2 id="home-why-heading" className="font-heading text-3xl font-bold leading-tight tracking-normal text-primary-foreground md:text-4xl">{hp.whyHeading}</h2>
+            <p className="mt-4 text-lg leading-relaxed text-primary-foreground/80">{hp.whySub}</p>
+          </div>
+          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4 lg:gap-6">
             {hp.why.map((w, i) => {
               const Icon = whyIcons[i] ?? ShieldCheck;
               return (
-                <div key={w.title} className="bg-background rounded-xl p-8 border border-border shadow-card">
-                  <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-5">
-                    <Icon className="h-7 w-7 text-primary" />
+                <div key={w.title} className="relative overflow-hidden rounded-lg border border-primary-foreground/20 bg-card p-7 shadow-elevated lg:p-8">
+                  <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-lg border border-primary/15 bg-primary/10">
+                    <Icon aria-hidden="true" strokeWidth={1.75} className="h-7 w-7 text-brand-cyan-dark" />
                   </div>
-                  <h3 className="text-xl font-heading font-bold text-foreground mb-3">{w.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{w.text}</p>
+                  <h3 className="mb-4 font-heading text-lg font-bold leading-snug tracking-normal text-card-foreground">{w.title}</h3>
+                  <p className="text-base leading-7 text-muted-foreground">{w.text}</p>
+                  <span aria-hidden="true" className="absolute inset-x-0 bottom-0 h-1 bg-secondary" />
                 </div>
               );
             })}
