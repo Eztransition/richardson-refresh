@@ -10,16 +10,18 @@ import type { FaqItem } from "@/config/site-pages";
 export const PageShell = ({
   title,
   variant = "book",
+  heroImage,
   children,
 }: {
   title: string;
   variant?: "book" | "call";
+  heroImage?: string;
   children: ReactNode;
 }) => (
   <div className="min-h-screen flex flex-col">
     <Header />
     <main className="flex-1">
-      <SizeHero title={title} variant={variant} />
+      <SizeHero title={title} variant={variant} backgroundImage={heroImage} />
       {children}
     </main>
     <Footer />
