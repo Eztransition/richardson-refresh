@@ -173,7 +173,7 @@ const HomePage = () => (
               return (
                 <li key={a}>
                   {loc ? (
-                    <a href={`/${loc.slug}`} className={`${cls} hover:border-primary/40 hover:text-primary transition-colors`}>{inner}</a>
+                    <a href={`/dumpster-rental-${loc.slug}`} className={`${cls} hover:border-primary/40 hover:text-primary transition-colors`}>{inner}</a>
                   ) : (
                     <span className={cls}>{inner}</span>
                   )}
