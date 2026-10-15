@@ -7,7 +7,8 @@ import GoogleMap from "@/components/sections/GoogleMap";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { FaqAccordion } from "@/components/site/PageShell";
-import { SizeHero, bookButtonClass } from "@/components/sizes/SizePageParts";
+import heroImage from "@/assets/richardson-hero.jpg";
+import { bookButtonClass } from "@/components/sizes/SizePageParts";
 import { BOOKING_URL, dumpsterSizePages } from "@/config/dumpster-sizes";
 import { ReviewsWidget } from "@/components/site/ReviewsWidget";
 import { galleryPage } from "@/config/site-pages";
@@ -15,8 +16,10 @@ import { homePage as hp, homeFaqs } from "@/config/home-page";
 import { locations } from "@/config/locations";
 
 const h2 = "text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-foreground";
-const featureIcons = [CalendarCheck, MessageSquareText, Truck];
-const whyIcons = [ShieldCheck, Wallet, CalendarRange];
+const featureIcons = [CalendarCheck, Truck, MessageSquareText];
+const whyIcons = [ShieldCheck, Wallet, CalendarRange, CalendarCheck];
+const eyebrow = "text-sm font-heading font-semibold text-primary uppercase mb-3 text-center";
+const sub = "text-center text-muted-foreground text-lg max-w-3xl mx-auto mb-10 leading-relaxed";
 
 const normalize = (n: string) =>
   n.toLowerCase().replace("rock wall", "rockwall").replace(/\b\w/g, (c) => c.toUpperCase());
@@ -25,12 +28,28 @@ const HomePage = () => (
   <div className="min-h-screen flex flex-col">
     <Header />
     <main className="flex-1">
-      <SizeHero eyebrow={hp.subHeading} title={hp.heading} variant="book" />
+      <section className="relative flex items-center bg-brand-dark text-primary-foreground">
+        <img src={heroImage} alt="Dallas Dumpster Rentals roll-off dumpster on a residential driveway" className="absolute inset-0 h-full w-full object-cover" fetchPriority="high" />
+        <div className="absolute inset-0 bg-brand-dark/75" />
+        <div className="container relative z-10 py-16 md:py-20 text-center">
+          <div className="max-w-4xl mx-auto">
+            <p className="inline-block mb-4 px-4 py-1.5 rounded-full bg-primary-foreground/10 backdrop-blur-md border border-primary-foreground/20 text-sm font-heading font-semibold">{hp.subHeading}</p>
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-heading font-bold mb-6 leading-tight">{hp.heading}</h1>
+            <p className="text-lg leading-relaxed max-w-3xl mx-auto mb-8">{hp.description}</p>
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4">
+              <Button asChild size="lg" className={bookButtonClass}><a href={BOOKING_URL}>Book a Dumpster</a></Button>
+              <Button asChild size="lg" className="bg-background text-foreground hover:bg-background/90 font-heading font-semibold text-lg px-10 h-14 shadow-lg"><Link to="/dumpster-size">View Dumpster Sizes</Link></Button>
+            </div>
+            <p className="mt-6 text-sm md:text-base">{hp.trustLine}</p>
+          </div>
+        </div>
+      </section>
 
       {/* Feature bar */}
-      <section className="relative z-10 -mt-10">
+      <section className="relative z-10 pt-12">
         <div className="container mx-auto">
-          <div className="grid sm:grid-cols-3 gap-4 bg-background rounded-2xl shadow-card border border-border p-6">
+          <h2 className={`${h2} text-center mb-8`}>{hp.howHeading}</h2>
+          <div className="grid sm:grid-cols-3 gap-6 bg-background rounded-2xl shadow-card border border-border p-6">
             {hp.features.map((f, i) => {
               const Icon = featureIcons[i] ?? Check;
               return (
@@ -52,7 +71,9 @@ const HomePage = () => (
       {/* Services */}
       <section className="py-16 lg:py-24 bg-background">
         <div className="container mx-auto">
-          <h2 className={`${h2} text-center mb-12`}>{hp.servicesHeading}</h2>
+          <p className={eyebrow}>{hp.servicesEyebrow}</p>
+          <h2 className={`${h2} text-center mb-4`}>{hp.servicesHeading}</h2>
+          <p className={sub}>{hp.servicesSub}</p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
             {dumpsterSizePages.map((d) => (
               <Card key={d.slug} className="overflow-hidden border border-border shadow-card hover:shadow-card-hover transition-all flex flex-col">
@@ -60,14 +81,15 @@ const HomePage = () => (
                   <img src={d.image} alt={d.imageAlt} className="w-full h-full object-cover" loading="lazy" />
                 </div>
                 <CardHeader className="pb-4">
-                  <h3 className="text-xl font-heading font-bold text-foreground">{d.title}</h3>
-                  <span className="pt-2 text-4xl lg:text-5xl font-heading font-bold text-primary">{d.overview.price}</span>
+                  <h3 className="text-xl font-heading font-bold text-foreground">{d.title.replace("Rentals", "Rental")}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{hp.sizeDescriptions[d.slug]}</p>
+                  <span className="pt-2 text-4xl lg:text-5xl font-heading font-bold text-primary">{d.overview.price.replace(".00", "")}</span>
                 </CardHeader>
                 <CardContent className="space-y-3 flex-1 text-sm">
                   {[
-                    ["Dimensions", d.overview.dimensions],
-                    ["Rental Time", d.overview.rentalTime],
-                    [d.overview.includedHeading, d.overview.includedText],
+                    ["Dimensions", d.overview.dimensions.replaceAll("’", "'").replaceAll(" x ", " × ")],
+                    ["Rental Period", d.overview.rentalTime.replace(/1-(\d) Day Rental/, "1–$1 Days")],
+                    ["Included Weight", d.overview.includedText.replace("Ibs. included", "lbs")],
                   ].map(([k, v]) => (
                     <div key={k} className="flex items-start gap-2">
                       <Check className="h-4 w-4 text-secondary flex-shrink-0 mt-0.5" />
@@ -76,7 +98,7 @@ const HomePage = () => (
                   ))}
                   <div className="pt-3 border-t border-border space-y-1 text-muted-foreground">
                     <p><strong>Additional Days:</strong> {d.overview.additionalDays}</p>
-                    <p><strong>Extra Weight:</strong> {d.overview.extraWeight}</p>
+                    <p><strong>Extra Weight:</strong> {d.overview.extraWeight.replace("/1000", "/1,000")}</p>
                   </div>
                 </CardContent>
                 <CardFooter className="flex flex-col gap-3 pt-4">
@@ -84,7 +106,7 @@ const HomePage = () => (
                     <a href={BOOKING_URL}>Book Now</a>
                   </Button>
                   <Button asChild variant="ghost" className="w-full text-muted-foreground hover:text-foreground text-base h-12">
-                    <Link to={`/${d.slug}` as const}>More Info →</Link>
+                    <Link to={`/${d.slug}` as const}>More Details</Link>
                   </Button>
                 </CardFooter>
               </Card>
@@ -96,16 +118,20 @@ const HomePage = () => (
       {/* Intro */}
       <section className="py-16 lg:py-24 bg-brand-surface">
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className={`${h2} mb-6 capitalize`}>{hp.introHeading}</h2>
-          <p className="text-lg text-muted-foreground leading-relaxed">{hp.intro}</p>
+          <p className={eyebrow}>{hp.introEyebrow}</p>
+          <h2 className={`${h2} mb-6`}>{hp.introHeading}</h2>
+          <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">{hp.intro.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
+          <Button asChild className={`mt-8 ${bookButtonClass}`}><Link to="/about-us">Learn More About Us</Link></Button>
         </div>
       </section>
 
       {/* Why */}
       <section className="py-16 lg:py-24 bg-background">
         <div className="container mx-auto">
-          <h2 className={`${h2} text-center mb-12`}>{hp.whyHeading}</h2>
-          <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+          <p className={eyebrow}>{hp.whyEyebrow}</p>
+          <h2 className={`${h2} text-center mb-4`}>{hp.whyHeading}</h2>
+          <p className={sub}>{hp.whySub}</p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             {hp.why.map((w, i) => {
               const Icon = whyIcons[i] ?? ShieldCheck;
               return (
@@ -125,8 +151,9 @@ const HomePage = () => (
       {/* Reviews */}
       <section className="py-16 lg:py-24 bg-brand-surface">
         <div className="container mx-auto">
+          <p className={eyebrow}>{hp.reviewsEyebrow}</p>
           <h2 className={`${h2} text-center mb-3`}>{hp.reviewsHeading}</h2>
-          <p className="text-center text-muted-foreground mb-12">{hp.reviewsSub}</p>
+          <p className={sub}>{hp.reviewsSub}</p>
           <ReviewsWidget />
         </div>
       </section>
@@ -134,9 +161,9 @@ const HomePage = () => (
       {/* Order band */}
       <section className="py-12 bg-gradient-to-br from-primary via-primary/90 to-primary/70">
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-center gap-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary-foreground">{hp.orderHeading}</h2>
+          <div className="max-w-2xl text-primary-foreground"><h2 className="text-3xl md:text-4xl font-heading font-bold">{hp.orderHeading}</h2><p className="mt-4 text-lg">{hp.orderSub}</p></div>
           <Button asChild size="lg" className={bookButtonClass}>
-            <a href={BOOKING_URL}>Book Now</a>
+            <a href={BOOKING_URL}>Book Your Dumpster</a>
           </Button>
         </div>
       </section>
@@ -144,8 +171,10 @@ const HomePage = () => (
       {/* Service area */}
       <section className="py-16 lg:py-24 bg-background">
         <div className="container mx-auto">
+          <p className={eyebrow}>{hp.areaEyebrow}</p>
           <h2 className={`${h2} text-center mb-3`}>{hp.areaHeading}</h2>
-          <p className="text-center text-muted-foreground mb-10">{hp.areaSub}</p>
+          <p className={sub}>{hp.areaSub}</p>
+          <h3 className="font-heading font-semibold text-center mb-6">Cities We Serve:</h3>
           <ul className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 max-w-5xl mx-auto">
             {hp.areas.map((a) => {
               const loc = locations.find((l) => l.name.toLowerCase() === normalize(a).toLowerCase());
@@ -155,7 +184,7 @@ const HomePage = () => (
                   <span>{a}</span>
                 </>
               );
-              const cls = "flex items-center gap-2 rounded-lg border border-border bg-brand-surface px-4 py-3 text-foreground font-medium";
+              const cls = "flex items-center gap-2 rounded-lg border border-border bg-brand-surface px-3 py-3 h-full text-foreground font-medium";
               return (
                 <li key={a}>
                   {loc ? (
@@ -167,13 +196,16 @@ const HomePage = () => (
               );
             })}
           </ul>
+          <div className="mt-8 text-center"><Button asChild className={bookButtonClass}><Link to="/service-area">Explore All Service Areas</Link></Button></div>
         </div>
       </section>
 
       {/* FAQ */}
       <section className="py-16 lg:py-24 bg-brand-surface">
         <div className="container mx-auto max-w-3xl">
-          <h2 className={`${h2} text-center mb-10`}>{hp.faqHeading}</h2>
+          <p className={eyebrow}>{hp.faqEyebrow}</p>
+          <h2 className={`${h2} text-center mb-4`}>{hp.faqHeading}</h2>
+          <p className={sub}>{hp.faqSub}</p>
           <FaqAccordion items={homeFaqs} />
         </div>
       </section>
@@ -181,7 +213,9 @@ const HomePage = () => (
       {/* Gallery */}
       <section className="py-16 lg:py-24 bg-background">
         <div className="container mx-auto">
-          <h2 className={`${h2} text-center mb-10`}>{hp.galleryHeading}</h2>
+          <p className={eyebrow}>{hp.galleryEyebrow}</p>
+          <h2 className={`${h2} text-center mb-4`}>{hp.galleryHeading}</h2>
+          <p className={sub}>{hp.gallerySub}</p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {galleryPage.images.slice(0, 8).map((img) => (
               <div key={img.src} className="overflow-hidden rounded-xl shadow-card">
@@ -192,7 +226,18 @@ const HomePage = () => (
         </div>
       </section>
 
+      <div className="container text-center pb-12"><Button asChild className={bookButtonClass}><Link to="/gallery">View Gallery</Link></Button></div>
       <GoogleMap location="Dallas" />
+      <section className="py-12 bg-gradient-to-br from-primary via-primary/90 to-primary/70 text-primary-foreground">
+        <div className="container text-center">
+          <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">{hp.finalHeading}</h2>
+          <p className="text-lg max-w-3xl mx-auto mb-8">{hp.finalSub}</p>
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <Button asChild size="lg" className={bookButtonClass}><a href={BOOKING_URL}>Book Online</a></Button>
+            <Button asChild size="lg" className="bg-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/30 font-heading font-semibold text-lg px-10 h-14"><Link to="/contact-us">Contact Us</Link></Button>
+          </div>
+        </div>
+      </section>
     </main>
     <Footer />
     <MobileStickyCTA />
