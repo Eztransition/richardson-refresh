@@ -4,6 +4,6 @@
 - [x] Verify homepage links, FAQs, and desktop/mobile presentation.
 
 # About Us images
-- [ ] Download the original About Us hero and Why Choose section backgrounds into project asset storage.
-- [ ] Apply both images only to their matching About Us sections, preserving content and controls.
-- [ ] Verify both images render and text stays readable.
+- [x] Download the original About Us hero and Why Choose section backgrounds into project asset storage.
+- [x] Apply both images only to their matching About Us sections, preserving content and controls.
+- [x] Verify both images render and text stays readable.
