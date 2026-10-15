@@ -12,7 +12,7 @@ interface NavLink {
 const navLinks: NavLink[] = [
   { label: "Home", href: "/", isInternal: true },
   { label: "Dumpster Size", href: "/dumpster-size", isInternal: true },
-  { label: "Service Area", href: "/", isInternal: true },
+  { label: "Service Area", href: "/service-area", isInternal: true },
   { label: "FAQs", href: "/frequently-asked-questions", isInternal: true },
   { label: "Acceptable & Prohibited Items", href: "/acceptable-prohibited-items", isInternal: true },
   { label: "Gallery", href: "/gallery", isInternal: true },
