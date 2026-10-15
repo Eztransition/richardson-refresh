@@ -252,12 +252,6 @@ export const contactPage = {
     "By checking this box, I consent to receive transactional messages related to my account, orders, or services I have requested. These messages may include appointment reminders, order confirmations, and account notifications among others. Message frequency may vary. Message & Data rates may apply.Reply HELP for help or STOP to opt-out.",
   consentMarketing:
     "By checking this box, I consent to receive marketing and promotional messages, including special offers, discounts, new product updates among others. Message frequency may vary. Message & Data rates may apply. Reply HELP for help or STOP to opt-out.",
-  body: [
-    "f you have a question about scheduling, delivery timing, or which dumpster size makes the most sense, reach out and we’ll help you get it set up. We serve Dallas and surrounding areas, and we can confirm availability and recommend the right roll-off based on what you’re throwing away and how long you need the container.",
-    "The fastest way to reach us is by phone at 972-645-6731. You can also email Info@dallas-dumpster.com. Our office address is 707 Opal Lane, Mesquite, TX 75149. Business hours are Monday–Friday 8:00 AM–7:00 PM and Saturday 9:00 AM–1:00 PM.",
-    "We deliver across Dallas and the nearby cities listed on the site, including Richardson, Forney, Rowlett, Plano, Rockwall, Allen, Balch Springs, Wylie, Seagoville, Garland, Hutchins, Carrollton, Murphy, Sachse, Addison, Highland Park, and University Park.",
-    "For a smooth pickup, make sure the container isn’t overfilled—keep debris level with the top—and place the dumpster on a solid surface like concrete, asphalt, or gravel (not in a yard). If you have any questions about acceptable materials, check the restrictions listed in the FAQ on the website or ask us when you call.",
-  ],
 };
 
 export const privacyPage = {

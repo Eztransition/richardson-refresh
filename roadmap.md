@@ -23,3 +23,8 @@
 - [x] Stop the embedded form script from moving a node React owns, which blanked the screen with a `removeChild` error.
 - [x] Confirm the form still shows its fields and the two-column layout is unchanged.
 - [x] Cycle through pages repeatedly with no runtime errors.
+
+# Contact Us text removal
+- [x] Remove the four intro paragraphs and the office address line below the form and map.
+- [x] Keep the contact cards, the two-column map/form section, and the footer address untouched.
+- [x] Verify the page on desktop and phone with no errors.
