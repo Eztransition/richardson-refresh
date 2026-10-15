@@ -90,7 +90,7 @@ const DumpsterSize = () => {
           </div>
         </section>
 
-        <RentalSteps tinted={false} />
+        <RentalSteps />
       </main>
       <Footer />
       <MobileStickyCTA />

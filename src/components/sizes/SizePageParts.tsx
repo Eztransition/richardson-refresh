@@ -2,6 +2,7 @@ import { Phone, CalendarCheck, Package, Truck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/richardson-hero.jpg";
 import { BOOKING_URL, rentalSteps } from "@/config/dumpster-sizes";
+import { wpImage } from "@/lib/wp-images";
 
 export const bookButtonClass =
   "bg-secondary hover:bg-secondary/90 text-secondary-foreground font-heading font-semibold text-lg px-12 py-4 h-14 shadow-lg hover:shadow-xl transition-all";
@@ -56,30 +57,54 @@ export const SizeHero = ({ eyebrow, title, variant, backgroundImage = heroImage 
 
 const stepIcons = [CalendarCheck, Package, Truck];
 
-export const RentalSteps = ({ tinted = true }: { tinted?: boolean }) => (
-  <section className={`py-16 lg:py-24 ${tinted ? "bg-brand-surface" : "bg-background"}`}>
+interface RentalStepsProps {
+  /** Photo behind the section; defaults to the same image as the About "Why Choose" band. */
+  backgroundImage?: string;
+}
+
+export const RentalSteps = ({ backgroundImage = wpImage("about-why-background.jpg") }: RentalStepsProps) => (
+  <section
+    aria-labelledby="rental-steps-heading"
+    className="relative isolate overflow-hidden bg-brand-dark py-16 lg:py-24"
+  >
+    <img
+      src={backgroundImage}
+      alt=""
+      loading="lazy"
+      className="absolute inset-0 -z-20 h-full w-full object-cover object-center"
+    />
+    <div className="absolute inset-0 -z-10 bg-brand-dark/75" />
     <div className="container mx-auto">
-      <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground text-center mb-12">
-        {rentalSteps.heading}
-      </h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+      <div className="mx-auto mb-10 max-w-3xl text-center lg:mb-14">
+        <span aria-hidden="true" className="mx-auto mb-6 block h-1 w-12 rounded-full bg-secondary" />
+        <h2
+          id="rental-steps-heading"
+          className="font-heading text-3xl font-bold leading-tight tracking-normal text-primary-foreground md:text-4xl"
+        >
+          {rentalSteps.heading}
+        </h2>
+      </div>
+      <div className="grid gap-5 md:grid-cols-3 lg:gap-6">
         {rentalSteps.steps.map((step, i) => {
           const Icon = stepIcons[i] ?? Truck;
           return (
             <div
               key={step.title}
-              className="relative bg-background rounded-xl p-6 lg:p-8 border border-border shadow-card hover:shadow-card-hover transition-all duration-300"
+              className="relative overflow-hidden rounded-lg border border-primary-foreground/20 bg-card p-7 shadow-elevated lg:p-9"
             >
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center">
-                  <Icon className="h-7 w-7 text-primary" />
+              <div className="mb-7 flex items-center gap-4">
+                <div className="flex h-14 w-14 items-center justify-center rounded-lg border border-primary/15 bg-primary/10">
+                  <Icon aria-hidden="true" strokeWidth={1.75} className="h-7 w-7 text-brand-cyan-dark" />
                 </div>
-                <span className="text-sm font-heading font-semibold text-muted-foreground">
+                <span className="font-heading text-sm font-bold uppercase tracking-normal text-muted-foreground">
                   Step {i + 1}
                 </span>
               </div>
-              <h3 className="text-xl font-heading font-bold text-foreground mb-3">{step.title}</h3>
-              <p className="text-muted-foreground leading-relaxed">{step.text}</p>
+              <h3 className="mb-4 font-heading text-xl font-bold leading-snug tracking-normal text-card-foreground">
+                {step.title}
+              </h3>
+              <p className="text-base leading-7 text-muted-foreground">{step.text}</p>
+              <span aria-hidden="true" className="absolute inset-x-0 bottom-0 h-1 bg-secondary" />
             </div>
           );
         })}
