@@ -53,7 +53,7 @@ export const AboutPage = () => {
             <p className="mb-4 font-heading text-xs font-bold uppercase tracking-normal text-secondary sm:text-sm">
               {ab.eyebrow}
             </p>
-            <h2 id="about-why-heading" className="font-heading text-3xl font-bold leading-tight tracking-normal text-primary-foreground md:text-4xl">{ab.whyHeading}</h2>
+            <h2 id="about-why-heading" className="font-heading text-3xl font-bold leading-tight tracking-normal text-primary-foreground md:text-4xl lg:text-5xl">{ab.whyHeading}</h2>
           </div>
           <div className="grid gap-5 md:grid-cols-3 lg:gap-6">
             {ab.why.map((w, i) => {

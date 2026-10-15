@@ -153,7 +153,7 @@ const HomePage = () => (
           <div className="mx-auto mb-10 max-w-3xl text-center lg:mb-14">
             <span aria-hidden="true" className="mx-auto mb-6 block h-1 w-12 rounded-full bg-secondary" />
             <p className="mb-4 font-heading text-xs font-bold uppercase tracking-normal text-secondary sm:text-sm">{hp.whyEyebrow}</p>
-            <h2 id="home-why-heading" className="font-heading text-3xl font-bold leading-tight tracking-normal text-primary-foreground md:text-4xl">{hp.whyHeading}</h2>
+            <h2 id="home-why-heading" className="font-heading text-3xl font-bold leading-tight tracking-normal text-primary-foreground md:text-4xl lg:text-5xl">{hp.whyHeading}</h2>
           </div>
           <div className="grid gap-5 md:grid-cols-3 lg:gap-6">
             {hp.why.map((w, i) => {
