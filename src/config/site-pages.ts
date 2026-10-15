@@ -40,6 +40,8 @@ export const aboutPage = {
       "Dallas Dumpster Rentals is a family-owned and operated business providing high quality roll off dumpster rentals at competitive prices in Dallas, TX and surrounding areas.",
   },
   heading: "About us",
+  heroImage: wpImage("about-hero.jpg"),
+  whyBackgroundImage: wpImage("about-why-background.jpg"),
   paragraphs: [
     "Dallas Dumpster Rentals takes pride in providing high quality roll off dumpster rentals at competitive prices. Whether you own a home, run a business, or are directing a construction site, we have the debris hauling containers to make your job easier.we are a family-owned and operated business, proudly serving our community with dependable, affordable and hassle-free dumpster rental.",
     "Our team is dedicated to providing timely and efficient service, ensuring your project, big or small, progresses smoothly with the support of our top-quality dumpsters. Trust us to meet your needs with professionalism and expert care.We are dedicated to providing the best rolloff dumpster rental in Dallas,TX and Surrounding areas.We offer professional and reliable dumpster rental services.Our aim is to offer a five-star, best-in-class customer service experience, whether this is your first dumpster rental or you rent dumpsters every week! We are committed to making the process of renting a dumpster easy, affordable, hassle-free.",

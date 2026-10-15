@@ -22,7 +22,7 @@ const h2 = "text-3xl md:text-4xl font-heading font-bold text-foreground";
 export const AboutPage = () => {
   const icons = [ShieldCheck, Wallet, CalendarRange];
   return (
-    <PageShell title={ab.heading}>
+    <PageShell title={ab.heading} heroImage={ab.heroImage}>
       <section className="py-16 lg:py-24 bg-background">
         <div className="container mx-auto grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           <div className="space-y-5 text-muted-foreground leading-relaxed text-lg">
@@ -39,7 +39,14 @@ export const AboutPage = () => {
         </div>
       </section>
 
-      <section className="py-16 lg:py-24 bg-brand-surface">
+      <section className="relative isolate py-16 lg:py-24 bg-brand-surface">
+        <img
+          src={ab.whyBackgroundImage}
+          alt=""
+          loading="lazy"
+          className="absolute inset-0 -z-20 h-full w-full object-cover object-center"
+        />
+        <div className="absolute inset-0 -z-10 bg-brand-surface/75" />
         <div className="container mx-auto">
           <p className="text-center text-sm font-heading font-semibold uppercase tracking-wide text-primary mb-3">
             {ab.eyebrow}
