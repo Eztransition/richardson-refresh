@@ -6,4 +6,4 @@
 # About Us images
 - [x] Download the original About Us hero and Why Choose section backgrounds into project asset storage.
 - [x] Apply both images only to their matching About Us sections, preserving content and controls.
-- [x] Verify both images render and text stays readable.
+- [x] Verify both images render and text stays readable.- [x] "How to Rent Our Dumpsters In 3 Easy Steps": photo background band matching the About "Why Choose" style (verified desktop + mobile)
