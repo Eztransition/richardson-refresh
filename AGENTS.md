@@ -7,3 +7,4 @@
 - Dumpster size pages (`/dumpster-size`, `/{10,15,20}-yard-dumpster-rentals`) take all wording, prices and SEO text from `src/config/dumpster-sizes.ts`, copied verbatim from dallas-dumpster.com — one place to sync with the source site.
 - General pages (About, Contact, FAQs, Gallery, Acceptable & Prohibited Items, Privacy Policy) take their verbatim text from `src/config/site-pages.ts` and share `PageShell` — one place to sync with the source site; all header/footer links are internal routes.
 - Third-party contact form embeds live in a dedicated component with their script loaded after mount — keeps browser side effects outside SSR.
+- Home page copy and FAQ answers live in `src/config/home-page.ts`, while displayed rental prices and terms come from shared dumpster size data — keeps homepage text independent without duplicating authoritative pricing.
