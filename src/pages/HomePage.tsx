@@ -128,14 +128,6 @@ const HomePage = () => (
           <h2 className={`${h2} text-center mb-3`}>{hp.reviewsHeading}</h2>
           <p className="text-center text-muted-foreground mb-12">{hp.reviewsSub}</p>
           <ReviewsWidget />
-                <p className="text-foreground leading-relaxed flex-1">{r.text}</p>
-                <div className="mt-4 pt-4 border-t border-border flex justify-between text-sm">
-                  <span className="font-heading font-semibold text-foreground">{r.name}</span>
-                  <span className="text-muted-foreground">{r.date}</span>
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
