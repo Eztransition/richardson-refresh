@@ -6,5 +6,6 @@
 - Site-wide head tags (title, description, social tags, favicon) live in `src/routes/__root.tsx` `head()`; per-page SEO is applied client-side via `src/lib/seo.ts`.
 - Dumpster size pages (`/dumpster-size`, `/{10,15,20}-yard-dumpster-rentals`) take all wording, prices and SEO text from `src/config/dumpster-sizes.ts`, copied verbatim from dallas-dumpster.com — one place to sync with the source site.
 - General pages (About, Contact, FAQs, Gallery, Acceptable & Prohibited Items, Privacy Policy) take their verbatim text and page-specific image references from `src/config/site-pages.ts` and share `PageShell`, with an optional hero image passed through to `SizeHero` — keeps individual page images from changing other pages; all header/footer links are internal routes.
+- Images copied from the old WordPress site resolve through `wpImage()` in `src/lib/wp-images.ts` (reads `src/assets/wp/*.asset.json`) — one lookup shared by page configs and shared section components, so an image swap happens in one place.
 - Third-party contact form embeds live in a dedicated component with their script loaded after mount — keeps browser side effects outside SSR.
 - Home page copy and FAQ answers live in `src/config/home-page.ts`, while displayed rental prices and terms come from shared dumpster size data — keeps homepage text independent without duplicating authoritative pricing.
