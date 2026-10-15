@@ -28,3 +28,7 @@
 - [x] Remove the four intro paragraphs and the office address line below the form and map.
 - [x] Keep the contact cards, the two-column map/form section, and the footer address untouched.
 - [x] Verify the page on desktop and phone with no errors.
+
+## Section title sizes
+- [x] Photo-band section titles (home Why Choose, About Why Choose, 3-step rental band) now scale to lg:text-5xl like every other section title
+- [x] Verified 48px vs 48px on desktop, 30px on phone, no overflow or errors
