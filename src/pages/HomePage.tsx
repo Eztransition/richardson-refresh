@@ -33,28 +33,28 @@ const HomePage = () => (
       <section className="relative flex items-center bg-brand-dark text-primary-foreground">
         <img src={heroImage} alt="Dallas Dumpster Rentals roll-off dumpster on a residential driveway" className="absolute inset-0 h-full w-full object-cover" fetchPriority="high" />
         <div className="absolute inset-0 bg-brand-dark/75" />
-        <div className="container relative z-10 py-16 md:py-20 text-center">
+        <div className="container relative z-10 py-10 md:py-20 text-center">
           <div className="max-w-4xl mx-auto">
             <p className="inline-block mb-4 px-4 py-1.5 rounded-full bg-primary-foreground/10 backdrop-blur-md border border-primary-foreground/20 text-sm font-heading font-semibold">{hp.subHeading}</p>
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-heading font-bold mb-6 leading-tight">{hp.heading}</h1>
-            <p className="text-lg leading-relaxed max-w-3xl mx-auto mb-8">{hp.description}</p>
-            <div className="mt-8 flex flex-col items-center gap-6">
-              <div className="order-2 flex w-full flex-col items-stretch justify-center gap-4 sm:order-1 sm:w-auto sm:flex-row sm:items-center">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-heading font-bold mb-4 md:mb-6 leading-tight">{hp.heading}</h1>
+            <p className="text-base md:text-lg leading-relaxed max-w-3xl mx-auto mb-6 md:mb-8">{hp.description}</p>
+            <div className="mt-6 flex flex-col items-center gap-4 md:mt-8 md:gap-6">
+              <div className="order-2 flex w-full flex-col items-stretch justify-center gap-3 sm:order-1 sm:w-auto sm:flex-row sm:items-center md:gap-4">
                 <Button asChild size="lg" className={bookButtonClass}><a href={BOOKING_URL}>Book a Dumpster</a></Button>
                 <Button asChild size="lg" className="bg-background text-foreground hover:bg-background/90 font-heading font-semibold text-lg px-10 h-14 shadow-lg"><Link to="/dumpster-size">View Sizes</Link></Button>
               </div>
-              <div className="order-1 inline-flex flex-wrap items-center justify-center gap-x-5 gap-y-3 rounded-full border border-primary-foreground/20 bg-primary-foreground/10 px-5 py-3 backdrop-blur-md sm:order-2 sm:px-6">
-                <span className="flex items-center gap-2.5">
-                  <GoogleMark className="h-6 w-6 shrink-0" />
-                  <span className="font-heading text-base font-semibold sm:text-lg">{hp.reviewsLine}</span>
+              <div className="order-1 inline-flex flex-wrap items-center justify-center gap-x-3 gap-y-2 rounded-full border border-primary-foreground/20 bg-primary-foreground/10 px-4 py-2.5 backdrop-blur-md sm:order-2 md:gap-x-5 md:px-6 md:py-3">
+                <span className="flex items-center gap-2 md:gap-2.5">
+                  <GoogleMark className="h-5 w-5 shrink-0 md:h-6 md:w-6" />
+                  <span className="font-heading text-sm font-semibold md:text-lg">{hp.reviewsLine}</span>
                 </span>
-                <span className="flex items-center gap-1" role="img" aria-label="Rated 5 out of 5 stars">
+                <span className="flex items-center gap-0.5 md:gap-1" role="img" aria-label="Rated 5 out of 5 stars">
                   {[0, 1, 2, 3, 4].map((i) => (
-                    <Star key={i} aria-hidden="true" className="h-5 w-5 fill-secondary text-secondary" />
+                    <Star key={i} aria-hidden="true" className="h-4 w-4 fill-secondary text-secondary md:h-5 md:w-5" />
                   ))}
                 </span>
-                <span className="flex items-center gap-1.5 font-heading text-sm font-semibold sm:text-base">
-                  <BadgeCheck aria-hidden="true" className="h-5 w-5 text-primary" />
+                <span className="flex items-center gap-1 font-heading text-xs font-semibold md:gap-1.5 md:text-base">
+                  <BadgeCheck aria-hidden="true" className="h-4 w-4 text-primary md:h-5 md:w-5" />
                   Verified
                 </span>
               </div>
