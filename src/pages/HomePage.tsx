@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { CalendarCheck, Check, MessageSquareText, Truck, ShieldCheck, Wallet, CalendarRange, Star, MapPin } from "lucide-react";
+import { CalendarCheck, Check, MessageSquareText, Truck, ShieldCheck, Wallet, CalendarRange, MapPin } from "lucide-react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import MobileStickyCTA from "@/components/layout/MobileStickyCTA";
@@ -9,9 +9,10 @@ import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 import { FaqAccordion } from "@/components/site/PageShell";
 import { SizeHero, bookButtonClass } from "@/components/sizes/SizePageParts";
 import { BOOKING_URL, dumpsterSizePages } from "@/config/dumpster-sizes";
+import { ReviewsWidget } from "@/components/site/ReviewsWidget";
 import { galleryPage } from "@/config/site-pages";
 import { homePage as hp, homeFaqs } from "@/config/home-page";
-import { getLocationByName } from "@/config/locations";
+import { locations } from "@/config/locations";
 
 const h2 = "text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-foreground";
 const featureIcons = [CalendarCheck, MessageSquareText, Truck];
@@ -126,22 +127,7 @@ const HomePage = () => (
         <div className="container mx-auto">
           <h2 className={`${h2} text-center mb-3`}>{hp.reviewsHeading}</h2>
           <p className="text-center text-muted-foreground mb-12">{hp.reviewsSub}</p>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {hp.reviews.map((r) => (
-              <div key={r.name} className="bg-background rounded-xl p-6 border border-border shadow-card flex flex-col">
-                <div className="flex gap-1 mb-3" aria-label="5 stars">
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <Star key={i} className="h-4 w-4 fill-secondary text-secondary" />
-                  ))}
-                </div>
-                <p className="text-foreground leading-relaxed flex-1">{r.text}</p>
-                <div className="mt-4 pt-4 border-t border-border flex justify-between text-sm">
-                  <span className="font-heading font-semibold text-foreground">{r.name}</span>
-                  <span className="text-muted-foreground">{r.date}</span>
-                </div>
-              </div>
-            ))}
-          </div>
+          <ReviewsWidget />
         </div>
       </section>
 
@@ -162,7 +148,7 @@ const HomePage = () => (
           <p className="text-center text-muted-foreground mb-10">{hp.areaSub}</p>
           <ul className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 max-w-5xl mx-auto">
             {hp.areas.map((a) => {
-              const loc = getLocationByName(normalize(a));
+              const loc = locations.find((l) => l.name.toLowerCase() === normalize(a).toLowerCase());
               const inner = (
                 <>
                   <MapPin className="h-4 w-4 text-primary shrink-0" />

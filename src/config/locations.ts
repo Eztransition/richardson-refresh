@@ -207,6 +207,15 @@ export const locations: LocationConfig[] = [
     heroDescription: "Fast, reliable roll-off dumpster delivery for your Duncanville home cleanouts, remodeling projects, and construction sites. Book online in minutes.",
     serviceAreaDescription: "Dallas Dumpster Rentals provides fast and reliable roll-off dumpster delivery throughout Duncanville, TX and the greater Dallas-Fort Worth metropolitan area. Whether you're tackling a home renovation, clearing out a property, or managing a construction project in Duncanville, we've got you covered.",
   },
+  {
+    name: "Royse City",
+    slug: "royse-city-tx",
+    state: "TX",
+    metaTitle: "Dumpster Rental Royse City TX | Fast Roll-Off Delivery",
+    metaDescription: "Rent 10, 15 & 20-yard roll-off dumpsters in Royse City, TX. Easy online booking, same day delivery, clear pricing. Call 972-645-6731.",
+    heroDescription: "Fast, reliable roll-off dumpster delivery for your Royse City home cleanouts, remodeling projects, and construction sites. Book online in minutes.",
+    serviceAreaDescription: "Dallas Dumpster Rentals provides fast and reliable roll-off dumpster delivery throughout Royse City, TX and the greater Dallas-Fort Worth metropolitan area. Whether you're tackling a home renovation, clearing out a property, or managing a construction project in Royse City, we've got you covered.",
+  },
 ];
 
 export const allServiceAreas = [
@@ -232,6 +241,7 @@ export const allServiceAreas = [
   "University Park",
   "DeSoto",
   "Duncanville",
+  "Royse City",
 ];
 
 export const getLocationBySlug = (slug: string): LocationConfig | undefined => {

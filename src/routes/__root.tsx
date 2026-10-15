@@ -15,6 +15,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import ScrollToTop from "@/components/ScrollToTop";
+import { WebChat } from "@/components/site/WebChat";
 import NotFound from "@/pages/NotFound";
 import { reportLovableError } from "@/lib/lovable-error-reporting";
 import appCss from "../styles.css?url";
@@ -74,6 +75,7 @@ function RootComponent() {
         <Toaster />
         <Sonner />
         <ScrollToTop />
+        <WebChat />
         <Outlet />
       </TooltipProvider>
     </QueryClientProvider>

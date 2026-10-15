@@ -86,7 +86,7 @@ export const aboutFaqs: FaqItem[] = [
   {
     q: "How high can I load my dumpster?",
     a: [
-      "When the dumpster is picked up, the driver will put a tarp over the load for containment during transport. We ask that you don’t load any material above the top rails of the dumpster that will interfere with the tarp. Try to keep the load flat and distribute the weight as evenly as possible. If for any reason the dumpster is improperly loaded and cannot be transported safely, you will have to unload the dumpster to a safe level before we can remove it. If your dumpster is overfilled, we have the right to refuse pickup and you may incur a minimum $145 trip charge.",
+      "When the dumpster is picked up, the driver will put a tarp over the load for containment during transport. We ask that you don’t load any material above the top rails of the dumpster that will interfere with the tarp. Try to keep the load flat and distribute the weight as evenly as possible. If for any reason the dumpster is improperly loaded and cannot be transported safely, you will have to unload the dumpster to a safe level before we can remove it. If your dumpster is overfilled, we have the right to refuse pickup and you may incur a minimum $135 trip charge.",
     ],
   },
   {
