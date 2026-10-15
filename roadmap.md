@@ -18,3 +18,8 @@
 - [x] Place the map on the left and the form on the right in one two-column section.
 - [x] Give the map and the form their own titles.
 - [x] Verify desktop side-by-side order, phone stacking, and that the form still loads.
+
+# Contact form crash
+- [x] Stop the embedded form script from moving a node React owns, which blanked the screen with a `removeChild` error.
+- [x] Confirm the form still shows its fields and the two-column layout is unchanged.
+- [x] Cycle through pages repeatedly with no runtime errors.
