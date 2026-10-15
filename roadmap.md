@@ -42,4 +42,4 @@
 - [x] Main section: "Our Story" heading with the three supplied paragraphs; image and placement preserved.
 - [x] Why Choose: new eyebrow and heading, three cards replaced with the supplied titles and text; layout, icons and styling untouched.
 - [x] Verified desktop and phone rendering with no overflow or runtime errors.
-- [ ] FAQs section: the brief's section 4 arrived with no content — waiting on the user's FAQ wording.
+- [x] FAQs section: keep the current 8 questions and answers unchanged (user confirmed).
