@@ -11,7 +11,7 @@ interface SizeHeroProps {
   eyebrow?: string;
   title: string;
   /** Short line shown under the H1, above the CTA. */
-  description?: string;
+  description?: string | undefined;
   backgroundImage?: string | undefined;
   /** Show "Book Now" (overview page) or "Call Us Now" (detail pages), matching the source page. */
   variant: "book" | "call";
