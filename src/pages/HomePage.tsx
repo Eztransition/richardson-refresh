@@ -12,7 +12,7 @@ import { BOOKING_URL, dumpsterSizePages } from "@/config/dumpster-sizes";
 import { ReviewsWidget } from "@/components/site/ReviewsWidget";
 import { galleryPage } from "@/config/site-pages";
 import { homePage as hp, homeFaqs } from "@/config/home-page";
-import { getLocationByName } from "@/config/locations";
+import { locations } from "@/config/locations";
 
 const h2 = "text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-foreground";
 const featureIcons = [CalendarCheck, MessageSquareText, Truck];
@@ -148,7 +148,7 @@ const HomePage = () => (
           <p className="text-center text-muted-foreground mb-10">{hp.areaSub}</p>
           <ul className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 max-w-5xl mx-auto">
             {hp.areas.map((a) => {
-              const loc = getLocationByName(normalize(a));
+              const loc = locations.find((l) => l.name.toLowerCase() === normalize(a).toLowerCase());
               const inner = (
                 <>
                   <MapPin className="h-4 w-4 text-primary shrink-0" />
