@@ -204,8 +204,14 @@ export const ContactPage = () => {
       </section>
 
       <section className="py-16 lg:py-24 bg-brand-surface">
-        <div className="container mx-auto max-w-3xl">
-          <ContactForm />
+        <div className="container mx-auto grid items-start gap-10 lg:grid-cols-2 lg:gap-12">
+          <div className="lg:order-2">
+            <h2 className="mb-6 text-2xl font-heading font-bold text-foreground md:text-3xl">{cp.formHeading}</h2>
+            <ContactForm />
+          </div>
+          <div className="lg:order-1">
+            <GoogleMap location="Dallas" variant="panel" heading={cp.mapHeading} height={796} />
+          </div>
         </div>
       </section>
 
@@ -220,7 +226,6 @@ export const ContactPage = () => {
         </div>
       </section>
 
-      <GoogleMap location="Dallas" />
     </PageShell>
   );
 };

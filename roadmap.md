@@ -13,3 +13,13 @@
 - [x] Apply supplied eyebrow, H1, description, and "Book a Dumpster" / "View Sizes" buttons.
 - [x] Replace the trust line with a 5-star Google reviews strip (Google logo, stars, Verified badge).
 - [x] Verify desktop and phone presentation with no chat bubble or sticky bar covering hero content.
+
+# Contact Us two columns
+- [x] Place the map on the left and the form on the right in one two-column section.
+- [x] Give the map and the form their own titles.
+- [x] Verify desktop side-by-side order, phone stacking, and that the form still loads.
+
+# Contact form crash
+- [x] Stop the embedded form script from moving a node React owns, which blanked the screen with a `removeChild` error.
+- [x] Confirm the form still shows its fields and the two-column layout is unchanged.
+- [x] Cycle through pages repeatedly with no runtime errors.
