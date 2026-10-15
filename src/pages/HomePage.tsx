@@ -38,24 +38,26 @@ const HomePage = () => (
             <p className="inline-block mb-4 px-4 py-1.5 rounded-full bg-primary-foreground/10 backdrop-blur-md border border-primary-foreground/20 text-sm font-heading font-semibold">{hp.subHeading}</p>
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-heading font-bold mb-6 leading-tight">{hp.heading}</h1>
             <p className="text-lg leading-relaxed max-w-3xl mx-auto mb-8">{hp.description}</p>
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4">
-              <Button asChild size="lg" className={bookButtonClass}><a href={BOOKING_URL}>Book a Dumpster</a></Button>
-              <Button asChild size="lg" className="bg-background text-foreground hover:bg-background/90 font-heading font-semibold text-lg px-10 h-14 shadow-lg"><Link to="/dumpster-size">View Sizes</Link></Button>
-            </div>
-            <div className="mt-8 inline-flex flex-wrap items-center justify-center gap-x-5 gap-y-3 rounded-full border border-primary-foreground/20 bg-primary-foreground/10 px-6 py-3 backdrop-blur-md">
-              <span className="flex items-center gap-2.5">
-                <GoogleMark className="h-6 w-6 shrink-0" />
-                <span className="font-heading text-base font-semibold sm:text-lg">{hp.reviewsLine}</span>
-              </span>
-              <span className="flex items-center gap-1" role="img" aria-label="Rated 5 out of 5 stars">
-                {[0, 1, 2, 3, 4].map((i) => (
-                  <Star key={i} aria-hidden="true" className="h-5 w-5 fill-secondary text-secondary" />
-                ))}
-              </span>
-              <span className="flex items-center gap-1.5 font-heading text-sm font-semibold sm:text-base">
-                <BadgeCheck aria-hidden="true" className="h-5 w-5 text-primary" />
-                Verified
-              </span>
+            <div className="mt-8 flex flex-col items-center gap-6">
+              <div className="order-2 flex w-full flex-col items-stretch justify-center gap-4 sm:order-1 sm:w-auto sm:flex-row sm:items-center">
+                <Button asChild size="lg" className={bookButtonClass}><a href={BOOKING_URL}>Book a Dumpster</a></Button>
+                <Button asChild size="lg" className="bg-background text-foreground hover:bg-background/90 font-heading font-semibold text-lg px-10 h-14 shadow-lg"><Link to="/dumpster-size">View Sizes</Link></Button>
+              </div>
+              <div className="order-1 inline-flex flex-wrap items-center justify-center gap-x-5 gap-y-3 rounded-full border border-primary-foreground/20 bg-primary-foreground/10 px-5 py-3 backdrop-blur-md sm:order-2 sm:px-6">
+                <span className="flex items-center gap-2.5">
+                  <GoogleMark className="h-6 w-6 shrink-0" />
+                  <span className="font-heading text-base font-semibold sm:text-lg">{hp.reviewsLine}</span>
+                </span>
+                <span className="flex items-center gap-1" role="img" aria-label="Rated 5 out of 5 stars">
+                  {[0, 1, 2, 3, 4].map((i) => (
+                    <Star key={i} aria-hidden="true" className="h-5 w-5 fill-secondary text-secondary" />
+                  ))}
+                </span>
+                <span className="flex items-center gap-1.5 font-heading text-sm font-semibold sm:text-base">
+                  <BadgeCheck aria-hidden="true" className="h-5 w-5 text-primary" />
+                  Verified
+                </span>
+              </div>
             </div>
           </div>
         </div>
