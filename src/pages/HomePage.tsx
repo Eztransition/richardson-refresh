@@ -214,6 +214,31 @@ const HomePage = () => (
         </div>
       </section>
 
+      {/* Final CTA */}
+      <section className="bg-gradient-to-br from-primary via-primary/90 to-cyan-600 py-12 text-white lg:py-20">
+        <div className="container mx-auto text-center">
+          <div className="mx-auto max-w-2xl space-y-6">
+            <h2 className="font-heading text-3xl font-bold leading-tight md:text-4xl lg:text-5xl">{hp.ctaHeading}</h2>
+            <p className="text-lg text-white/90">{hp.ctaSub}</p>
+            <div className="flex flex-col justify-center gap-4 pt-4 sm:flex-row">
+              <Button asChild size="lg" className={bookButtonClass}>
+                <Link to="/dumpster-size">Find Your Dumpster</Link>
+              </Button>
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="h-14 border-2 border-white/20 bg-white/20 px-10 font-heading text-lg font-semibold text-white transition-all hover:bg-white hover:text-primary"
+              >
+                <Link to="/contact-us">Contact Us</Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
     </main>
     <Footer />
     <MobileStickyCTA />

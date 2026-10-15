@@ -56,8 +56,8 @@ export const homePage = {
   galleryEyebrow: "OUR GALLERY",
   galleryHeading: "Our Dumpsters at Work",
   gallerySub: "Take a look at our roll-off dumpsters delivered to residential and commercial project sites throughout the Dallas area.",
-  finalHeading: "Let's Get Your Dumpster Scheduled",
-  finalSub: "Have a project coming up? Browse our available dumpster sizes and book online, or contact us if you need help choosing the right option.",
+  ctaHeading: "Have a Project in Mind?",
+  ctaSub: "We'll help you find the right roll-off dumpster, whether you're clearing out your garage or preparing for a major renovation.",
 };
 
 export const homeFaqs: FaqItem[] = [
