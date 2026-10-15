@@ -79,7 +79,7 @@ export const RentalSteps = ({ backgroundImage = wpImage("about-why-background.jp
         <span aria-hidden="true" className="mx-auto mb-6 block h-1 w-12 rounded-full bg-secondary" />
         <h2
           id="rental-steps-heading"
-          className="font-heading text-3xl font-bold leading-tight tracking-normal text-primary-foreground md:text-4xl"
+          className="font-heading text-3xl font-bold leading-tight tracking-normal text-primary-foreground md:text-4xl lg:text-5xl"
         >
           {rentalSteps.heading}
         </h2>
