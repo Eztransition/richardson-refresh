@@ -4,16 +4,13 @@ import { GoogleMark } from "@/components/site/GoogleMark";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import MobileStickyCTA from "@/components/layout/MobileStickyCTA";
-import GoogleMap from "@/components/sections/GoogleMap";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
-import { FaqAccordion } from "@/components/site/PageShell";
 import heroImage from "@/assets/richardson-hero.jpg";
 import { bookButtonClass } from "@/components/sizes/SizePageParts";
 import { BOOKING_URL, dumpsterSizePages } from "@/config/dumpster-sizes";
 import { ReviewsWidget } from "@/components/site/ReviewsWidget";
-import { galleryPage } from "@/config/site-pages";
-import { homePage as hp, homeFaqs } from "@/config/home-page";
+import { homePage as hp } from "@/config/home-page";
 import { wpImage } from "@/lib/wp-images";
 import { locations } from "@/config/locations";
 
@@ -139,7 +136,7 @@ const HomePage = () => (
           <p className={eyebrow}>{hp.introEyebrow}</p>
           <h2 className={`${h2} mb-6`}>{hp.introHeading}</h2>
           <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">{hp.intro.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
-          <Button asChild className={`mt-8 ${bookButtonClass}`}><Link to="/about-us">Learn More About Us</Link></Button>
+          <Button asChild className={`mt-8 ${bookButtonClass}`}><Link to="/about-us">More About Us</Link></Button>
         </div>
       </section>
 
@@ -157,9 +154,8 @@ const HomePage = () => (
             <span aria-hidden="true" className="mx-auto mb-6 block h-1 w-12 rounded-full bg-secondary" />
             <p className="mb-4 font-heading text-xs font-bold uppercase tracking-normal text-secondary sm:text-sm">{hp.whyEyebrow}</p>
             <h2 id="home-why-heading" className="font-heading text-3xl font-bold leading-tight tracking-normal text-primary-foreground md:text-4xl">{hp.whyHeading}</h2>
-            <p className="mt-4 text-lg leading-relaxed text-primary-foreground/80">{hp.whySub}</p>
           </div>
-          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4 lg:gap-6">
+          <div className="grid gap-5 md:grid-cols-3 lg:gap-6">
             {hp.why.map((w, i) => {
               const Icon = whyIcons[i] ?? ShieldCheck;
               return (
@@ -181,19 +177,8 @@ const HomePage = () => (
       <section className="py-16 lg:py-24 bg-brand-surface">
         <div className="container mx-auto">
           <p className={eyebrow}>{hp.reviewsEyebrow}</p>
-          <h2 className={`${h2} text-center mb-3`}>{hp.reviewsHeading}</h2>
-          <p className={sub}>{hp.reviewsSub}</p>
+          <h2 className={`${h2} text-center mb-10`}>{hp.reviewsHeading}</h2>
           <ReviewsWidget />
-        </div>
-      </section>
-
-      {/* Order band */}
-      <section className="py-12 bg-gradient-to-br from-primary via-primary/90 to-primary/70">
-        <div className="container mx-auto flex flex-col md:flex-row items-center justify-center gap-6 text-center">
-          <div className="max-w-2xl text-primary-foreground"><h2 className="text-3xl md:text-4xl font-heading font-bold">{hp.orderHeading}</h2><p className="mt-4 text-lg">{hp.orderSub}</p></div>
-          <Button asChild size="lg" className={bookButtonClass}>
-            <a href={BOOKING_URL}>Book Your Dumpster</a>
-          </Button>
         </div>
       </section>
 
@@ -229,44 +214,6 @@ const HomePage = () => (
         </div>
       </section>
 
-      {/* FAQ */}
-      <section className="py-16 lg:py-24 bg-brand-surface">
-        <div className="container mx-auto max-w-3xl">
-          <p className={eyebrow}>{hp.faqEyebrow}</p>
-          <h2 className={`${h2} text-center mb-4`}>{hp.faqHeading}</h2>
-          <p className={sub}>{hp.faqSub}</p>
-          <FaqAccordion items={homeFaqs} />
-        </div>
-      </section>
-
-      {/* Gallery */}
-      <section className="py-16 lg:py-24 bg-background">
-        <div className="container mx-auto">
-          <p className={eyebrow}>{hp.galleryEyebrow}</p>
-          <h2 className={`${h2} text-center mb-4`}>{hp.galleryHeading}</h2>
-          <p className={sub}>{hp.gallerySub}</p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {galleryPage.images.slice(0, 8).map((img) => (
-              <div key={img.src} className="overflow-hidden rounded-xl shadow-card">
-                <img src={img.src} alt={img.alt} loading="lazy" className="aspect-square w-full object-cover hover:scale-105 transition-transform duration-300" />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <div className="container text-center pb-12"><Button asChild className={bookButtonClass}><Link to="/gallery">View Gallery</Link></Button></div>
-      <GoogleMap location="Dallas" />
-      <section className="py-12 bg-gradient-to-br from-primary via-primary/90 to-primary/70 text-primary-foreground">
-        <div className="container text-center">
-          <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">{hp.finalHeading}</h2>
-          <p className="text-lg max-w-3xl mx-auto mb-8">{hp.finalSub}</p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button asChild size="lg" className={bookButtonClass}><a href={BOOKING_URL}>Book Online</a></Button>
-            <Button asChild size="lg" className="bg-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/30 font-heading font-semibold text-lg px-10 h-14"><Link to="/contact-us">Contact Us</Link></Button>
-          </div>
-        </div>
-      </section>
     </main>
     <Footer />
     <MobileStickyCTA />
