@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Clock, Mail, MapPin, Phone, ShieldCheck, Wallet, CalendarRange } from "lucide-react";
+import { Clock, Mail, Phone, ShieldCheck, Wallet, CalendarRange } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import GoogleMap from "@/components/sections/GoogleMap";
 import { ContactForm } from "@/components/site/ContactForm";
@@ -215,16 +215,6 @@ export const ContactPage = () => {
         </div>
       </section>
 
-      <section className="py-16 lg:py-24 bg-background">
-        <div className="container mx-auto max-w-3xl">
-          <div className="space-y-4 text-muted-foreground leading-relaxed text-lg">
-            {cp.body.map((p) => <p key={p}>{p}</p>)}
-            <p className="flex items-center gap-2 text-foreground font-semibold pt-2">
-              <MapPin className="h-5 w-5 text-primary" /> 707 Opal Lane, Mesquite, TX 75149
-            </p>
-          </div>
-        </div>
-      </section>
 
     </PageShell>
   );
