@@ -1,6 +1,3 @@
-import photo10 from "@/assets/dumpster-10-yard-photo.jpg.asset.json";
-import photo15 from "@/assets/dumpster-15-yard-photo.png.asset.json";
-import photo20 from "@/assets/dumpster-20-yard-photo.png.asset.json";
 
 /**
  * Content copied verbatim from the public dallas-dumpster.com size pages.
@@ -39,7 +36,7 @@ export const dumpsterSizePages: DumpsterSizePage[] = [
   {
     slug: "10-yard-dumpster-rentals",
     title: "10-Yard Dumpster Rentals",
-    image: photo10.url,
+    image: "/images/dumpster-10-yard-photo.jpg",
     imageAlt: "10-Yard Dumpster Rentals",
     price: "$355.00",
     size: "14’L x 7’W x 4’H",
@@ -67,7 +64,7 @@ export const dumpsterSizePages: DumpsterSizePage[] = [
   {
     slug: "15-yard-dumpster-rentals",
     title: "15-Yard Dumpster Rentals",
-    image: photo15.url,
+    image: "/images/dumpster-15-yard-photo.png",
     imageAlt: "15-Yard Dumpster Rentals",
     price: "$375.00",
     size: "14’L x 7’W x 4’H",
@@ -95,7 +92,7 @@ export const dumpsterSizePages: DumpsterSizePage[] = [
   {
     slug: "20-yard-dumpster-rentals",
     title: "20-Yard Dumpster Rentals",
-    image: photo20.url,
+    image: "/images/dumpster-20-yard-photo.png",
     imageAlt: "20-Yard Dumpster Rentals",
     price: "$450.00",
     size: "14’L x 7’W x 5’H",
