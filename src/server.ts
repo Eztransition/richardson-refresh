@@ -7,6 +7,42 @@ type ServerEntry = {
   fetch: (request: Request, env: unknown, ctx: unknown) => Promise<Response> | Response;
 };
 
+
+// ---------------------------------------------------------------------------
+// Retired hosting origins: the old Lovable-built site ran on
+// local.dallas-dumpster.com (and its richardson-refresh.pages.dev twin);
+// production is https://dallas-dumpster.com. Every request to a retired host
+// gets a permanent 301 at the edge — path and query string preserved. Old
+// paths that no longer exist on production are mapped to their closest live
+// counterpart instead of failing or landing on the homepage.
+// ---------------------------------------------------------------------------
+const RETIRED_HOSTS = new Set<string>([
+  "local.dallas-dumpster.com",
+  "richardson-refresh.pages.dev",
+]);
+
+const RETIRED_PATH_REDIRECTS: Record<string, string> = {
+  "/10-yard-dumpster-rentals": "/dumpster-size",
+};
+
+function retiredHostRedirect(request: Request): Response | null {
+  let url: URL;
+  try {
+    url = new URL(request.url);
+  } catch {
+    return null;
+  }
+  if (!RETIRED_HOSTS.has(url.host)) return null;
+  const location =
+    "https://dallas-dumpster.com" +
+    (RETIRED_PATH_REDIRECTS[url.pathname] ?? url.pathname) +
+    url.search;
+  return new Response(null, {
+    status: 301,
+    headers: { Location: location, "X-Redirect-By": "retired-origin-301" },
+  });
+}
+
 let serverEntryPromise: Promise<ServerEntry> | undefined;
 
 async function getServerEntry(): Promise<ServerEntry> {
@@ -46,6 +82,9 @@ function isH3SwallowedErrorBody(body: string): boolean {
 
 export default {
   async fetch(request: Request, env: unknown, ctx: unknown) {
+    const retired = retiredHostRedirect(request);
+    if (retired) return retired;
+
     try {
       const handler = await getServerEntry();
       const response = await handler.fetch(request, env, ctx);

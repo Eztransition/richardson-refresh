@@ -37,7 +37,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:title", content: SITE_TITLE },
       { property: "og:description", content: SOCIAL_DESCRIPTION },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://richardson-revamp-joy.lovable.app/" },
+      { property: "og:url", content: "https://dallas-dumpster.com/" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: SITE_TITLE },
       { name: "twitter:description", content: SOCIAL_DESCRIPTION },
