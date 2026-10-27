@@ -5,7 +5,7 @@ import { wpImage } from "@/lib/wp-images";
  * Acceptable & Prohibited Items, Privacy Policy), copied verbatim from the
  * public dallas-dumpster.com pages — including the source's own wording and typos.
  */
-const SITE = "https://richardson-revamp-joy.lovable.app";
+const SITE = "https://dallas-dumpster.com";
 
 export const pageUrl = (path: string) => `${SITE}${path}`;
 

@@ -1,4 +1,4 @@
-export const SITE_ORIGIN = "https://richardson-revamp-joy.lovable.app";
+export const SITE_ORIGIN = "https://dallas-dumpster.com";
 
 type MetaAttr = "name" | "property";
 

@@ -7,7 +7,7 @@ function Page20() {
 }
 
 const SEO = getDumpsterSizePage("20-yard-dumpster-rentals").seo;
-const URL = "https://richardson-revamp-joy.lovable.app/20-yard-dumpster-rentals";
+const URL = "https://dallas-dumpster.com/20-yard-dumpster-rentals";
 
 export const Route = createFileRoute("/20-yard-dumpster-rentals")({
   component: Page20,

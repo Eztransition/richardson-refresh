@@ -3,7 +3,7 @@ import DumpsterSize from "@/pages/DumpsterSize";
 import { dumpsterSizeOverview } from "@/config/dumpster-sizes";
 
 const SEO = dumpsterSizeOverview.seo;
-const URL = "https://richardson-revamp-joy.lovable.app/dumpster-size";
+const URL = "https://dallas-dumpster.com/dumpster-size";
 
 export const Route = createFileRoute("/dumpster-size")({
   component: DumpsterSize,
